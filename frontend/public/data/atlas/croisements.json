@@ -1,0 +1,1582 @@
+{
+ "seuils": {
+  "r_min": 0.3,
+  "z_outlier": 2.5,
+  "pop_min": 2000
+ },
+ "croisements": [
+  {
+   "id": "ips_ecole_public__revenu",
+   "y": "ips_ecole_public",
+   "x": "revenu",
+   "dimensions": [
+    "ecole",
+    "richesse"
+   ],
+   "r_communes": 0.869,
+   "r_dept": 0.825,
+   "n_communes": 15631,
+   "force": "très forte",
+   "question": "Dis-moi le revenu de ta commune, je te dirai le public de ton école ?",
+   "lecture": "Entre communes, IPS (écoles) et Revenu médian évoluent ensemble (corrélation +0.87, relation très forte).",
+   "dessus": [
+    {
+     "code": "38395",
+     "nom": "Plateau-des-Petites-Roches",
+     "x": 29190,
+     "y": 137.9,
+     "pop": 2433,
+     "z": 3.4
+    },
+    {
+     "code": "49259",
+     "nom": "Rochefort-sur-Loire",
+     "x": 26130,
+     "y": 129.1,
+     "pop": 2333,
+     "z": 3.2
+    },
+    {
+     "code": "38383",
+     "nom": "Saint-Étienne-de-Crossey",
+     "x": 31080,
+     "y": 138.4,
+     "pop": 2619,
+     "z": 2.9
+    },
+    {
+     "code": "14242",
+     "nom": "Épron",
+     "x": 30860,
+     "y": 136.9,
+     "pop": 2093,
+     "z": 2.8
+    },
+    {
+     "code": "86133",
+     "nom": "Ligugé",
+     "x": 28170,
+     "y": 130.7,
+     "pop": 3444,
+     "z": 2.8
+    },
+    {
+     "code": "34217",
+     "nom": "Prades-le-Lez",
+     "x": 29270,
+     "y": 132.4,
+     "pop": 6184,
+     "z": 2.7
+    },
+    {
+     "code": "31004",
+     "nom": "Ayguesvives",
+     "x": 31340,
+     "y": 137.0,
+     "pop": 2812,
+     "z": 2.7
+    },
+    {
+     "code": "31445",
+     "nom": "Quint-Fonsegrives",
+     "x": 31490,
+     "y": 137.1,
+     "pop": 6133,
+     "z": 2.6
+    }
+   ],
+   "dessous": [
+    {
+     "code": "74016",
+     "nom": "Archamps",
+     "x": 59760,
+     "y": 132.5,
+     "pop": 2375,
+     "z": -6.0
+    },
+    {
+     "code": "74201",
+     "nom": "Neydens",
+     "x": 54260,
+     "y": 120.6,
+     "pop": 2250,
+     "z": -5.9
+    },
+    {
+     "code": "74031",
+     "nom": "Beaumont",
+     "x": 52450,
+     "y": 121.1,
+     "pop": 3097,
+     "z": -5.4
+    },
+    {
+     "code": "25321",
+     "nom": "Villers-le-Lac",
+     "x": 42410,
+     "y": 98.6,
+     "pop": 5292,
+     "z": -5.3
+    },
+    {
+     "code": "74082",
+     "nom": "Collonges-sous-Salève",
+     "x": 51810,
+     "y": 122.8,
+     "pop": 3832,
+     "z": -5.0
+    },
+    {
+     "code": "25512",
+     "nom": "Le Russey",
+     "x": 37160,
+     "y": 90.0,
+     "pop": 2599,
+     "z": -4.9
+    },
+    {
+     "code": "01153",
+     "nom": "Échenevex",
+     "x": 54700,
+     "y": 130.5,
+     "pop": 2328,
+     "z": -4.8
+    },
+    {
+     "code": "25403",
+     "nom": "Montlebon",
+     "x": 41460,
+     "y": 100.6,
+     "pop": 2244,
+     "z": -4.8
+    }
+   ],
+   "variantes": [
+    {
+     "a": "ips_college_public",
+     "b": "revenu",
+     "r": 0.857
+    },
+    {
+     "a": "ips_lycee_public",
+     "b": "revenu",
+     "r": 0.636
+    },
+    {
+     "a": "ips_ecole_public",
+     "b": "prix_m2",
+     "r": 0.53
+    },
+    {
+     "a": "ips_college_public",
+     "b": "prix_m2",
+     "r": 0.505
+    },
+    {
+     "a": "ips_lycee_public",
+     "b": "prix_m2",
+     "r": 0.323
+    }
+   ],
+   "note": "Les communes très en dessous du pronostic sont presque toutes frontalières de Genève : les salaires suisses gonflent le revenu local sans changer le profil social des écoles. L'écart dit ici « frontière », pas « école qui décroche »."
+  },
+  {
+   "id": "prix_m2__cadres",
+   "y": "prix_m2",
+   "x": "cadres",
+   "dimensions": [
+    "richesse",
+    "pcs"
+   ],
+   "r_communes": 0.825,
+   "r_dept": 0.841,
+   "n_communes": 33061,
+   "force": "très forte",
+   "question": "L'immobilier flambe-t-il seulement là où vivent les cadres ?",
+   "lecture": "Entre communes, Prix immobilier et Cadres évoluent ensemble (corrélation +0.82, relation très forte).",
+   "dessus": [
+    {
+     "code": "75106",
+     "nom": "Paris 6e arr.",
+     "x": 56.9,
+     "y": 14600,
+     "pop": 40389,
+     "z": 12.9
+    },
+    {
+     "code": "75107",
+     "nom": "Paris 7e arr.",
+     "x": 57.5,
+     "y": 14290,
+     "pop": 48015,
+     "z": 12.5
+    },
+    {
+     "code": "83119",
+     "nom": "Saint-Tropez",
+     "x": 14.2,
+     "y": 12500,
+     "pop": 3582,
+     "z": 12.4
+    },
+    {
+     "code": "75104",
+     "nom": "Paris 4e arr.",
+     "x": 55.7,
+     "y": 12858,
+     "pop": 27332,
+     "z": 10.9
+    },
+    {
+     "code": "73227",
+     "nom": "Courchevel",
+     "x": 11.2,
+     "y": 10849,
+     "pop": 2290,
+     "z": 10.7
+    },
+    {
+     "code": "75101",
+     "nom": "Paris 1er arr.",
+     "x": 57.1,
+     "y": 12524,
+     "pop": 15114,
+     "z": 10.4
+    },
+    {
+     "code": "75108",
+     "nom": "Paris 8e arr.",
+     "x": 56.6,
+     "y": 12326,
+     "pop": 35317,
+     "z": 10.2
+    },
+    {
+     "code": "33236",
+     "nom": "Lège-Cap-Ferret",
+     "x": 15.7,
+     "y": 10671,
+     "pop": 7909,
+     "z": 10.2
+    }
+   ],
+   "dessous": [],
+   "variantes": [
+    {
+     "a": "prix_m2",
+     "b": "diplome_sup",
+     "r": 0.774
+    },
+    {
+     "a": "revenu",
+     "b": "diplome_sup",
+     "r": 0.688
+    },
+    {
+     "a": "prix_m2",
+     "b": "ouvriers",
+     "r": -0.669
+    },
+    {
+     "a": "revenu",
+     "b": "cadres",
+     "r": 0.658
+    },
+    {
+     "a": "revenu",
+     "b": "employes",
+     "r": -0.624
+    },
+    {
+     "a": "revenu",
+     "b": "ouvriers",
+     "r": -0.563
+    },
+    {
+     "a": "prix_m2",
+     "b": "employes",
+     "r": -0.501
+    }
+   ],
+   "note": "Les communes bien au-dessus du pronostic sont souvent touristiques ou littorales : le prix y suit les acheteurs extérieurs, pas les habitants."
+  },
+  {
+   "id": "ips_ecole_public__diplome_sup",
+   "y": "ips_ecole_public",
+   "x": "diplome_sup",
+   "dimensions": [
+    "ecole",
+    "pcs"
+   ],
+   "r_communes": 0.725,
+   "r_dept": 0.805,
+   "n_communes": 15727,
+   "force": "très forte",
+   "question": "Communes diplômées, écoles au public favorisé ?",
+   "lecture": "Entre communes, IPS (écoles) et Diplômés du supérieur évoluent ensemble (corrélation +0.72, relation très forte).",
+   "dessus": [
+    {
+     "code": "77517",
+     "nom": "Villevaudé",
+     "x": 28.5,
+     "y": 125.1,
+     "pop": 2132,
+     "z": 3.0
+    },
+    {
+     "code": "36202",
+     "nom": "Saint-Maur",
+     "x": 24.8,
+     "y": 119.7,
+     "pop": 3537,
+     "z": 2.8
+    },
+    {
+     "code": "49259",
+     "nom": "Rochefort-sur-Loire",
+     "x": 35.1,
+     "y": 129.1,
+     "pop": 2333,
+     "z": 2.7
+    },
+    {
+     "code": "54111",
+     "nom": "Chaligny",
+     "x": 29.7,
+     "y": 123.5,
+     "pop": 2729,
+     "z": 2.6
+    },
+    {
+     "code": "67205",
+     "nom": "Hœrdt",
+     "x": 32.6,
+     "y": 126.2,
+     "pop": 4570,
+     "z": 2.6
+    },
+    {
+     "code": "72260",
+     "nom": "Ruaudin",
+     "x": 29.4,
+     "y": 122.7,
+     "pop": 3481,
+     "z": 2.6
+    },
+    {
+     "code": "28358",
+     "nom": "Saint-Prest",
+     "x": 36.5,
+     "y": 129.5,
+     "pop": 2115,
+     "z": 2.5
+    },
+    {
+     "code": "14409",
+     "nom": "Merville-Franceville-Plage",
+     "x": 27.6,
+     "y": 120.7,
+     "pop": 2231,
+     "z": 2.5
+    }
+   ],
+   "dessous": [
+    {
+     "code": "59350",
+     "nom": "Lille",
+     "x": 52.2,
+     "y": 93.9,
+     "pop": 238246,
+     "z": -5.0
+    },
+    {
+     "code": "67482",
+     "nom": "Strasbourg",
+     "x": 46.6,
+     "y": 91.8,
+     "pop": 293771,
+     "z": -4.5
+    },
+    {
+     "code": "67447",
+     "nom": "Schiltigheim",
+     "x": 40.8,
+     "y": 87.2,
+     "pop": 34708,
+     "z": -4.3
+    },
+    {
+     "code": "63113",
+     "nom": "Clermont-Ferrand",
+     "x": 40.0,
+     "y": 86.5,
+     "pop": 146351,
+     "z": -4.3
+    },
+    {
+     "code": "97356",
+     "nom": "Camopi",
+     "x": 12.4,
+     "y": 60.1,
+     "pop": 2189,
+     "z": -4.2
+    },
+    {
+     "code": "69266",
+     "nom": "Villeurbanne",
+     "x": 48.8,
+     "y": 96.2,
+     "pop": 163684,
+     "z": -4.2
+    },
+    {
+     "code": "31555",
+     "nom": "Toulouse",
+     "x": 55.2,
+     "y": 102.6,
+     "pop": 514819,
+     "z": -4.1
+    },
+    {
+     "code": "38185",
+     "nom": "Grenoble",
+     "x": 52.1,
+     "y": 100.5,
+     "pop": 156140,
+     "z": -4.0
+    }
+   ],
+   "variantes": [
+    {
+     "a": "ips_ecole_public",
+     "b": "ouvriers",
+     "r": -0.655
+    },
+    {
+     "a": "ips_college_public",
+     "b": "diplome_sup",
+     "r": 0.65
+    },
+    {
+     "a": "ips_ecole_public",
+     "b": "cadres",
+     "r": 0.643
+    },
+    {
+     "a": "ips_college_public",
+     "b": "employes",
+     "r": -0.61
+    },
+    {
+     "a": "ips_college_public",
+     "b": "cadres",
+     "r": 0.608
+    },
+    {
+     "a": "ips_college_public",
+     "b": "ouvriers",
+     "r": -0.608
+    },
+    {
+     "a": "ips_ecole_public",
+     "b": "employes",
+     "r": -0.608
+    },
+    {
+     "a": "ips_lycee_public",
+     "b": "diplome_sup",
+     "r": 0.605
+    },
+    {
+     "a": "ips_lycee_public",
+     "b": "cadres",
+     "r": 0.547
+    },
+    {
+     "a": "ips_lycee_public",
+     "b": "employes",
+     "r": -0.546
+    },
+    {
+     "a": "ips_lycee_public",
+     "b": "ouvriers",
+     "r": -0.526
+    },
+    {
+     "a": "ips_ecole_public",
+     "b": "intermediaires",
+     "r": 0.303
+    }
+   ]
+  },
+  {
+   "id": "idp__natalite",
+   "y": "idp",
+   "x": "natalite",
+   "dimensions": [
+    "politique",
+    "demographie"
+   ],
+   "r_communes": 0.627,
+   "r_dept": 0.666,
+   "n_communes": 11417,
+   "force": "forte",
+   "question": "Les candidats issus de la diversité se présentent-ils dans les communes les plus jeunes ?",
+   "lecture": "Entre communes, Diversité des candidats et Taux de natalité évoluent ensemble (corrélation +0.63, relation forte).",
+   "dessus": [
+    {
+     "code": "93079",
+     "nom": "Villetaneuse",
+     "x": 13.8,
+     "y": 64.0,
+     "pop": 12530,
+     "z": 10.6
+    },
+    {
+     "code": "93014",
+     "nom": "Clichy-sous-Bois",
+     "x": 14.1,
+     "y": 54.4,
+     "pop": 29354,
+     "z": 8.8
+    },
+    {
+     "code": "93027",
+     "nom": "La Courneuve",
+     "x": 13.0,
+     "y": 53.5,
+     "pop": 47167,
+     "z": 8.8
+    },
+    {
+     "code": "95019",
+     "nom": "Arnouville",
+     "x": 13.6,
+     "y": 53.8,
+     "pop": 15023,
+     "z": 8.7
+    },
+    {
+     "code": "57207",
+     "nom": "Farébersviller",
+     "x": 8.9,
+     "y": 50.0,
+     "pop": 5224,
+     "z": 8.7
+    },
+    {
+     "code": "95585",
+     "nom": "Sarcelles",
+     "x": 16.4,
+     "y": 55.0,
+     "pop": 59173,
+     "z": 8.6
+    },
+    {
+     "code": "93071",
+     "nom": "Sevran",
+     "x": 15.2,
+     "y": 52.7,
+     "pop": 52535,
+     "z": 8.3
+    },
+    {
+     "code": "95280",
+     "nom": "Goussainville",
+     "x": 16.8,
+     "y": 53.4,
+     "pop": 31301,
+     "z": 8.2
+    }
+   ],
+   "dessous": [],
+   "variantes": [
+    {
+     "a": "idp",
+     "b": "ages65",
+     "r": -0.484
+    },
+    {
+     "a": "idp",
+     "b": "jeunes",
+     "r": 0.407
+    }
+   ],
+   "note": "L'IDP mesure la diversité des candidats aux municipales 2026, pas celle des habitants. La natalité signale des communes jeunes, souvent urbaines : une relation de géographie démographique, pas une cause."
+  },
+  {
+   "id": "idp__hlm",
+   "y": "idp",
+   "x": "hlm",
+   "dimensions": [
+    "politique",
+    "logement"
+   ],
+   "r_communes": 0.6,
+   "r_dept": 0.652,
+   "n_communes": 11414,
+   "force": "forte",
+   "question": "Plus de logement social, plus de candidats issus de la diversité ?",
+   "lecture": "Entre communes, Diversité des candidats et Logement social (HLM) évoluent ensemble (corrélation +0.60, relation forte).",
+   "dessus": [
+    {
+     "code": "95019",
+     "nom": "Arnouville",
+     "x": 4.3,
+     "y": 53.8,
+     "pop": 15023,
+     "z": 10.1
+    },
+    {
+     "code": "93079",
+     "nom": "Villetaneuse",
+     "x": 51.8,
+     "y": 64.0,
+     "pop": 12530,
+     "z": 9.3
+    },
+    {
+     "code": "97362",
+     "nom": "Papaichton",
+     "x": 0.5,
+     "y": 45.9,
+     "pop": 5006,
+     "z": 8.8
+    },
+    {
+     "code": "95280",
+     "nom": "Goussainville",
+     "x": 27.5,
+     "y": 53.4,
+     "pop": 31301,
+     "z": 8.7
+    },
+    {
+     "code": "93014",
+     "nom": "Clichy-sous-Bois",
+     "x": 34.6,
+     "y": 54.4,
+     "pop": 29354,
+     "z": 8.4
+    },
+    {
+     "code": "93071",
+     "nom": "Sevran",
+     "x": 31.4,
+     "y": 52.7,
+     "pop": 52535,
+     "z": 8.3
+    },
+    {
+     "code": "93027",
+     "nom": "La Courneuve",
+     "x": 38.4,
+     "y": 53.5,
+     "pop": 47167,
+     "z": 8.0
+    },
+    {
+     "code": "95427",
+     "nom": "Montmagny",
+     "x": 14.7,
+     "y": 46.4,
+     "pop": 15105,
+     "z": 8.0
+    }
+   ],
+   "dessous": [
+    {
+     "code": "76322",
+     "nom": "Le Grand-Quevilly",
+     "x": 66.2,
+     "y": 5.3,
+     "pop": 25789,
+     "z": -3.2
+    },
+    {
+     "code": "97120",
+     "nom": "Pointe-à-Pitre",
+     "x": 53.8,
+     "y": 1.8,
+     "pop": 15040,
+     "z": -3.1
+    },
+    {
+     "code": "14167",
+     "nom": "Colombelles",
+     "x": 46.6,
+     "y": 0.0,
+     "pop": 7243,
+     "z": -3.0
+    },
+    {
+     "code": "97407",
+     "nom": "Le Port",
+     "x": 49.9,
+     "y": 1.7,
+     "pop": 33969,
+     "z": -2.9
+    },
+    {
+     "code": "62771",
+     "nom": "Sallaumines",
+     "x": 40.1,
+     "y": 0.0,
+     "pop": 9414,
+     "z": -2.7
+    },
+    {
+     "code": "62178",
+     "nom": "Bruay-la-Buissière",
+     "x": 38.5,
+     "y": 0.0,
+     "pop": 21424,
+     "z": -2.6
+    }
+   ],
+   "variantes": [
+    {
+     "a": "idp",
+     "b": "maisons",
+     "r": -0.523
+    },
+    {
+     "a": "idp",
+     "b": "proprietaires",
+     "r": -0.501
+    }
+   ],
+   "note": "Diversité des candidats, pas des habitants : la relation dit où la diversité accède à la candidature, pas un lien de cause."
+  },
+  {
+   "id": "prix_m2__maisons",
+   "y": "prix_m2",
+   "x": "maisons",
+   "dimensions": [
+    "richesse",
+    "logement"
+   ],
+   "r_communes": -0.587,
+   "r_dept": -0.84,
+   "n_communes": 33139,
+   "force": "forte",
+   "question": "La France des maisons est-elle celle de l'immobilier abordable ?",
+   "lecture": "Entre communes, Prix immobilier et Maisons individuelles évoluent en sens inverse (corrélation -0.59, relation forte).",
+   "dessus": [
+    {
+     "code": "75106",
+     "nom": "Paris 6e arr.",
+     "x": 0.7,
+     "y": 14600,
+     "pop": 40389,
+     "z": 12.2
+    },
+    {
+     "code": "75107",
+     "nom": "Paris 7e arr.",
+     "x": 0.6,
+     "y": 14290,
+     "pop": 48015,
+     "z": 11.8
+    },
+    {
+     "code": "83119",
+     "nom": "Saint-Tropez",
+     "x": 35.2,
+     "y": 12500,
+     "pop": 3582,
+     "z": 10.9
+    },
+    {
+     "code": "33236",
+     "nom": "Lège-Cap-Ferret",
+     "x": 85.6,
+     "y": 10671,
+     "pop": 7909,
+     "z": 10.6
+    },
+    {
+     "code": "75104",
+     "nom": "Paris 4e arr.",
+     "x": 0.3,
+     "y": 12858,
+     "pop": 27332,
+     "z": 10.0
+    },
+    {
+     "code": "75101",
+     "nom": "Paris 1er arr.",
+     "x": 0.2,
+     "y": 12524,
+     "pop": 15114,
+     "z": 9.6
+    },
+    {
+     "code": "75108",
+     "nom": "Paris 8e arr.",
+     "x": 0.3,
+     "y": 12326,
+     "pop": 35317,
+     "z": 9.4
+    },
+    {
+     "code": "75105",
+     "nom": "Paris 5e arr.",
+     "x": 0.6,
+     "y": 12081,
+     "pop": 55252,
+     "z": 9.1
+    }
+   ],
+   "dessous": [
+    {
+     "code": "25547",
+     "nom": "Sochaux",
+     "x": 16.8,
+     "y": 902,
+     "pop": 3721,
+     "z": -3.9
+    },
+    {
+     "code": "39478",
+     "nom": "Saint-Claude",
+     "x": 20.5,
+     "y": 857,
+     "pop": 8386,
+     "z": -3.8
+    },
+    {
+     "code": "42218",
+     "nom": "Saint-Étienne",
+     "x": 10.7,
+     "y": 1259,
+     "pop": 173136,
+     "z": -3.7
+    },
+    {
+     "code": "90010",
+     "nom": "Belfort",
+     "x": 12.7,
+     "y": 1312,
+     "pop": 45912,
+     "z": -3.5
+    },
+    {
+     "code": "25388",
+     "nom": "Montbéliard",
+     "x": 20.6,
+     "y": 1071,
+     "pop": 24672,
+     "z": -3.5
+    },
+    {
+     "code": "97120",
+     "nom": "Pointe-à-Pitre",
+     "x": 12.0,
+     "y": 1389,
+     "pop": 15040,
+     "z": -3.5
+    },
+    {
+     "code": "71076",
+     "nom": "Chalon-sur-Saône",
+     "x": 12.3,
+     "y": 1400,
+     "pop": 45102,
+     "z": -3.4
+    },
+    {
+     "code": "01269",
+     "nom": "Nantua",
+     "x": 21.1,
+     "y": 1181,
+     "pop": 3416,
+     "z": -3.4
+    }
+   ],
+   "variantes": [
+    {
+     "a": "prix_m2",
+     "b": "proprietaires",
+     "r": -0.376
+    },
+    {
+     "a": "revenu",
+     "b": "hlm",
+     "r": -0.373
+    }
+   ]
+  },
+  {
+   "id": "cadres__maisons",
+   "y": "cadres",
+   "x": "maisons",
+   "dimensions": [
+    "pcs",
+    "logement"
+   ],
+   "r_communes": -0.572,
+   "r_dept": -0.782,
+   "n_communes": 34608,
+   "force": "forte",
+   "question": "Les cadres, en appartement plutôt qu'en pavillon ?",
+   "lecture": "Entre communes, Cadres et Maisons individuelles évoluent en sens inverse (corrélation -0.57, relation forte).",
+   "dessus": [
+    {
+     "code": "78571",
+     "nom": "Saint-Nom-la-Bretèche",
+     "x": 82.0,
+     "y": 62.2,
+     "pop": 4965,
+     "z": 5.0
+    },
+    {
+     "code": "78650",
+     "nom": "Le Vésinet",
+     "x": 42.9,
+     "y": 63.1,
+     "pop": 15554,
+     "z": 4.5
+    },
+    {
+     "code": "78688",
+     "nom": "Voisins-le-Bretonneux",
+     "x": 59.7,
+     "y": 58.8,
+     "pop": 10624,
+     "z": 4.3
+    },
+    {
+     "code": "77037",
+     "nom": "Bois-le-Roi",
+     "x": 86.2,
+     "y": 55.1,
+     "pop": 6072,
+     "z": 4.3
+    },
+    {
+     "code": "91471",
+     "nom": "Orsay",
+     "x": 46.0,
+     "y": 59.5,
+     "pop": 16498,
+     "z": 4.2
+    },
+    {
+     "code": "78672",
+     "nom": "Villennes-sur-Seine",
+     "x": 59.1,
+     "y": 57.4,
+     "pop": 5952,
+     "z": 4.2
+    },
+    {
+     "code": "78224",
+     "nom": "L'Étang-la-Ville",
+     "x": 60.0,
+     "y": 57.1,
+     "pop": 5157,
+     "z": 4.1
+    },
+    {
+     "code": "78575",
+     "nom": "Saint-Rémy-lès-Chevreuse",
+     "x": 73.8,
+     "y": 54.6,
+     "pop": 7747,
+     "z": 4.1
+    }
+   ],
+   "dessous": [],
+   "variantes": [
+    {
+     "a": "diplome_sup",
+     "b": "maisons",
+     "r": -0.517
+    },
+    {
+     "a": "maisons",
+     "b": "ouvriers",
+     "r": 0.431
+    },
+    {
+     "a": "proprietaires",
+     "b": "cadres",
+     "r": -0.367
+    }
+   ]
+  },
+  {
+   "id": "res_secondaires__ages65",
+   "y": "res_secondaires",
+   "x": "ages65",
+   "dimensions": [
+    "logement",
+    "demographie"
+   ],
+   "r_communes": 0.507,
+   "r_dept": 0.505,
+   "n_communes": 34688,
+   "force": "forte",
+   "question": "Les communes de résidences secondaires sont-elles aussi celles des retraités ?",
+   "lecture": "Entre communes, Résidences secondaires et 65 ans et plus évoluent ensemble (corrélation +0.51, relation forte).",
+   "dessus": [
+    {
+     "code": "73257",
+     "nom": "Les Belleville",
+     "x": 15.1,
+     "y": 88.3,
+     "pop": 3498,
+     "z": 6.5
+    },
+    {
+     "code": "73227",
+     "nom": "Courchevel",
+     "x": 16.8,
+     "y": 84.4,
+     "pop": 2290,
+     "z": 6.1
+    },
+    {
+     "code": "73150",
+     "nom": "La Plagne Tarentaise",
+     "x": 17.2,
+     "y": 83.8,
+     "pop": 3836,
+     "z": 6.0
+    },
+    {
+     "code": "74191",
+     "nom": "Morzine",
+     "x": 25.3,
+     "y": 86.1,
+     "pop": 2658,
+     "z": 5.6
+    },
+    {
+     "code": "2A139",
+     "nom": "Lecci",
+     "x": 14.2,
+     "y": 73.2,
+     "pop": 2134,
+     "z": 5.4
+    },
+    {
+     "code": "74136",
+     "nom": "Le Grand-Bornand",
+     "x": 22.5,
+     "y": 80.5,
+     "pop": 2050,
+     "z": 5.3
+    },
+    {
+     "code": "73290",
+     "nom": "Val-Cenis",
+     "x": 24.7,
+     "y": 78.2,
+     "pop": 2112,
+     "z": 5.0
+    },
+    {
+     "code": "73054",
+     "nom": "Bourg-Saint-Maurice",
+     "x": 20.0,
+     "y": 72.0,
+     "pop": 7270,
+     "z": 4.9
+    }
+   ],
+   "dessous": [],
+   "variantes": [
+    {
+     "a": "hlm",
+     "b": "natalite",
+     "r": 0.493
+    },
+    {
+     "a": "proprietaires",
+     "b": "natalite",
+     "r": -0.464
+    },
+    {
+     "a": "res_secondaires",
+     "b": "jeunes",
+     "r": -0.435
+    },
+    {
+     "a": "maisons",
+     "b": "natalite",
+     "r": -0.425
+    },
+    {
+     "a": "hlm",
+     "b": "ages65",
+     "r": -0.363
+    },
+    {
+     "a": "res_secondaires",
+     "b": "natalite",
+     "r": -0.35
+    }
+   ]
+  },
+  {
+   "id": "ips_college_public__hlm",
+   "y": "ips_college_public",
+   "x": "hlm",
+   "dimensions": [
+    "ecole",
+    "logement"
+   ],
+   "r_communes": -0.47,
+   "r_dept": -0.196,
+   "n_communes": 3581,
+   "force": "nette",
+   "question": "Plus de HLM dans la commune, collège au public moins favorisé ?",
+   "lecture": "Entre communes, IPS (collèges) et Logement social (HLM) évoluent en sens inverse (corrélation -0.47, relation nette).",
+   "dessus": [
+    {
+     "code": "78117",
+     "nom": "Buc",
+     "x": 14.0,
+     "y": 155.5,
+     "pop": 5816,
+     "z": 4.8
+    },
+    {
+     "code": "92071",
+     "nom": "Sceaux",
+     "x": 20.7,
+     "y": 146.5,
+     "pop": 20884,
+     "z": 4.3
+    },
+    {
+     "code": "78650",
+     "nom": "Le Vésinet",
+     "x": 6.7,
+     "y": 147.7,
+     "pop": 15554,
+     "z": 3.8
+    },
+    {
+     "code": "92064",
+     "nom": "Saint-Cloud",
+     "x": 11.5,
+     "y": 144.0,
+     "pop": 29855,
+     "z": 3.7
+    },
+    {
+     "code": "06152",
+     "nom": "Valbonne",
+     "x": 13.7,
+     "y": 143.0,
+     "pop": 11939,
+     "z": 3.7
+    },
+    {
+     "code": "78686",
+     "nom": "Viroflay",
+     "x": 12.3,
+     "y": 142.8,
+     "pop": 17237,
+     "z": 3.6
+    },
+    {
+     "code": "94067",
+     "nom": "Saint-Mandé",
+     "x": 13.1,
+     "y": 142.4,
+     "pop": 21071,
+     "z": 3.6
+    },
+    {
+     "code": "78160",
+     "nom": "Chevreuse",
+     "x": 10.6,
+     "y": 143.4,
+     "pop": 5502,
+     "z": 3.6
+    }
+   ],
+   "dessous": [
+    {
+     "code": "97353",
+     "nom": "Maripasoula",
+     "x": 0.8,
+     "y": 69.5,
+     "pop": 9579,
+     "z": -3.5
+    },
+    {
+     "code": "97356",
+     "nom": "Camopi",
+     "x": 0.0,
+     "y": 71.1,
+     "pop": 2189,
+     "z": -3.3
+    },
+    {
+     "code": "97357",
+     "nom": "Grand-Santi",
+     "x": 1.0,
+     "y": 71.1,
+     "pop": 9668,
+     "z": -3.3
+    },
+    {
+     "code": "97360",
+     "nom": "Apatou",
+     "x": 2.0,
+     "y": 71.2,
+     "pop": 10306,
+     "z": -3.3
+    },
+    {
+     "code": "97308",
+     "nom": "Saint-Georges",
+     "x": 12.0,
+     "y": 68.0,
+     "pop": 4915,
+     "z": -3.1
+    },
+    {
+     "code": "02095",
+     "nom": "Bohain-en-Vermandois",
+     "x": 11.0,
+     "y": 69.2,
+     "pop": 5605,
+     "z": -3.1
+    },
+    {
+     "code": "97306",
+     "nom": "Mana",
+     "x": 7.1,
+     "y": 71.4,
+     "pop": 10957,
+     "z": -3.0
+    },
+    {
+     "code": "97362",
+     "nom": "Papaichton",
+     "x": 0.5,
+     "y": 74.7,
+     "pop": 5006,
+     "z": -3.0
+    }
+   ],
+   "variantes": [
+    {
+     "a": "ips_college_public",
+     "b": "proprietaires",
+     "r": 0.44
+    },
+    {
+     "a": "ips_ecole_public",
+     "b": "hlm",
+     "r": -0.433
+    },
+    {
+     "a": "ips_lycee_public",
+     "b": "hlm",
+     "r": -0.424
+    },
+    {
+     "a": "ips_ecole_public",
+     "b": "proprietaires",
+     "r": 0.41
+    },
+    {
+     "a": "ips_ecole_public",
+     "b": "vacants",
+     "r": -0.374
+    }
+   ],
+   "note": "L'IPS mesure le milieu social des élèves, pas la qualité du collège : un IPS bas n'est pas un collège qui échoue."
+  },
+  {
+   "id": "ips_lycee_public__jeunes",
+   "y": "ips_lycee_public",
+   "x": "jeunes",
+   "dimensions": [
+    "ecole",
+    "demographie"
+   ],
+   "r_communes": -0.436,
+   "r_dept": -0.405,
+   "n_communes": 1193,
+   "force": "nette",
+   "question": "Dans les communes les plus jeunes, des lycées au public moins favorisé ?",
+   "lecture": "Entre communes, IPS (lycées) et Jeunes (0-14 ans) évoluent en sens inverse (corrélation -0.44, relation nette).",
+   "dessus": [
+    {
+     "code": "78117",
+     "nom": "Buc",
+     "x": 17.7,
+     "y": 160.0,
+     "pop": 5816,
+     "z": 4.6
+    },
+    {
+     "code": "91471",
+     "nom": "Orsay",
+     "x": 13.8,
+     "y": 152.0,
+     "pop": 16498,
+     "z": 3.8
+    },
+    {
+     "code": "78372",
+     "nom": "Marly-le-Roi",
+     "x": 18.1,
+     "y": 147.3,
+     "pop": 16756,
+     "z": 3.7
+    },
+    {
+     "code": "78650",
+     "nom": "Le Vésinet",
+     "x": 18.0,
+     "y": 146.0,
+     "pop": 15554,
+     "z": 3.6
+    },
+    {
+     "code": "91272",
+     "nom": "Gif-sur-Yvette",
+     "x": 15.7,
+     "y": 147.5,
+     "pop": 22544,
+     "z": 3.5
+    },
+    {
+     "code": "06152",
+     "nom": "Valbonne",
+     "x": 16.6,
+     "y": 142.6,
+     "pop": 11939,
+     "z": 3.2
+    },
+    {
+     "code": "91338",
+     "nom": "Limours",
+     "x": 17.2,
+     "y": 141.1,
+     "pop": 6517,
+     "z": 3.1
+    },
+    {
+     "code": "38229",
+     "nom": "Meylan",
+     "x": 16.2,
+     "y": 141.2,
+     "pop": 18770,
+     "z": 3.1
+    }
+   ],
+   "dessous": [],
+   "variantes": [
+    {
+     "a": "ips_lycee_public",
+     "b": "natalite",
+     "r": -0.387
+    },
+    {
+     "a": "ips_college_public",
+     "b": "natalite",
+     "r": -0.363
+    }
+   ],
+   "note": "Les communes jeunes sont souvent périurbaines ou populaires : les familles s'installent où le logement est accessible. C'est cette géographie que la relation capte."
+  },
+  {
+   "id": "ips_lycee_public__idp",
+   "y": "ips_lycee_public",
+   "x": "idp",
+   "dimensions": [
+    "ecole",
+    "politique"
+   ],
+   "r_communes": -0.36,
+   "r_dept": -0.436,
+   "n_communes": 1193,
+   "force": "nette",
+   "question": "Là où les candidats sont plus divers, des lycées au public moins favorisé ?",
+   "lecture": "Entre communes, IPS (lycées) et Diversité des candidats évoluent en sens inverse (corrélation -0.36, relation nette).",
+   "dessus": [
+    {
+     "code": "78117",
+     "nom": "Buc",
+     "x": 3.8,
+     "y": 160.0,
+     "pop": 5816,
+     "z": 4.4
+    },
+    {
+     "code": "91471",
+     "nom": "Orsay",
+     "x": 16.0,
+     "y": 152.0,
+     "pop": 16498,
+     "z": 4.1
+    },
+    {
+     "code": "91272",
+     "nom": "Gif-sur-Yvette",
+     "x": 7.0,
+     "y": 147.5,
+     "pop": 22544,
+     "z": 3.5
+    },
+    {
+     "code": "78372",
+     "nom": "Marly-le-Roi",
+     "x": 2.7,
+     "y": 147.3,
+     "pop": 16756,
+     "z": 3.4
+    },
+    {
+     "code": "78650",
+     "nom": "Le Vésinet",
+     "x": 5.5,
+     "y": 146.0,
+     "pop": 15554,
+     "z": 3.4
+    },
+    {
+     "code": "06152",
+     "nom": "Valbonne",
+     "x": 12.1,
+     "y": 142.6,
+     "pop": 11939,
+     "z": 3.3
+    },
+    {
+     "code": "91338",
+     "nom": "Limours",
+     "x": 9.3,
+     "y": 141.1,
+     "pop": 6517,
+     "z": 3.1
+    },
+    {
+     "code": "38229",
+     "nom": "Meylan",
+     "x": 4.6,
+     "y": 141.2,
+     "pop": 18770,
+     "z": 3.0
+    }
+   ],
+   "dessous": [
+    {
+     "code": "59324",
+     "nom": "Jeumont",
+     "x": 6.5,
+     "y": 68.7,
+     "pop": 10160,
+     "z": -2.6
+    }
+   ],
+   "variantes": [
+    {
+     "a": "ips_college_public",
+     "b": "idp",
+     "r": -0.34
+    }
+   ],
+   "note": "Les deux indicateurs décrivent la même géographie sociale, celle des villes populaires : la relation ne dit rien d'un lien entre diversité et école."
+  },
+  {
+   "id": "cadres__ages65",
+   "y": "cadres",
+   "x": "ages65",
+   "dimensions": [
+    "pcs",
+    "demographie"
+   ],
+   "r_communes": -0.329,
+   "r_dept": -0.595,
+   "n_communes": 34611,
+   "force": "nette",
+   "question": "« Cadres » baisse quand « 65 ans et plus » monte. Partout ?",
+   "lecture": "Entre communes, Cadres et 65 ans et plus évoluent en sens inverse (corrélation -0.33, relation nette).",
+   "dessus": [
+    {
+     "code": "78650",
+     "nom": "Le Vésinet",
+     "x": 20.7,
+     "y": 63.1,
+     "pop": 15554,
+     "z": 5.0
+    },
+    {
+     "code": "92064",
+     "nom": "Saint-Cloud",
+     "x": 18.9,
+     "y": 62.9,
+     "pop": 29855,
+     "z": 5.0
+    },
+    {
+     "code": "78571",
+     "nom": "Saint-Nom-la-Bretèche",
+     "x": 23.1,
+     "y": 62.2,
+     "pop": 4965,
+     "z": 5.0
+    },
+    {
+     "code": "75105",
+     "nom": "Paris 5e arr.",
+     "x": 19.4,
+     "y": 60.4,
+     "pop": 55252,
+     "z": 4.7
+    },
+    {
+     "code": "75109",
+     "nom": "Paris 9e arr.",
+     "x": 14.1,
+     "y": 61.0,
+     "pop": 57271,
+     "z": 4.7
+    },
+    {
+     "code": "92014",
+     "nom": "Bourg-la-Reine",
+     "x": 18.4,
+     "y": 60.0,
+     "pop": 21019,
+     "z": 4.7
+    },
+    {
+     "code": "94080",
+     "nom": "Vincennes",
+     "x": 16.4,
+     "y": 60.0,
+     "pop": 48193,
+     "z": 4.7
+    },
+    {
+     "code": "91471",
+     "nom": "Orsay",
+     "x": 18.1,
+     "y": 59.5,
+     "pop": 16498,
+     "z": 4.6
+    }
+   ],
+   "dessous": [],
+   "variantes": [
+    {
+     "a": "diplome_sup",
+     "b": "ages65",
+     "r": -0.321
+    }
+   ]
+  }
+ ]
+}

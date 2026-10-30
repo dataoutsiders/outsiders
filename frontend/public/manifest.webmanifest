@@ -1,0 +1,20 @@
+{
+  "name": "Outsiders : comprendre la France par ses angles morts",
+  "short_name": "Outsiders",
+  "description": "Les idées reçues sur la France face aux données publiques, la carte des outsiders et une fiche pour chaque territoire.",
+  "lang": "fr",
+  "start_url": "/?source=application",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0063CB",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Vrai ou faux, le fil", "short_name": "Le fil", "url": "/fil", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "La carte des outsiders", "short_name": "La carte", "url": "/atlas", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

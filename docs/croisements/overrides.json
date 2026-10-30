@@ -1,0 +1,46 @@
+{
+  "ips_ecole_public__revenu": {
+    "question": "Dis-moi le revenu de ta commune, je te dirai le public de ton école ?",
+    "note": "Les communes très en dessous du pronostic sont presque toutes frontalières de Genève : les salaires suisses gonflent le revenu local sans changer le profil social des écoles. L'écart dit ici « frontière », pas « école qui décroche »."
+  },
+  "prix_m2__cadres": {
+    "question": "L'immobilier flambe-t-il seulement là où vivent les cadres ?",
+    "note": "Les communes bien au-dessus du pronostic sont souvent touristiques ou littorales : le prix y suit les acheteurs extérieurs, pas les habitants."
+  },
+  "ips_ecole_public__diplome_sup": {
+    "question": "Communes diplômées, écoles au public favorisé ?"
+  },
+  "idp__natalite": {
+    "question": "Les candidats issus de la diversité se présentent-ils dans les communes les plus jeunes ?",
+    "note": "L'IDP mesure la diversité des candidats aux municipales 2026, pas celle des habitants. La natalité signale des communes jeunes, souvent urbaines : une relation de géographie démographique, pas une cause."
+  },
+  "idp__hlm": {
+    "question": "Plus de logement social, plus de candidats issus de la diversité ?",
+    "note": "Diversité des candidats, pas des habitants : la relation dit où la diversité accède à la candidature, pas un lien de cause."
+  },
+  "prix_m2__maisons": {
+    "question": "La France des maisons est-elle celle de l'immobilier abordable ?"
+  },
+  "cadres__maisons": {
+    "question": "Les cadres, en appartement plutôt qu'en pavillon ?"
+  },
+  "res_secondaires__ages65": {
+    "question": "Les communes de résidences secondaires sont-elles aussi celles des retraités ?"
+  },
+  "ips_college_public__hlm": {
+    "question": "Plus de HLM dans la commune, collège au public moins favorisé ?",
+    "note": "L'IPS mesure le milieu social des élèves, pas la qualité du collège : un IPS bas n'est pas un collège qui échoue."
+  },
+  "ips_lycee_public__jeunes": {
+    "question": "Dans les communes les plus jeunes, des lycées au public moins favorisé ?",
+    "note": "Les communes jeunes sont souvent périurbaines ou populaires : les familles s'installent où le logement est accessible. C'est cette géographie que la relation capte."
+  },
+  "ips_lycee_public__idp": {
+    "question": "Là où les candidats sont plus divers, des lycées au public moins favorisé ?",
+    "note": "Les deux indicateurs décrivent la même géographie sociale, celle des villes populaires : la relation ne dit rien d'un lien entre diversité et école."
+  },
+  "diplome_sup__ages65": {
+    "question": "Les communes âgées sont-elles aussi les moins diplômées ?",
+    "note": "Deux mécanismes se combinent : les générations anciennes sont moins souvent diplômées du supérieur, et les jeunes diplômés partent vers les métropoles."
+  }
+}

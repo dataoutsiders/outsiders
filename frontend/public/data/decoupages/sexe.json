@@ -1,0 +1,25 @@
+{
+  "id": "sexe",
+  "note": "Femmes et hommes (sexe administratif). Données INSEE, chaque indicateur daté et sourcé. Les millésimes diffèrent selon l'indicateur (de 2019 à 2025).",
+  "sources": {
+    "salaire_eqtp": { "label": "Insee Focus n°377 (2024)", "full": "Insee Focus n°377, Écart de salaire entre femmes et hommes en 2024 (secteur privé, équivalent temps plein).", "url": "https://www.insee.fr/fr/statistiques/8743657" },
+    "taux_emploi": { "label": "Insee, enquête Emploi 2025", "full": "Insee, enquête Emploi 2025, Emploi, chômage, revenus du travail (édition 2026), fiche « Caractéristiques des personnes en emploi » (taux d'emploi des 15-64 ans, France hors Mayotte, logement ordinaire).", "url": "https://www.insee.fr/fr/statistiques/8733041" },
+    "temps_partiel": { "label": "Insee, enquête Emploi 2025", "full": "Insee, enquête Emploi 2025, Emploi, chômage, revenus du travail (édition 2026), fiche « Temps partiel » (salariés de 15 ans ou plus hors apprentis, emploi principal).", "url": "https://www.insee.fr/fr/statistiques/8733075" },
+    "esperance_vie": { "label": "Insee, Bilan démographique 2025", "full": "Insee Première n° 2087, Bilan démographique 2025 (espérance de vie à la naissance, données provisoires).", "url": "https://www.insee.fr/fr/statistiques/8719824" },
+    "pension": { "label": "Insee, Femmes et hommes (2019)", "full": "Insee, Femmes et hommes, l'égalité en question (retraites, données 2019).", "url": "https://www.insee.fr/fr/statistiques/6047747" }
+  },
+  "categories": [
+    {
+      "id": "femmes",
+      "nom": "Femmes",
+      "couleur": "#EC4899",
+      "valeurs": { "salaire_eqtp": 2514, "taux_emploi": 66.7, "temps_partiel": 26.6, "esperance_vie": 85.9, "pension": 981 }
+    },
+    {
+      "id": "hommes",
+      "nom": "Hommes",
+      "couleur": "#3B82F6",
+      "valeurs": { "salaire_eqtp": 2891, "taux_emploi": 71.9, "temps_partiel": 8.4, "esperance_vie": 80.3, "pension": 1600 }
+    }
+  ]
+}

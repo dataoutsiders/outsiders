@@ -1,0 +1,505 @@
+{
+ "generated": "2026-07-05",
+ "legislature": 17,
+ "titre": "Qui représente qui ? L'Assemblée au miroir de la France",
+ "sources": {
+  "assemblee": {
+   "label": "Open data Assemblée nationale (députés en exercice, 17e législature)",
+   "url": "https://data.assemblee-nationale.fr/acteurs/deputes-en-exercice"
+  },
+  "pcs": {
+   "label": "INSEE, enquête Emploi 2023 (actifs occupés par catégorie socioprofessionnelle)",
+   "url": "https://www.insee.fr/fr/statistiques/7767045"
+  },
+  "femmes": {
+   "label": "INSEE, population par sexe et âge au 1er janvier 2025",
+   "url": "https://www.insee.fr/fr/statistiques/2381474"
+  },
+  "idp": {
+   "label": "Kheddache M., L'Horty Y. (2023), Indice de Diversité Patronymique, rapport TEPP",
+   "url": "https://www.tepp.eu/"
+  }
+ },
+ "references": {
+  "pcs": {
+   "agriculteurs": 1.5,
+   "artisans": 6.7,
+   "cadres": 22.4,
+   "intermediaires": 25.1,
+   "employes": 25.2,
+   "ouvriers": 18.6
+  },
+  "femmes": 51.5,
+  "idp": 7.0
+ },
+ "pcs_labels": {
+  "agriculteurs": "Agriculteurs exploitants",
+  "artisans": "Artisans, commerçants, chefs d'entreprise",
+  "cadres": "Cadres et professions intellectuelles supérieures",
+  "intermediaires": "Professions intermédiaires",
+  "employes": "Employés",
+  "ouvriers": "Ouvriers",
+  "sans": "Sans profession déclarée"
+ },
+ "ensemble": {
+  "n": 577,
+  "femmes_pct": 37.8,
+  "age_moyen": 52.0,
+  "idp_pct": 4.2,
+  "idp_n_reconnus": 501,
+  "pcs": {
+   "agriculteurs": 2.6,
+   "artisans": 7.3,
+   "cadres": 66.4,
+   "intermediaires": 9.7,
+   "employes": 5.5,
+   "ouvriers": 1.0,
+   "sans": 7.5
+  },
+  "pcs_n": {
+   "agriculteurs": 15,
+   "artisans": 42,
+   "cadres": 383,
+   "intermediaires": 56,
+   "employes": 32,
+   "ouvriers": 6,
+   "sans": 43
+  },
+  "collaborateurs": {
+   "n": 2060,
+   "par_depute": 3.6,
+   "femmes_pct": 47.7,
+   "idp_pct": 6.4,
+   "idp_n_reconnus": 1697
+  }
+ },
+ "groupes": [
+  {
+   "sigle": "GDR",
+   "nom": "Gauche Démocrate et Républicaine",
+   "couleur": "#991B1B",
+   "n": 17,
+   "femmes_pct": 29.4,
+   "age_moyen": 51.6,
+   "idp_pct": 7.1,
+   "idp_n_reconnus": 14,
+   "pcs": {
+    "agriculteurs": 0.0,
+    "artisans": 0.0,
+    "cadres": 52.9,
+    "intermediaires": 29.4,
+    "employes": 17.6,
+    "ouvriers": 0.0,
+    "sans": 0.0
+   },
+   "pcs_n": {
+    "agriculteurs": 0,
+    "artisans": 0,
+    "cadres": 9,
+    "intermediaires": 5,
+    "employes": 3,
+    "ouvriers": 0,
+    "sans": 0
+   },
+   "collaborateurs": {
+    "n": 62,
+    "par_depute": 3.6,
+    "femmes_pct": 51.6,
+    "idp_pct": 10.4,
+    "idp_n_reconnus": 48
+   }
+  },
+  {
+   "sigle": "LFI-NFP",
+   "nom": "La France insoumise - Nouveau Front Populaire",
+   "couleur": "#DC2626",
+   "n": 71,
+   "femmes_pct": 42.3,
+   "age_moyen": 44.6,
+   "idp_pct": 10.8,
+   "idp_n_reconnus": 65,
+   "pcs": {
+    "agriculteurs": 0.0,
+    "artisans": 1.4,
+    "cadres": 59.2,
+    "intermediaires": 14.1,
+    "employes": 14.1,
+    "ouvriers": 4.2,
+    "sans": 7.0
+   },
+   "pcs_n": {
+    "agriculteurs": 0,
+    "artisans": 1,
+    "cadres": 42,
+    "intermediaires": 10,
+    "employes": 10,
+    "ouvriers": 3,
+    "sans": 5
+   },
+   "collaborateurs": {
+    "n": 283,
+    "par_depute": 4.0,
+    "femmes_pct": 48.4,
+    "idp_pct": 12.2,
+    "idp_n_reconnus": 229
+   }
+  },
+  {
+   "sigle": "ECOS",
+   "nom": "Écologiste et Social",
+   "couleur": "#16A34A",
+   "n": 38,
+   "femmes_pct": 47.4,
+   "age_moyen": 49.9,
+   "idp_pct": 6.2,
+   "idp_n_reconnus": 32,
+   "pcs": {
+    "agriculteurs": 2.6,
+    "artisans": 2.6,
+    "cadres": 76.3,
+    "intermediaires": 7.9,
+    "employes": 0.0,
+    "ouvriers": 0.0,
+    "sans": 10.5
+   },
+   "pcs_n": {
+    "agriculteurs": 1,
+    "artisans": 1,
+    "cadres": 29,
+    "intermediaires": 3,
+    "employes": 0,
+    "ouvriers": 0,
+    "sans": 4
+   },
+   "collaborateurs": {
+    "n": 131,
+    "par_depute": 3.4,
+    "femmes_pct": 52.7,
+    "idp_pct": 5.8,
+    "idp_n_reconnus": 103
+   }
+  },
+  {
+   "sigle": "SOC",
+   "nom": "Socialistes et apparentés",
+   "couleur": "#EC4899",
+   "n": 68,
+   "femmes_pct": 39.7,
+   "age_moyen": 55.9,
+   "idp_pct": 8.9,
+   "idp_n_reconnus": 56,
+   "pcs": {
+    "agriculteurs": 2.9,
+    "artisans": 2.9,
+    "cadres": 79.4,
+    "intermediaires": 11.8,
+    "employes": 0.0,
+    "ouvriers": 0.0,
+    "sans": 2.9
+   },
+   "pcs_n": {
+    "agriculteurs": 2,
+    "artisans": 2,
+    "cadres": 54,
+    "intermediaires": 8,
+    "employes": 0,
+    "ouvriers": 0,
+    "sans": 2
+   },
+   "collaborateurs": {
+    "n": 235,
+    "par_depute": 3.5,
+    "femmes_pct": 50.6,
+    "idp_pct": 5.9,
+    "idp_n_reconnus": 185
+   }
+  },
+  {
+   "sigle": "LIOT",
+   "nom": "Libertés, Indépendants, Outre-mer et Territoires",
+   "couleur": "#0D9488",
+   "n": 23,
+   "femmes_pct": 21.7,
+   "age_moyen": 59.8,
+   "idp_pct": 0.0,
+   "idp_n_reconnus": 18,
+   "pcs": {
+    "agriculteurs": 0.0,
+    "artisans": 4.3,
+    "cadres": 91.3,
+    "intermediaires": 0.0,
+    "employes": 0.0,
+    "ouvriers": 0.0,
+    "sans": 4.3
+   },
+   "pcs_n": {
+    "agriculteurs": 0,
+    "artisans": 1,
+    "cadres": 21,
+    "intermediaires": 0,
+    "employes": 0,
+    "ouvriers": 0,
+    "sans": 1
+   },
+   "collaborateurs": {
+    "n": 86,
+    "par_depute": 3.7,
+    "femmes_pct": 54.7,
+    "idp_pct": 2.8,
+    "idp_n_reconnus": 72
+   }
+  },
+  {
+   "sigle": "DEM",
+   "nom": "Les Démocrates",
+   "couleur": "#F97316",
+   "n": 37,
+   "femmes_pct": 40.5,
+   "age_moyen": 57.8,
+   "idp_pct": 0.0,
+   "idp_n_reconnus": 35,
+   "pcs": {
+    "agriculteurs": 8.1,
+    "artisans": 8.1,
+    "cadres": 67.6,
+    "intermediaires": 8.1,
+    "employes": 2.7,
+    "ouvriers": 0.0,
+    "sans": 5.4
+   },
+   "pcs_n": {
+    "agriculteurs": 3,
+    "artisans": 3,
+    "cadres": 25,
+    "intermediaires": 3,
+    "employes": 1,
+    "ouvriers": 0,
+    "sans": 2
+   },
+   "collaborateurs": {
+    "n": 135,
+    "par_depute": 3.6,
+    "femmes_pct": 53.3,
+    "idp_pct": 8.0,
+    "idp_n_reconnus": 112
+   }
+  },
+  {
+   "sigle": "EPR",
+   "nom": "Ensemble pour la République",
+   "couleur": "#EAB308",
+   "n": 91,
+   "femmes_pct": 48.4,
+   "age_moyen": 53.1,
+   "idp_pct": 5.3,
+   "idp_n_reconnus": 75,
+   "pcs": {
+    "agriculteurs": 3.3,
+    "artisans": 13.2,
+    "cadres": 64.8,
+    "intermediaires": 7.7,
+    "employes": 2.2,
+    "ouvriers": 0.0,
+    "sans": 8.8
+   },
+   "pcs_n": {
+    "agriculteurs": 3,
+    "artisans": 12,
+    "cadres": 59,
+    "intermediaires": 7,
+    "employes": 2,
+    "ouvriers": 0,
+    "sans": 8
+   },
+   "collaborateurs": {
+    "n": 292,
+    "par_depute": 3.2,
+    "femmes_pct": 51.4,
+    "idp_pct": 4.8,
+    "idp_n_reconnus": 229
+   }
+  },
+  {
+   "sigle": "HOR",
+   "nom": "Horizons & Indépendants",
+   "couleur": "#38BDF8",
+   "n": 35,
+   "femmes_pct": 31.4,
+   "age_moyen": 55.2,
+   "idp_pct": 3.4,
+   "idp_n_reconnus": 29,
+   "pcs": {
+    "agriculteurs": 0.0,
+    "artisans": 14.3,
+    "cadres": 62.9,
+    "intermediaires": 17.1,
+    "employes": 2.9,
+    "ouvriers": 0.0,
+    "sans": 2.9
+   },
+   "pcs_n": {
+    "agriculteurs": 0,
+    "artisans": 5,
+    "cadres": 22,
+    "intermediaires": 6,
+    "employes": 1,
+    "ouvriers": 0,
+    "sans": 1
+   },
+   "collaborateurs": {
+    "n": 112,
+    "par_depute": 3.2,
+    "femmes_pct": 55.4,
+    "idp_pct": 5.3,
+    "idp_n_reconnus": 95
+   }
+  },
+  {
+   "sigle": "DR",
+   "nom": "Droite Républicaine",
+   "couleur": "#2563EB",
+   "n": 48,
+   "femmes_pct": 33.3,
+   "age_moyen": 54.1,
+   "idp_pct": 0.0,
+   "idp_n_reconnus": 41,
+   "pcs": {
+    "agriculteurs": 6.2,
+    "artisans": 8.3,
+    "cadres": 70.8,
+    "intermediaires": 0.0,
+    "employes": 4.2,
+    "ouvriers": 0.0,
+    "sans": 10.4
+   },
+   "pcs_n": {
+    "agriculteurs": 3,
+    "artisans": 4,
+    "cadres": 34,
+    "intermediaires": 0,
+    "employes": 2,
+    "ouvriers": 0,
+    "sans": 5
+   },
+   "collaborateurs": {
+    "n": 183,
+    "par_depute": 3.8,
+    "femmes_pct": 54.6,
+    "idp_pct": 5.2,
+    "idp_n_reconnus": 154
+   }
+  },
+  {
+   "sigle": "UDDPLR",
+   "nom": "Union des droites pour la République",
+   "couleur": "#4338CA",
+   "n": 17,
+   "femmes_pct": 17.6,
+   "age_moyen": 44.8,
+   "idp_pct": 7.1,
+   "idp_n_reconnus": 14,
+   "pcs": {
+    "agriculteurs": 5.9,
+    "artisans": 29.4,
+    "cadres": 52.9,
+    "intermediaires": 0.0,
+    "employes": 0.0,
+    "ouvriers": 0.0,
+    "sans": 11.8
+   },
+   "pcs_n": {
+    "agriculteurs": 1,
+    "artisans": 5,
+    "cadres": 9,
+    "intermediaires": 0,
+    "employes": 0,
+    "ouvriers": 0,
+    "sans": 2
+   },
+   "collaborateurs": {
+    "n": 53,
+    "par_depute": 3.1,
+    "femmes_pct": 35.8,
+    "idp_pct": 4.7,
+    "idp_n_reconnus": 43
+   }
+  },
+  {
+   "sigle": "RN",
+   "nom": "Rassemblement National",
+   "couleur": "#1E3A8A",
+   "n": 122,
+   "femmes_pct": 32.0,
+   "age_moyen": 49.8,
+   "idp_pct": 0.0,
+   "idp_n_reconnus": 112,
+   "pcs": {
+    "agriculteurs": 1.6,
+    "artisans": 4.9,
+    "cadres": 59.0,
+    "intermediaires": 11.5,
+    "employes": 10.7,
+    "ouvriers": 2.5,
+    "sans": 9.8
+   },
+   "pcs_n": {
+    "agriculteurs": 2,
+    "artisans": 6,
+    "cadres": 72,
+    "intermediaires": 14,
+    "employes": 13,
+    "ouvriers": 3,
+    "sans": 12
+   },
+   "collaborateurs": {
+    "n": 450,
+    "par_depute": 3.7,
+    "femmes_pct": 33.3,
+    "idp_pct": 5.3,
+    "idp_n_reconnus": 398
+   }
+  },
+  {
+   "sigle": "NI",
+   "nom": "Non inscrit",
+   "couleur": "#9CA3AF",
+   "n": 10,
+   "femmes_pct": 50.0,
+   "age_moyen": 57.7,
+   "idp_pct": 0.0,
+   "idp_n_reconnus": 10,
+   "pcs": {
+    "agriculteurs": 0.0,
+    "artisans": 20.0,
+    "cadres": 70.0,
+    "intermediaires": 0.0,
+    "employes": 0.0,
+    "ouvriers": 0.0,
+    "sans": 10.0
+   },
+   "pcs_n": {
+    "agriculteurs": 0,
+    "artisans": 2,
+    "cadres": 7,
+    "intermediaires": 0,
+    "employes": 0,
+    "ouvriers": 0,
+    "sans": 1
+   },
+   "collaborateurs": {
+    "n": 38,
+    "par_depute": 3.8,
+    "femmes_pct": 65.8,
+    "idp_pct": 3.4,
+    "idp_n_reconnus": 29
+   }
+  }
+ ],
+ "notes": [
+  "La catégorie socioprofessionnelle est celle déclarée par le député (nomenclature INSEE fournie par l'AN), figée au moment du mandat.",
+  "La référence PCS porte sur les actifs occupés : « sans profession déclarée » n'a pas d'équivalent population.",
+  "L'IDP est un proxy attaché au nom, fiable en agrégé, bruité à l'individu ; il est calculé sur les noms reconnus par le référentiel.",
+  "Petits groupes : les pourcentages sur moins de 20 personnes sont indicatifs.",
+  "Les collaborateurs sont listés par l'AN avec civilité et nom : parité et diversité mesurables, mais ni carrières ni conditions de travail."
+ ]
+}

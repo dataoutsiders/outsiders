@@ -1,0 +1,1441 @@
+{
+ "id": "pays",
+ "note": "30 pays : Union européenne (27), Islande, Norvège, Suisse. Le Royaume-Uni ne publie plus dans Eurostat. Millésimes 2024-2025 selon l'indicateur. Repère affiché : moyenne UE27. Les définitions sont harmonisées par Eurostat, mais chaque enquête garde ses limites nationales.",
+ "references": {
+  "dep_publiques": 49.4,
+  "pauvrete_enfants": 24.3,
+  "esperance_vie": 81.5,
+  "mortalite_infantile": 3.5,
+  "decrochage": 9.1,
+  "gini": 29.2,
+  "emploi_seniors": 66.4,
+  "heures_tp": 40.3
+ },
+ "sources": {
+  "dep_publiques": {
+   "label": "Eurostat, gov_10a_main (2025)",
+   "full": "Eurostat, Dépenses publiques (% du PIB), jeu gov_10a_main, millésime 2025.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/gov_10a_main/default/table?lang=fr"
+  },
+  "pauvrete_enfants": {
+   "label": "Eurostat, ilc_peps01n (2025)",
+   "full": "Eurostat, Enfants menacés de pauvreté ou d'exclusion (%), jeu ilc_peps01n, millésime 2025.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=fr"
+  },
+  "esperance_vie": {
+   "label": "Eurostat, demo_mlexpec (2024)",
+   "full": "Eurostat, Espérance de vie à la naissance (années), jeu demo_mlexpec, millésime 2024.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=fr"
+  },
+  "mortalite_infantile": {
+   "label": "Eurostat, demo_minfind (2024)",
+   "full": "Eurostat, Mortalité infantile (pour 1000 naissances), jeu demo_minfind, millésime 2024.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/demo_minfind/default/table?lang=fr"
+  },
+  "decrochage": {
+   "label": "Eurostat, edat_lfse_14 (2025)",
+   "full": "Eurostat, Décrochage scolaire des 18-24 ans (%), jeu edat_lfse_14, millésime 2025.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/edat_lfse_14/default/table?lang=fr"
+  },
+  "gini": {
+   "label": "Eurostat, ilc_di12 (2025)",
+   "full": "Eurostat, Inégalités de revenu (Gini, 0-100), jeu ilc_di12, millésime 2025.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/ilc_di12/default/table?lang=fr"
+  },
+  "emploi_seniors": {
+   "label": "Eurostat, lfsi_emp_a (2025)",
+   "full": "Eurostat, Emploi des 55-64 ans (%), jeu lfsi_emp_a, millésime 2025.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table?lang=fr"
+  },
+  "heures_tp": {
+   "label": "Eurostat, lfsa_ewhun2 (2025)",
+   "full": "Eurostat, Heures hebdomadaires des temps pleins (heures), jeu lfsa_ewhun2, millésime 2025.",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/lfsa_ewhun2/default/table?lang=fr"
+  }
+ },
+ "series": {
+  "dep_publiques": [
+   {
+    "a": 1995,
+    "fr": 56.1,
+    "ue": 53.5
+   },
+   {
+    "a": 1996,
+    "fr": 56.0,
+    "ue": 51.1
+   },
+   {
+    "a": 1997,
+    "fr": 55.6,
+    "ue": 49.7
+   },
+   {
+    "a": 1998,
+    "fr": 54.0,
+    "ue": 48.8
+   },
+   {
+    "a": 1999,
+    "fr": 53.7,
+    "ue": 48.4
+   },
+   {
+    "a": 2000,
+    "fr": 52.6,
+    "ue": 47.4
+   },
+   {
+    "a": 2001,
+    "fr": 52.8,
+    "ue": 47.4
+   },
+   {
+    "a": 2002,
+    "fr": 53.9,
+    "ue": 47.8
+   },
+   {
+    "a": 2003,
+    "fr": 54.4,
+    "ue": 48.1
+   },
+   {
+    "a": 2004,
+    "fr": 54.0,
+    "ue": 47.4
+   },
+   {
+    "a": 2005,
+    "fr": 54.3,
+    "ue": 47.2
+   },
+   {
+    "a": 2006,
+    "fr": 53.8,
+    "ue": 46.6
+   },
+   {
+    "a": 2007,
+    "fr": 53.6,
+    "ue": 45.8
+   },
+   {
+    "a": 2008,
+    "fr": 54.3,
+    "ue": 47.0
+   },
+   {
+    "a": 2009,
+    "fr": 58.0,
+    "ue": 50.9
+   },
+   {
+    "a": 2010,
+    "fr": 57.7,
+    "ue": 50.7
+   },
+   {
+    "a": 2011,
+    "fr": 57.0,
+    "ue": 49.3
+   },
+   {
+    "a": 2012,
+    "fr": 57.9,
+    "ue": 50.0
+   },
+   {
+    "a": 2013,
+    "fr": 58.6,
+    "ue": 50.0
+   },
+   {
+    "a": 2014,
+    "fr": 58.4,
+    "ue": 49.3
+   },
+   {
+    "a": 2015,
+    "fr": 57.6,
+    "ue": 48.3
+   },
+   {
+    "a": 2016,
+    "fr": 57.4,
+    "ue": 47.5
+   },
+   {
+    "a": 2017,
+    "fr": 57.7,
+    "ue": 46.9
+   },
+   {
+    "a": 2018,
+    "fr": 56.4,
+    "ue": 46.6
+   },
+   {
+    "a": 2019,
+    "fr": 55.3,
+    "ue": 46.6
+   },
+   {
+    "a": 2020,
+    "fr": 61.7,
+    "ue": 52.8
+   },
+   {
+    "a": 2021,
+    "fr": 59.5,
+    "ue": 51.1
+   },
+   {
+    "a": 2022,
+    "fr": 58.4,
+    "ue": 49.1
+   },
+   {
+    "a": 2023,
+    "fr": 56.8,
+    "ue": 48.8
+   },
+   {
+    "a": 2024,
+    "fr": 57.0,
+    "ue": 48.9
+   },
+   {
+    "a": 2025,
+    "fr": 57.3,
+    "ue": 49.4
+   }
+  ],
+  "pauvrete_enfants": [
+   {
+    "a": 2015,
+    "fr": 22.4,
+    "ue": 27.4
+   },
+   {
+    "a": 2016,
+    "fr": 23.8,
+    "ue": 27.1
+   },
+   {
+    "a": 2017,
+    "fr": 23.5,
+    "ue": 25.1
+   },
+   {
+    "a": 2018,
+    "fr": 24.0,
+    "ue": 23.9
+   },
+   {
+    "a": 2019,
+    "fr": 24.1,
+    "ue": 22.8
+   },
+   {
+    "a": 2020,
+    "fr": 23.6,
+    "ue": 24.1
+   },
+   {
+    "a": 2021,
+    "fr": 22.5,
+    "ue": 24.5
+   },
+   {
+    "a": 2022,
+    "fr": 27.1,
+    "ue": 24.8
+   },
+   {
+    "a": 2023,
+    "fr": 26.6,
+    "ue": 24.9
+   },
+   {
+    "a": 2024,
+    "fr": 26.2,
+    "ue": 24.2
+   },
+   {
+    "a": 2025,
+    "fr": 27.5,
+    "ue": 24.3
+   }
+  ],
+  "esperance_vie": [
+   {
+    "a": 1998,
+    "fr": 78.7,
+    "ue": null
+   },
+   {
+    "a": 1999,
+    "fr": 78.9,
+    "ue": null
+   },
+   {
+    "a": 2000,
+    "fr": 79.2,
+    "ue": null
+   },
+   {
+    "a": 2001,
+    "fr": 79.3,
+    "ue": null
+   },
+   {
+    "a": 2002,
+    "fr": 79.4,
+    "ue": 77.6
+   },
+   {
+    "a": 2003,
+    "fr": 79.3,
+    "ue": 77.7
+   },
+   {
+    "a": 2004,
+    "fr": 80.3,
+    "ue": 78.3
+   },
+   {
+    "a": 2005,
+    "fr": 80.3,
+    "ue": 78.4
+   },
+   {
+    "a": 2006,
+    "fr": 80.9,
+    "ue": 78.9
+   },
+   {
+    "a": 2007,
+    "fr": 81.3,
+    "ue": 79.1
+   },
+   {
+    "a": 2008,
+    "fr": 81.4,
+    "ue": 79.3
+   },
+   {
+    "a": 2009,
+    "fr": 81.5,
+    "ue": 79.5
+   },
+   {
+    "a": 2010,
+    "fr": 81.8,
+    "ue": 79.8
+   },
+   {
+    "a": 2011,
+    "fr": 82.3,
+    "ue": 80.1
+   },
+   {
+    "a": 2012,
+    "fr": 82.1,
+    "ue": 80.2
+   },
+   {
+    "a": 2013,
+    "fr": 82.4,
+    "ue": 80.5
+   },
+   {
+    "a": 2014,
+    "fr": 82.4,
+    "ue": 80.6
+   },
+   {
+    "a": 2015,
+    "fr": 82.1,
+    "ue": 80.5
+   },
+   {
+    "a": 2016,
+    "fr": 82.4,
+    "ue": 80.7
+   },
+   {
+    "a": 2017,
+    "fr": 82.4,
+    "ue": 80.7
+   },
+   {
+    "a": 2018,
+    "fr": 82.6,
+    "ue": 80.8
+   },
+   {
+    "a": 2019,
+    "fr": 82.7,
+    "ue": 81.1
+   },
+   {
+    "a": 2020,
+    "fr": 82.2,
+    "ue": 80.3
+   },
+   {
+    "a": 2021,
+    "fr": 82.2,
+    "ue": 80.0
+   },
+   {
+    "a": 2022,
+    "fr": 82.2,
+    "ue": 80.6
+   },
+   {
+    "a": 2023,
+    "fr": 82.9,
+    "ue": 81.2
+   },
+   {
+    "a": 2024,
+    "fr": 83.0,
+    "ue": 81.5
+   }
+  ],
+  "mortalite_infantile": [
+   {
+    "a": 1995,
+    "fr": null,
+    "ue": 7.7
+   },
+   {
+    "a": 1996,
+    "fr": 5.0,
+    "ue": 7.4
+   },
+   {
+    "a": 1997,
+    "fr": 4.9,
+    "ue": 6.9
+   },
+   {
+    "a": 1998,
+    "fr": 4.8,
+    "ue": 6.6
+   },
+   {
+    "a": 1999,
+    "fr": 4.4,
+    "ue": 6.2
+   },
+   {
+    "a": 2000,
+    "fr": 4.5,
+    "ue": 6.0
+   },
+   {
+    "a": 2001,
+    "fr": 4.6,
+    "ue": 5.8
+   },
+   {
+    "a": 2002,
+    "fr": 4.2,
+    "ue": 5.5
+   },
+   {
+    "a": 2003,
+    "fr": 4.2,
+    "ue": 5.2
+   },
+   {
+    "a": 2004,
+    "fr": 4.0,
+    "ue": 5.1
+   },
+   {
+    "a": 2005,
+    "fr": 3.8,
+    "ue": 4.8
+   },
+   {
+    "a": 2006,
+    "fr": 3.8,
+    "ue": 4.6
+   },
+   {
+    "a": 2007,
+    "fr": 3.8,
+    "ue": 4.4
+   },
+   {
+    "a": 2008,
+    "fr": 3.8,
+    "ue": 4.2
+   },
+   {
+    "a": 2009,
+    "fr": 3.9,
+    "ue": 4.2
+   },
+   {
+    "a": 2010,
+    "fr": 3.6,
+    "ue": 4.0
+   },
+   {
+    "a": 2011,
+    "fr": 3.5,
+    "ue": 3.8
+   },
+   {
+    "a": 2012,
+    "fr": 3.5,
+    "ue": 3.8
+   },
+   {
+    "a": 2013,
+    "fr": 3.6,
+    "ue": 3.7
+   },
+   {
+    "a": 2014,
+    "fr": 3.5,
+    "ue": 3.6
+   },
+   {
+    "a": 2015,
+    "fr": 3.7,
+    "ue": 3.6
+   },
+   {
+    "a": 2016,
+    "fr": 3.7,
+    "ue": 3.6
+   },
+   {
+    "a": 2017,
+    "fr": 3.9,
+    "ue": 3.5
+   },
+   {
+    "a": 2018,
+    "fr": 3.8,
+    "ue": 3.4
+   },
+   {
+    "a": 2019,
+    "fr": 3.8,
+    "ue": 3.4
+   },
+   {
+    "a": 2020,
+    "fr": 3.6,
+    "ue": 3.3
+   },
+   {
+    "a": 2021,
+    "fr": 3.7,
+    "ue": 3.2
+   },
+   {
+    "a": 2022,
+    "fr": 4.0,
+    "ue": 3.3
+   },
+   {
+    "a": 2023,
+    "fr": 4.0,
+    "ue": 3.3
+   },
+   {
+    "a": 2024,
+    "fr": 4.1,
+    "ue": 3.5
+   }
+  ],
+  "decrochage": [
+   {
+    "a": 1995,
+    "fr": 15.4,
+    "ue": null
+   },
+   {
+    "a": 1996,
+    "fr": 15.2,
+    "ue": null
+   },
+   {
+    "a": 1997,
+    "fr": 14.1,
+    "ue": null
+   },
+   {
+    "a": 1998,
+    "fr": 14.9,
+    "ue": null
+   },
+   {
+    "a": 1999,
+    "fr": 14.7,
+    "ue": null
+   },
+   {
+    "a": 2000,
+    "fr": 13.3,
+    "ue": null
+   },
+   {
+    "a": 2001,
+    "fr": 13.5,
+    "ue": null
+   },
+   {
+    "a": 2002,
+    "fr": 13.4,
+    "ue": 16.9
+   },
+   {
+    "a": 2003,
+    "fr": 12.7,
+    "ue": 16.4
+   },
+   {
+    "a": 2004,
+    "fr": 12.3,
+    "ue": 16.0
+   },
+   {
+    "a": 2005,
+    "fr": 12.5,
+    "ue": 15.6
+   },
+   {
+    "a": 2006,
+    "fr": 12.7,
+    "ue": 15.2
+   },
+   {
+    "a": 2007,
+    "fr": 12.8,
+    "ue": 14.7
+   },
+   {
+    "a": 2008,
+    "fr": 11.8,
+    "ue": 14.3
+   },
+   {
+    "a": 2009,
+    "fr": 12.4,
+    "ue": 14.0
+   },
+   {
+    "a": 2010,
+    "fr": 12.7,
+    "ue": 13.8
+   },
+   {
+    "a": 2011,
+    "fr": 12.3,
+    "ue": 13.2
+   },
+   {
+    "a": 2012,
+    "fr": 11.8,
+    "ue": 12.6
+   },
+   {
+    "a": 2013,
+    "fr": 9.7,
+    "ue": 11.8
+   },
+   {
+    "a": 2014,
+    "fr": 8.8,
+    "ue": 11.1
+   },
+   {
+    "a": 2015,
+    "fr": 9.2,
+    "ue": 11.0
+   },
+   {
+    "a": 2016,
+    "fr": 8.8,
+    "ue": 10.6
+   },
+   {
+    "a": 2017,
+    "fr": 8.8,
+    "ue": 10.5
+   },
+   {
+    "a": 2018,
+    "fr": 8.7,
+    "ue": 10.5
+   },
+   {
+    "a": 2019,
+    "fr": 8.2,
+    "ue": 10.1
+   },
+   {
+    "a": 2020,
+    "fr": 8.0,
+    "ue": 10.0
+   },
+   {
+    "a": 2021,
+    "fr": 7.8,
+    "ue": 9.7
+   },
+   {
+    "a": 2022,
+    "fr": 7.6,
+    "ue": 9.6
+   },
+   {
+    "a": 2023,
+    "fr": 7.6,
+    "ue": 9.6
+   },
+   {
+    "a": 2024,
+    "fr": 7.9,
+    "ue": 9.6
+   },
+   {
+    "a": 2025,
+    "fr": 7.2,
+    "ue": 9.1
+   }
+  ],
+  "gini": [
+   {
+    "a": 2014,
+    "fr": 29.2,
+    "ue": 30.9
+   },
+   {
+    "a": 2015,
+    "fr": 29.2,
+    "ue": 30.8
+   },
+   {
+    "a": 2016,
+    "fr": 29.3,
+    "ue": 30.6
+   },
+   {
+    "a": 2017,
+    "fr": 28.8,
+    "ue": 30.3
+   },
+   {
+    "a": 2018,
+    "fr": 28.5,
+    "ue": 30.4
+   },
+   {
+    "a": 2019,
+    "fr": 29.2,
+    "ue": 30.1
+   },
+   {
+    "a": 2020,
+    "fr": 29.2,
+    "ue": 30.0
+   },
+   {
+    "a": 2021,
+    "fr": 29.3,
+    "ue": 30.2
+   },
+   {
+    "a": 2022,
+    "fr": 29.8,
+    "ue": 29.6
+   },
+   {
+    "a": 2023,
+    "fr": 29.7,
+    "ue": 29.6
+   },
+   {
+    "a": 2024,
+    "fr": 30.0,
+    "ue": 29.4
+   },
+   {
+    "a": 2025,
+    "fr": 30.4,
+    "ue": 29.2
+   }
+  ],
+  "emploi_seniors": [
+   {
+    "a": 2003,
+    "fr": 38.2,
+    "ue": null
+   },
+   {
+    "a": 2004,
+    "fr": 39.1,
+    "ue": null
+   },
+   {
+    "a": 2005,
+    "fr": 39.8,
+    "ue": null
+   },
+   {
+    "a": 2006,
+    "fr": 39.4,
+    "ue": null
+   },
+   {
+    "a": 2007,
+    "fr": 39.5,
+    "ue": null
+   },
+   {
+    "a": 2008,
+    "fr": 39.5,
+    "ue": null
+   },
+   {
+    "a": 2009,
+    "fr": 40.2,
+    "ue": 43.2
+   },
+   {
+    "a": 2010,
+    "fr": 41.0,
+    "ue": 43.7
+   },
+   {
+    "a": 2011,
+    "fr": 42.7,
+    "ue": 45.0
+   },
+   {
+    "a": 2012,
+    "fr": 45.8,
+    "ue": 46.4
+   },
+   {
+    "a": 2013,
+    "fr": 46.9,
+    "ue": 47.9
+   },
+   {
+    "a": 2014,
+    "fr": 48.2,
+    "ue": 49.7
+   },
+   {
+    "a": 2015,
+    "fr": 50.1,
+    "ue": 51.4
+   },
+   {
+    "a": 2016,
+    "fr": 51.2,
+    "ue": 53.5
+   },
+   {
+    "a": 2017,
+    "fr": 52.6,
+    "ue": 55.5
+   },
+   {
+    "a": 2018,
+    "fr": 53.6,
+    "ue": 57.3
+   },
+   {
+    "a": 2019,
+    "fr": 54.5,
+    "ue": 58.6
+   },
+   {
+    "a": 2020,
+    "fr": 55.2,
+    "ue": 59.0
+   },
+   {
+    "a": 2021,
+    "fr": 56.0,
+    "ue": 60.4
+   },
+   {
+    "a": 2022,
+    "fr": 56.9,
+    "ue": 62.3
+   },
+   {
+    "a": 2023,
+    "fr": 58.5,
+    "ue": 63.9
+   },
+   {
+    "a": 2024,
+    "fr": 60.3,
+    "ue": 65.2
+   },
+   {
+    "a": 2025,
+    "fr": 61.7,
+    "ue": 66.4
+   }
+  ],
+  "heures_tp": [
+   {
+    "a": 2008,
+    "fr": 41.0,
+    "ue": 41.6
+   },
+   {
+    "a": 2009,
+    "fr": 41.1,
+    "ue": 41.5
+   },
+   {
+    "a": 2010,
+    "fr": 41.2,
+    "ue": 41.5
+   },
+   {
+    "a": 2011,
+    "fr": 41.2,
+    "ue": 41.4
+   },
+   {
+    "a": 2012,
+    "fr": 41.1,
+    "ue": 41.4
+   },
+   {
+    "a": 2013,
+    "fr": 40.7,
+    "ue": 41.3
+   },
+   {
+    "a": 2014,
+    "fr": 40.5,
+    "ue": 41.3
+   },
+   {
+    "a": 2015,
+    "fr": 40.4,
+    "ue": 41.2
+   },
+   {
+    "a": 2016,
+    "fr": 40.5,
+    "ue": 41.2
+   },
+   {
+    "a": 2017,
+    "fr": 40.4,
+    "ue": 41.1
+   },
+   {
+    "a": 2018,
+    "fr": 40.4,
+    "ue": 41.0
+   },
+   {
+    "a": 2019,
+    "fr": 40.5,
+    "ue": 40.9
+   },
+   {
+    "a": 2020,
+    "fr": 40.4,
+    "ue": 40.7
+   },
+   {
+    "a": 2021,
+    "fr": 39.9,
+    "ue": 40.6
+   },
+   {
+    "a": 2022,
+    "fr": 40.1,
+    "ue": 40.6
+   },
+   {
+    "a": 2023,
+    "fr": 40.0,
+    "ue": 40.4
+   },
+   {
+    "a": 2024,
+    "fr": 40.0,
+    "ue": 40.3
+   },
+   {
+    "a": 2025,
+    "fr": 39.9,
+    "ue": 40.3
+   }
+  ]
+ },
+ "categories": [
+  {
+   "id": "fr",
+   "nom": "France",
+   "couleur": "#3B82F6",
+   "valeurs": {
+    "dep_publiques": 57.3,
+    "pauvrete_enfants": 27.5,
+    "esperance_vie": 83.0,
+    "mortalite_infantile": 4.1,
+    "decrochage": 7.2,
+    "gini": 30.4,
+    "emploi_seniors": 61.7,
+    "heures_tp": 39.9
+   }
+  },
+  {
+   "id": "de",
+   "nom": "Allemagne",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 50.1,
+    "pauvrete_enfants": 23.5,
+    "esperance_vie": 81.2,
+    "mortalite_infantile": 3.3,
+    "decrochage": 13.1,
+    "gini": 30.1,
+    "emploi_seniors": 75.3,
+    "heures_tp": 40.3
+   }
+  },
+  {
+   "id": "at",
+   "nom": "Autriche",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 54.6,
+    "pauvrete_enfants": 24.4,
+    "esperance_vie": 82.1,
+    "mortalite_infantile": 3.1,
+    "decrochage": 10.0,
+    "gini": 27.4,
+    "emploi_seniors": 60.9,
+    "heures_tp": 41.7
+   }
+  },
+  {
+   "id": "be",
+   "nom": "Belgique",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 54.4,
+    "pauvrete_enfants": 18.9,
+    "esperance_vie": 82.4,
+    "mortalite_infantile": 3.5,
+    "decrochage": 7.3,
+    "gini": 23.4,
+    "emploi_seniors": 61.5,
+    "heures_tp": 40.3
+   }
+  },
+  {
+   "id": "bg",
+   "nom": "Bulgarie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 42.1,
+    "pauvrete_enfants": 33.1,
+    "esperance_vie": 75.8,
+    "mortalite_infantile": 4.5,
+    "decrochage": 8.6,
+    "gini": 37.7,
+    "emploi_seniors": 71.2,
+    "heures_tp": 40.1
+   }
+  },
+  {
+   "id": "cy",
+   "nom": "Chypre",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 37.9,
+    "pauvrete_enfants": 14.0,
+    "esperance_vie": 83.5,
+    "mortalite_infantile": 3.0,
+    "decrochage": 9.8,
+    "gini": 31.2,
+    "emploi_seniors": 71.0,
+    "heures_tp": 41.4
+   }
+  },
+  {
+   "id": "hr",
+   "nom": "Croatie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 49.4,
+    "pauvrete_enfants": 15.7,
+    "esperance_vie": 78.9,
+    "mortalite_infantile": 3.2,
+    "decrochage": 2.1,
+    "gini": 28.5,
+    "emploi_seniors": 54.9,
+    "heures_tp": 40.1
+   }
+  },
+  {
+   "id": "dk",
+   "nom": "Danemark",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 47.2,
+    "pauvrete_enfants": 14.8,
+    "esperance_vie": 82.0,
+    "mortalite_infantile": 4.3,
+    "decrochage": 10.0,
+    "gini": 28.2,
+    "emploi_seniors": 74.7,
+    "heures_tp": 38.6
+   }
+  },
+  {
+   "id": "es",
+   "nom": "Espagne",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 45.3,
+    "pauvrete_enfants": 33.8,
+    "esperance_vie": 84.0,
+    "mortalite_infantile": 3.0,
+    "decrochage": 12.8,
+    "gini": 30.8,
+    "emploi_seniors": 62.4,
+    "heures_tp": 40.1
+   }
+  },
+  {
+   "id": "ee",
+   "nom": "Estonie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 45.6,
+    "pauvrete_enfants": 19.4,
+    "esperance_vie": 79.4,
+    "mortalite_infantile": 1.4,
+    "decrochage": 10.2,
+    "gini": 30.9,
+    "emploi_seniors": 77.0,
+    "heures_tp": 40.0
+   }
+  },
+  {
+   "id": "fi",
+   "nom": "Finlande",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 57.5,
+    "pauvrete_enfants": 17.1,
+    "esperance_vie": 82.2,
+    "mortalite_infantile": 2.1,
+    "decrochage": 9.9,
+    "gini": 27.1,
+    "emploi_seniors": 72.3,
+    "heures_tp": 39.1
+   }
+  },
+  {
+   "id": "el",
+   "nom": "Grèce",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 47.8,
+    "pauvrete_enfants": 29.6,
+    "esperance_vie": 81.9,
+    "mortalite_infantile": 3.7,
+    "decrochage": 3.0,
+    "gini": 31.6,
+    "emploi_seniors": 59.6,
+    "heures_tp": 42.0
+   }
+  },
+  {
+   "id": "hu",
+   "nom": "Hongrie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 47.6,
+    "pauvrete_enfants": 23.0,
+    "esperance_vie": 76.8,
+    "mortalite_infantile": 3.8,
+    "decrochage": 9.3,
+    "gini": 29.5,
+    "emploi_seniors": 72.1,
+    "heures_tp": 40.3
+   }
+  },
+  {
+   "id": "ie",
+   "nom": "Irlande",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 22.3,
+    "pauvrete_enfants": 23.7,
+    "esperance_vie": 83.1,
+    "mortalite_infantile": 3.3,
+    "decrochage": 3.6,
+    "gini": 27.2,
+    "emploi_seniors": 69.4,
+    "heures_tp": 39.7
+   }
+  },
+  {
+   "id": "is",
+   "nom": "Islande",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 45.7,
+    "pauvrete_enfants": null,
+    "esperance_vie": 82.8,
+    "mortalite_infantile": 1.4,
+    "decrochage": 16.7,
+    "gini": null,
+    "emploi_seniors": 81.8,
+    "heures_tp": 42.2
+   }
+  },
+  {
+   "id": "it",
+   "nom": "Italie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 51.1,
+    "pauvrete_enfants": 27.1,
+    "esperance_vie": 83.7,
+    "mortalite_infantile": 2.5,
+    "decrochage": 8.2,
+    "gini": 31.0,
+    "emploi_seniors": 61.2,
+    "heures_tp": 39.8
+   }
+  },
+  {
+   "id": "lv",
+   "nom": "Lettonie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 45.3,
+    "pauvrete_enfants": 17.6,
+    "esperance_vie": 76.4,
+    "mortalite_infantile": 1.5,
+    "decrochage": 8.8,
+    "gini": 35.6,
+    "emploi_seniors": 73.6,
+    "heures_tp": 40.0
+   }
+  },
+  {
+   "id": "lt",
+   "nom": "Lituanie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 41.1,
+    "pauvrete_enfants": 19.9,
+    "esperance_vie": 77.5,
+    "mortalite_infantile": 2.9,
+    "decrochage": 5.9,
+    "gini": 35.5,
+    "emploi_seniors": 69.9,
+    "heures_tp": 40.0
+   }
+  },
+  {
+   "id": "lu",
+   "nom": "Luxembourg",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 48.7,
+    "pauvrete_enfants": 25.2,
+    "esperance_vie": 83.2,
+    "mortalite_infantile": 5.3,
+    "decrochage": null,
+    "gini": 30.5,
+    "emploi_seniors": 48.9,
+    "heures_tp": 40.8
+   }
+  },
+  {
+   "id": "mt",
+   "nom": "Malte",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 37.1,
+    "pauvrete_enfants": 23.3,
+    "esperance_vie": 83.0,
+    "mortalite_infantile": 5.0,
+    "decrochage": 8.6,
+    "gini": 29.2,
+    "emploi_seniors": 61.4,
+    "heures_tp": 41.1
+   }
+  },
+  {
+   "id": "no",
+   "nom": "Norvège",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 49.4,
+    "pauvrete_enfants": 14.3,
+    "esperance_vie": 83.2,
+    "mortalite_infantile": 2.1,
+    "decrochage": 3.8,
+    "gini": 23.7,
+    "emploi_seniors": 72.6,
+    "heures_tp": 40.0
+   }
+  },
+  {
+   "id": "nl",
+   "nom": "Pays-Bas",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 45.2,
+    "pauvrete_enfants": 12.7,
+    "esperance_vie": 81.9,
+    "mortalite_infantile": 3.3,
+    "decrochage": 7.4,
+    "gini": 25.9,
+    "emploi_seniors": 75.8,
+    "heures_tp": 39.1
+   }
+  },
+  {
+   "id": "pl",
+   "nom": "Pologne",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 50.9,
+    "pauvrete_enfants": 15.6,
+    "esperance_vie": 78.5,
+    "mortalite_infantile": 3.6,
+    "decrochage": 4.0,
+    "gini": 24.9,
+    "emploi_seniors": 60.1,
+    "heures_tp": 41.1
+   }
+  },
+  {
+   "id": "pt",
+   "nom": "Portugal",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 42.3,
+    "pauvrete_enfants": 19.2,
+    "esperance_vie": 82.5,
+    "mortalite_infantile": 3.0,
+    "decrochage": 6.1,
+    "gini": 30.9,
+    "emploi_seniors": 69.5,
+    "heures_tp": 41.1
+   }
+  },
+  {
+   "id": "ro",
+   "nom": "Roumanie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 43.4,
+    "pauvrete_enfants": 32.4,
+    "esperance_vie": 76.5,
+    "mortalite_infantile": 6.6,
+    "decrochage": 15.5,
+    "gini": 27.3,
+    "emploi_seniors": 57.0,
+    "heures_tp": 40.2
+   }
+  },
+  {
+   "id": "sk",
+   "nom": "Slovaquie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 47.3,
+    "pauvrete_enfants": 22.7,
+    "esperance_vie": 78.4,
+    "mortalite_infantile": 5.9,
+    "decrochage": 6.8,
+    "gini": 23.0,
+    "emploi_seniors": 66.6,
+    "heures_tp": 40.3
+   }
+  },
+  {
+   "id": "si",
+   "nom": "Slovénie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 48.9,
+    "pauvrete_enfants": 12.5,
+    "esperance_vie": 82.1,
+    "mortalite_infantile": 1.7,
+    "decrochage": 5.5,
+    "gini": 24.6,
+    "emploi_seniors": 57.6,
+    "heures_tp": 40.9
+   }
+  },
+  {
+   "id": "ch",
+   "nom": "Suisse",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 33.6,
+    "pauvrete_enfants": null,
+    "esperance_vie": 84.2,
+    "mortalite_infantile": 3.3,
+    "decrochage": 5.5,
+    "gini": null,
+    "emploi_seniors": 75.3,
+    "heures_tp": 43.3
+   }
+  },
+  {
+   "id": "se",
+   "nom": "Suède",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 49.3,
+    "pauvrete_enfants": 23.4,
+    "esperance_vie": 83.8,
+    "mortalite_infantile": 2.0,
+    "decrochage": 6.7,
+    "gini": 28.6,
+    "emploi_seniors": 78.3,
+    "heures_tp": 41.3
+   }
+  },
+  {
+   "id": "cz",
+   "nom": "Tchéquie",
+   "couleur": "#64748B",
+   "valeurs": {
+    "dep_publiques": 43.3,
+    "pauvrete_enfants": 15.4,
+    "esperance_vie": 80.1,
+    "mortalite_infantile": 2.3,
+    "decrochage": 6.1,
+    "gini": 24.0,
+    "emploi_seniors": 78.3,
+    "heures_tp": 40.7
+   }
+  }
+ ]
+}

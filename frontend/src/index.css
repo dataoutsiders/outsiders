@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Variables personnalisées Outsiders */
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F6F6F6;
+  --text-primary: #161616;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --accent-primary: #0063CB;
+  --accent-secondary: #E1000F;
+  --accent-hover: #0052A8;
+  --border-light: #DDDDDD;
+  --border-medium: #CCCCCC;
+}
+
+/* Smooth scroll pour la navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.6;
+}
+
+/* Animations pour les sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-mt-24 > section {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Utilitaires personnalisés */
+.prose-outsiders {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.prose-outsiders h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.prose-outsiders h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-outsiders h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-outsiders p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-outsiders blockquote {
+  border-left: 4px solid var(--accent-primary);
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 1.5rem 0;
+}
+
+/* Fond de carte Leaflet (tuiles OpenStreetMap France, colorées) passé en gris clair :
+   le fond ne doit pas concurrencer les couleurs des données. */
+.fond-carte {
+  filter: grayscale(1) contrast(0.55) brightness(1.3);
+}
+
+/* Sur iPhone, toucher un champ dont le texte fait moins de 16 px fait zoomer la page :
+   on force 16 px sur les petits écrans pour tous les champs de saisie. */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Carrousel horizontal sans barre de défilement visible (cartes de l'accueil sur téléphone). */
+.sans-barre {
+  scrollbar-width: none;
+}
+.sans-barre::-webkit-scrollbar {
+  display: none;
+}

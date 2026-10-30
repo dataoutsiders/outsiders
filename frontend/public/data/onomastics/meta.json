@@ -1,0 +1,38 @@
+{
+  "generated": "2026-10-29",
+  "normalization": "upper, NFD sans accents, apostrophes -> espace, espaces compactes",
+  "idp": {
+    "population_baseline_pct": 7.0,
+    "n_surnames_known": 218676,
+    "n_surnames_divers": 16642,
+    "divers_pct_of_reference": 7.6,
+    "rule": "absent avant 1950 OU multiplie par >15 apres 1950",
+    "source": "Kheddache M., L'Horty Y. (2023), Indice de Diversite Patronymique, Rapport TEPP n°2024-1",
+    "reference_file": "INSEE - noms de famille 1891-2000 (218 983 patronymes)"
+  },
+  "gender": {
+    "n_firstnames": 43455,
+    "national_female_birth_pct": 49.5,
+    "source": "INSEE - fichier des prenoms (naissances 1900-2025)",
+    "note": "proxy : sexe associe au prenom, fiable en agrege, bruite a l'individu"
+  },
+  "age": {
+    "decade_labels": [
+      "1900-1909",
+      "1910-1919",
+      "1920-1929",
+      "1930-1939",
+      "1940-1949",
+      "1950-1959",
+      "1960-1969",
+      "1970-1979",
+      "1980-1989",
+      "1990-1999",
+      "2000-2009",
+      "2010-2019",
+      "2020-2025"
+    ],
+    "source": "INSEE - fichier des prenoms (naissances 1900-2025)",
+    "note": "proxy d'age via l'annee de naissance associee au prenom"
+  }
+}

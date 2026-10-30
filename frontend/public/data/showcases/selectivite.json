@@ -1,0 +1,1418 @@
+{
+ "generated": "2026-07-06",
+ "session": 2025,
+ "titre": "Qui peut entrer ? La sélectivité du supérieur",
+ "source": {
+  "label": "MESR, Parcoursup 2025 (vœux et admissions par formation)",
+  "url": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-parcoursup/"
+ },
+ "stats": {
+  "n_formations": 14237,
+  "n_voeux": 13502031,
+  "plus_dure": {
+   "label": "BPJEPS",
+   "n": 79,
+   "taux_median": 4
+  },
+  "ecart_bts": {
+   "dur": {
+    "academie": "Mayotte",
+    "taux": 10
+   },
+   "ouvert": {
+    "academie": "Limoges",
+    "taux": 76
+   },
+   "ecart": 66
+  },
+  "boursiers_min": {
+   "id": "Ecole de Commerce",
+   "label": "Écoles de commerce",
+   "n": 254,
+   "taux_median": 63,
+   "voeux_par_place": 17.0,
+   "taux_acceptation": 6.4,
+   "pct_boursiers": 5.2
+  },
+  "boursiers_max": {
+   "id": "BTS",
+   "label": "BTS",
+   "n": 5350,
+   "taux_median": 57,
+   "voeux_par_place": 13.2,
+   "taux_acceptation": 7.8,
+   "pct_boursiers": 29.4
+  }
+ },
+ "filieres": [
+  {
+   "id": "PASS",
+   "label": "PASS (accès santé)",
+   "n": 287,
+   "taux_median": 34,
+   "voeux_par_place": 41.8,
+   "taux_acceptation": 2.0,
+   "pct_boursiers": 18.2
+  },
+  {
+   "id": "Autre formation",
+   "label": "Autres formations",
+   "n": 1804,
+   "taux_median": 38,
+   "voeux_par_place": 17.4,
+   "taux_acceptation": 7.2,
+   "pct_boursiers": 17.7
+  },
+  {
+   "id": "IFSI",
+   "label": "IFSI (soins infirmiers)",
+   "n": 344,
+   "taux_median": 40,
+   "voeux_par_place": 46.9,
+   "taux_acceptation": 2.3,
+   "pct_boursiers": 24.3
+  },
+  {
+   "id": "CPGE",
+   "label": "Classes préparatoires (CPGE)",
+   "n": 986,
+   "taux_median": 43,
+   "voeux_par_place": 27.8,
+   "taux_acceptation": 3.8,
+   "pct_boursiers": 10.4
+  },
+  {
+   "id": "BUT",
+   "label": "BUT (ex-DUT)",
+   "n": 820,
+   "taux_median": 45,
+   "voeux_par_place": 22.5,
+   "taux_acceptation": 5.7,
+   "pct_boursiers": 20.1
+  },
+  {
+   "id": "EFTS",
+   "label": "Travail social (EFTS)",
+   "n": 243,
+   "taux_median": 45,
+   "voeux_par_place": 6.2,
+   "taux_acceptation": 18.0,
+   "pct_boursiers": 15.7
+  },
+  {
+   "id": "Licence_Las",
+   "label": "Licence accès santé (LAS)",
+   "n": 513,
+   "taux_median": 53,
+   "voeux_par_place": 24.0,
+   "taux_acceptation": 4.7,
+   "pct_boursiers": 21.3
+  },
+  {
+   "id": "BTS",
+   "label": "BTS",
+   "n": 5350,
+   "taux_median": 57,
+   "voeux_par_place": 13.2,
+   "taux_acceptation": 7.8,
+   "pct_boursiers": 29.4
+  },
+  {
+   "id": "Ecole de Commerce",
+   "label": "Écoles de commerce",
+   "n": 254,
+   "taux_median": 63,
+   "voeux_par_place": 17.0,
+   "taux_acceptation": 6.4,
+   "pct_boursiers": 5.2
+  },
+  {
+   "id": "Ecole d'Ingénieur",
+   "label": "Écoles d'ingénieurs",
+   "n": 585,
+   "taux_median": 68,
+   "voeux_par_place": 36.4,
+   "taux_acceptation": 2.6,
+   "pct_boursiers": 7.3
+  },
+  {
+   "id": "Licence",
+   "label": "Licence",
+   "n": 3051,
+   "taux_median": 86,
+   "voeux_par_place": 10.7,
+   "taux_acceptation": 10.4,
+   "pct_boursiers": 22.5
+  }
+ ],
+ "detaillees": [
+  {
+   "label": "BPJEPS",
+   "n": 79,
+   "taux_median": 4
+  },
+  {
+   "label": "Sciences politiques",
+   "n": 46,
+   "taux_median": 10
+  },
+  {
+   "label": "Formations Bac + 5",
+   "n": 42,
+   "taux_median": 13
+  },
+  {
+   "label": "DN MADE",
+   "n": 321,
+   "taux_median": 23
+  },
+  {
+   "label": "BUT - Service",
+   "n": 334,
+   "taux_median": 32
+  },
+  {
+   "label": "D.E secteur sanitaire",
+   "n": 525,
+   "taux_median": 34
+  },
+  {
+   "label": "Classe préparatoire aux études supérieures",
+   "n": 42,
+   "taux_median": 34
+  },
+  {
+   "label": "Diplôme National d'Art",
+   "n": 57,
+   "taux_median": 35
+  },
+  {
+   "label": "DCG",
+   "n": 96,
+   "taux_median": 38
+  },
+  {
+   "label": "Classe préparatoire scientifique",
+   "n": 490,
+   "taux_median": 41
+  },
+  {
+   "label": "Licence - STAPS",
+   "n": 28,
+   "taux_median": 42
+  },
+  {
+   "label": "C.M.I - Cursus Master en Ingénierie",
+   "n": 70,
+   "taux_median": 42
+  },
+  {
+   "label": "Classe préparatoire littéraire",
+   "n": 136,
+   "taux_median": 42
+  },
+  {
+   "label": "FCIL",
+   "n": 108,
+   "taux_median": 44
+  },
+  {
+   "label": "D.E secteur social",
+   "n": 243,
+   "taux_median": 45
+  }
+ ],
+ "licence": {
+  "n": 3051,
+  "pct_100": 33,
+  "pct_sous_50": 27,
+  "regions": [
+   {
+    "region": "Ile-de-France",
+    "n": 721,
+    "pct_100": 20,
+    "taux_median": 49
+   },
+   {
+    "region": "Auvergne-Rhône-Alpes",
+    "n": 429,
+    "pct_100": 21,
+    "taux_median": 82
+   },
+   {
+    "region": "Provence-Alpes-Côte d'Azur",
+    "n": 202,
+    "pct_100": 23,
+    "taux_median": 79
+   },
+   {
+    "region": "Occitanie",
+    "n": 250,
+    "pct_100": 30,
+    "taux_median": 76
+   },
+   {
+    "region": "Grand-Est",
+    "n": 265,
+    "pct_100": 32,
+    "taux_median": 97
+   },
+   {
+    "region": "Nouvelle Aquitaine",
+    "n": 212,
+    "pct_100": 40,
+    "taux_median": 99
+   },
+   {
+    "region": "Centre",
+    "n": 79,
+    "pct_100": 42,
+    "taux_median": 99
+   },
+   {
+    "region": "Bourgogne-Franche-Comté",
+    "n": 89,
+    "pct_100": 43,
+    "taux_median": 99
+   },
+   {
+    "region": "Hauts-de-France",
+    "n": 239,
+    "pct_100": 44,
+    "taux_median": 99
+   },
+   {
+    "region": "Pays-de-la-Loire",
+    "n": 172,
+    "pct_100": 46,
+    "taux_median": 99
+   },
+   {
+    "region": "Normandie",
+    "n": 106,
+    "pct_100": 48,
+    "taux_median": 99
+   },
+   {
+    "region": "Bretagne",
+    "n": 160,
+    "pct_100": 51,
+    "taux_median": 100
+   },
+   {
+    "region": "Corse",
+    "n": 21,
+    "pct_100": 67,
+    "taux_median": 100
+   },
+   {
+    "region": "Guyane",
+    "n": 15,
+    "pct_100": 67,
+    "taux_median": 100
+   },
+   {
+    "region": "Réunion",
+    "n": 31,
+    "pct_100": 90,
+    "taux_median": 100
+   },
+   {
+    "region": "Martinique",
+    "n": 21,
+    "pct_100": 95,
+    "taux_median": 100
+   },
+   {
+    "region": "Guadeloupe",
+    "n": 13,
+    "pct_100": 100,
+    "taux_median": 100
+   }
+  ]
+ },
+ "evolution": {
+  "sessions": [
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "filieres": [
+   {
+    "id": "PASS",
+    "label": "PASS (accès santé)",
+    "serie": [
+     {
+      "a": 2020,
+      "n": 227,
+      "pression": 17.8,
+      "acceptation": 4.4,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 268,
+      "pression": 32.4,
+      "acceptation": 2.4,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 272,
+      "pression": 33.1,
+      "acceptation": 2.3,
+      "acces": 33
+     },
+     {
+      "a": 2023,
+      "n": 278,
+      "pression": 34.7,
+      "acceptation": 2.3,
+      "acces": 38
+     },
+     {
+      "a": 2024,
+      "n": 284,
+      "pression": 37.3,
+      "acceptation": 2.2,
+      "acces": 36
+     },
+     {
+      "a": 2025,
+      "n": 287,
+      "pression": 41.8,
+      "acceptation": 2.0,
+      "acces": 34
+     }
+    ]
+   },
+   {
+    "id": "CPGE",
+    "label": "Classes préparatoires (CPGE)",
+    "serie": [
+     {
+      "a": 2018,
+      "n": 846,
+      "pression": 15.1,
+      "acceptation": 7.7,
+      "acces": null
+     },
+     {
+      "a": 2019,
+      "n": 849,
+      "pression": 16.1,
+      "acceptation": 7.2,
+      "acces": null
+     },
+     {
+      "a": 2020,
+      "n": 847,
+      "pression": 17.1,
+      "acceptation": 6.4,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 968,
+      "pression": 21.5,
+      "acceptation": 4.8,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 974,
+      "pression": 20.9,
+      "acceptation": 4.8,
+      "acces": 73
+     },
+     {
+      "a": 2023,
+      "n": 983,
+      "pression": 23.2,
+      "acceptation": 4.6,
+      "acces": 67
+     },
+     {
+      "a": 2024,
+      "n": 982,
+      "pression": 27.6,
+      "acceptation": 3.9,
+      "acces": 62
+     },
+     {
+      "a": 2025,
+      "n": 986,
+      "pression": 27.8,
+      "acceptation": 3.8,
+      "acces": 43
+     }
+    ]
+   },
+   {
+    "id": "Ecole de Commerce",
+    "label": "Écoles de commerce",
+    "serie": [
+     {
+      "a": 2020,
+      "n": 144,
+      "pression": 9.2,
+      "acceptation": 10.5,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 172,
+      "pression": 10.5,
+      "acceptation": 8.5,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 193,
+      "pression": 15.8,
+      "acceptation": 6.9,
+      "acces": 63
+     },
+     {
+      "a": 2023,
+      "n": 208,
+      "pression": 15.9,
+      "acceptation": 7.0,
+      "acces": 63
+     },
+     {
+      "a": 2024,
+      "n": 222,
+      "pression": 17.8,
+      "acceptation": 7.0,
+      "acces": 62
+     },
+     {
+      "a": 2025,
+      "n": 256,
+      "pression": 17.0,
+      "acceptation": 6.4,
+      "acces": 63
+     }
+    ]
+   },
+   {
+    "id": "Ecole d'Ingénieur",
+    "label": "Écoles d'ingénieurs",
+    "serie": [
+     {
+      "a": 2020,
+      "n": 402,
+      "pression": 28.9,
+      "acceptation": 3.3,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 457,
+      "pression": 29.1,
+      "acceptation": 2.8,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 454,
+      "pression": 29.6,
+      "acceptation": 3.2,
+      "acces": 72
+     },
+     {
+      "a": 2023,
+      "n": 472,
+      "pression": 32.5,
+      "acceptation": 3.1,
+      "acces": 70
+     },
+     {
+      "a": 2024,
+      "n": 523,
+      "pression": 33.5,
+      "acceptation": 3.0,
+      "acces": 73
+     },
+     {
+      "a": 2025,
+      "n": 585,
+      "pression": 36.4,
+      "acceptation": 2.6,
+      "acces": 68
+     }
+    ]
+   },
+   {
+    "id": "BUT",
+    "label": "BUT (ex-DUT)",
+    "serie": [
+     {
+      "a": 2018,
+      "n": 789,
+      "pression": 15.2,
+      "acceptation": 7.9,
+      "acces": null
+     },
+     {
+      "a": 2019,
+      "n": 801,
+      "pression": 17.3,
+      "acceptation": 7.0,
+      "acces": null
+     },
+     {
+      "a": 2020,
+      "n": 804,
+      "pression": 18.6,
+      "acceptation": 6.2,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 803,
+      "pression": 18.3,
+      "acceptation": 6.3,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 809,
+      "pression": 18.2,
+      "acceptation": 6.1,
+      "acces": 51
+     },
+     {
+      "a": 2023,
+      "n": 816,
+      "pression": 18.3,
+      "acceptation": 6.0,
+      "acces": 52
+     },
+     {
+      "a": 2024,
+      "n": 819,
+      "pression": 18.8,
+      "acceptation": 6.1,
+      "acces": 50
+     },
+     {
+      "a": 2025,
+      "n": 820,
+      "pression": 22.5,
+      "acceptation": 5.7,
+      "acces": 45
+     }
+    ]
+   },
+   {
+    "id": "Licence_Las",
+    "label": "Licence accès santé (LAS)",
+    "serie": [
+     {
+      "a": 2020,
+      "n": 457,
+      "pression": 18.9,
+      "acceptation": 5.9,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 521,
+      "pression": 22.8,
+      "acceptation": 5.0,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 537,
+      "pression": 19.4,
+      "acceptation": 5.4,
+      "acces": 71
+     },
+     {
+      "a": 2023,
+      "n": 550,
+      "pression": 20.0,
+      "acceptation": 4.8,
+      "acces": 66
+     },
+     {
+      "a": 2024,
+      "n": 522,
+      "pression": 21.0,
+      "acceptation": 4.9,
+      "acces": 59
+     },
+     {
+      "a": 2025,
+      "n": 513,
+      "pression": 24.0,
+      "acceptation": 4.7,
+      "acces": 53
+     }
+    ]
+   },
+   {
+    "id": "Licence",
+    "label": "Licence",
+    "serie": [
+     {
+      "a": 2018,
+      "n": 2434,
+      "pression": 5.9,
+      "acceptation": 15.4,
+      "acces": null
+     },
+     {
+      "a": 2019,
+      "n": 2517,
+      "pression": 7.2,
+      "acceptation": 14.5,
+      "acces": null
+     },
+     {
+      "a": 2020,
+      "n": 2575,
+      "pression": 7.9,
+      "acceptation": 13.6,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 2690,
+      "pression": 8.3,
+      "acceptation": 12.0,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 2847,
+      "pression": 8.9,
+      "acceptation": 10.8,
+      "acces": 95
+     },
+     {
+      "a": 2023,
+      "n": 2900,
+      "pression": 9.1,
+      "acceptation": 10.4,
+      "acces": 94
+     },
+     {
+      "a": 2024,
+      "n": 3016,
+      "pression": 9.5,
+      "acceptation": 10.3,
+      "acces": 91
+     },
+     {
+      "a": 2025,
+      "n": 3052,
+      "pression": 10.7,
+      "acceptation": 10.4,
+      "acces": 86
+     }
+    ]
+   },
+   {
+    "id": "BTS",
+    "label": "BTS",
+    "serie": [
+     {
+      "a": 2018,
+      "n": 5100,
+      "pression": 13.0,
+      "acceptation": 9.2,
+      "acces": null
+     },
+     {
+      "a": 2019,
+      "n": 5108,
+      "pression": 14.4,
+      "acceptation": 8.0,
+      "acces": null
+     },
+     {
+      "a": 2020,
+      "n": 5168,
+      "pression": 14.6,
+      "acceptation": 6.9,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 5242,
+      "pression": 14.6,
+      "acceptation": 6.2,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 5303,
+      "pression": 14.3,
+      "acceptation": 6.0,
+      "acces": 61
+     },
+     {
+      "a": 2023,
+      "n": 5339,
+      "pression": 14.5,
+      "acceptation": 5.8,
+      "acces": 60
+     },
+     {
+      "a": 2024,
+      "n": 5345,
+      "pression": 11.7,
+      "acceptation": 7.8,
+      "acces": 62
+     },
+     {
+      "a": 2025,
+      "n": 5351,
+      "pression": 13.2,
+      "acceptation": 7.8,
+      "acces": 57
+     }
+    ]
+   },
+   {
+    "id": "EFTS",
+    "label": "Travail social (EFTS)",
+    "serie": [
+     {
+      "a": 2019,
+      "n": 221,
+      "pression": 8.8,
+      "acceptation": 12.2,
+      "acces": null
+     },
+     {
+      "a": 2020,
+      "n": 221,
+      "pression": 9.5,
+      "acceptation": 11.6,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 224,
+      "pression": 7.4,
+      "acceptation": 14.1,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 229,
+      "pression": 5.6,
+      "acceptation": 18.4,
+      "acces": 40
+     },
+     {
+      "a": 2023,
+      "n": 231,
+      "pression": 4.8,
+      "acceptation": 20.2,
+      "acces": 46
+     },
+     {
+      "a": 2024,
+      "n": 240,
+      "pression": 5.9,
+      "acceptation": 17.9,
+      "acces": 45
+     },
+     {
+      "a": 2025,
+      "n": 243,
+      "pression": 6.2,
+      "acceptation": 18.0,
+      "acces": 45
+     }
+    ]
+   },
+   {
+    "id": "IFSI",
+    "label": "IFSI (soins infirmiers)",
+    "serie": [
+     {
+      "a": 2019,
+      "n": 324,
+      "pression": 60.9,
+      "acceptation": 1.7,
+      "acces": null
+     },
+     {
+      "a": 2020,
+      "n": 329,
+      "pression": 53.7,
+      "acceptation": 1.9,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 331,
+      "pression": 57.3,
+      "acceptation": 1.7,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 337,
+      "pression": 52.8,
+      "acceptation": 1.9,
+      "acces": 36
+     },
+     {
+      "a": 2023,
+      "n": 340,
+      "pression": 45.5,
+      "acceptation": 2.2,
+      "acces": 43
+     },
+     {
+      "a": 2024,
+      "n": 518,
+      "pression": 37.7,
+      "acceptation": 3.1,
+      "acces": 38
+     },
+     {
+      "a": 2025,
+      "n": 344,
+      "pression": 46.9,
+      "acceptation": 2.3,
+      "acces": 40
+     }
+    ]
+   },
+   {
+    "id": "Autre formation",
+    "label": "Autres formations",
+    "serie": [
+     {
+      "a": 2018,
+      "n": 1484,
+      "pression": 41.6,
+      "acceptation": 6.6,
+      "acces": null
+     },
+     {
+      "a": 2019,
+      "n": 1573,
+      "pression": 16.9,
+      "acceptation": 7.8,
+      "acces": null
+     },
+     {
+      "a": 2020,
+      "n": 1391,
+      "pression": 15.3,
+      "acceptation": 7.9,
+      "acces": null
+     },
+     {
+      "a": 2021,
+      "n": 1572,
+      "pression": 17.5,
+      "acceptation": 7.4,
+      "acces": null
+     },
+     {
+      "a": 2022,
+      "n": 1689,
+      "pression": 16.0,
+      "acceptation": 6.9,
+      "acces": 42
+     },
+     {
+      "a": 2023,
+      "n": 1670,
+      "pression": 16.6,
+      "acceptation": 7.1,
+      "acces": 43
+     },
+     {
+      "a": 2024,
+      "n": 1565,
+      "pression": 16.9,
+      "acceptation": 7.0,
+      "acces": 47
+     },
+     {
+      "a": 2025,
+      "n": 1815,
+      "pression": 17.3,
+      "acceptation": 7.1,
+      "acces": 38
+     }
+    ]
+   }
+  ],
+  "licence_pct_100": [
+   {
+    "a": 2022,
+    "pct": 28
+   },
+   {
+    "a": 2023,
+    "pct": 28
+   },
+   {
+    "a": 2024,
+    "pct": 29
+   },
+   {
+    "a": 2025,
+    "pct": 33
+   }
+  ]
+ },
+ "matrice": {
+  "filieres": [
+   "BTS",
+   "Licence",
+   "BUT",
+   "CPGE",
+   "IFSI"
+  ],
+  "labels": {
+   "BTS": "BTS",
+   "Licence": "Licence",
+   "BUT": "BUT (ex-DUT)",
+   "CPGE": "Classes préparatoires (CPGE)",
+   "IFSI": "IFSI (soins infirmiers)"
+  },
+  "rows": [
+   {
+    "academie": "Paris",
+    "n": 1033,
+    "BTS": 27,
+    "Licence": 50,
+    "BUT": 12,
+    "CPGE": 26,
+    "IFSI": 28,
+    "moyenne": 29
+   },
+   {
+    "academie": "Créteil",
+    "n": 782,
+    "BTS": 30,
+    "Licence": 43,
+    "BUT": 19,
+    "CPGE": 48,
+    "IFSI": 32,
+    "moyenne": 34
+   },
+   {
+    "academie": "Versailles",
+    "n": 874,
+    "BTS": 32,
+    "Licence": 51,
+    "BUT": 24,
+    "CPGE": 33,
+    "IFSI": 35,
+    "moyenne": 35
+   },
+   {
+    "academie": "Lyon",
+    "n": 830,
+    "BTS": 50,
+    "Licence": 80,
+    "BUT": 35,
+    "CPGE": 40,
+    "IFSI": 38,
+    "moyenne": 49
+   },
+   {
+    "academie": "Toulouse",
+    "n": 648,
+    "BTS": 61,
+    "Licence": 68,
+    "BUT": 44,
+    "CPGE": 33,
+    "IFSI": 38,
+    "moyenne": 49
+   },
+   {
+    "academie": "Aix-Marseille",
+    "n": 607,
+    "BTS": 48,
+    "Licence": 77,
+    "BUT": 47,
+    "CPGE": 53,
+    "IFSI": 28,
+    "moyenne": 51
+   },
+   {
+    "academie": "Bordeaux",
+    "n": 631,
+    "BTS": 62,
+    "Licence": 82,
+    "BUT": 36,
+    "CPGE": 40,
+    "IFSI": 49,
+    "moyenne": 54
+   },
+   {
+    "academie": "Nice",
+    "n": 366,
+    "BTS": 44,
+    "Licence": 87,
+    "BUT": 36,
+    "CPGE": 51,
+    "IFSI": null,
+    "moyenne": 54
+   },
+   {
+    "academie": "Strasbourg",
+    "n": 384,
+    "BTS": 54,
+    "Licence": 84,
+    "BUT": 34,
+    "CPGE": 52,
+    "IFSI": 44,
+    "moyenne": 54
+   },
+   {
+    "academie": "Montpellier",
+    "n": 562,
+    "BTS": 58,
+    "Licence": 97,
+    "BUT": 41,
+    "CPGE": 49,
+    "IFSI": 29,
+    "moyenne": 55
+   },
+   {
+    "academie": "Grenoble",
+    "n": 582,
+    "BTS": 65,
+    "Licence": 82,
+    "BUT": 42,
+    "CPGE": 54,
+    "IFSI": 40,
+    "moyenne": 57
+   },
+   {
+    "academie": "Rennes",
+    "n": 758,
+    "BTS": 69,
+    "Licence": 100,
+    "BUT": 44,
+    "CPGE": 49,
+    "IFSI": 38,
+    "moyenne": 60
+   },
+   {
+    "academie": "Nantes",
+    "n": 840,
+    "BTS": 72,
+    "Licence": 99,
+    "BUT": 40,
+    "CPGE": 43,
+    "IFSI": 49,
+    "moyenne": 61
+   },
+   {
+    "academie": "Dijon",
+    "n": 333,
+    "BTS": 67,
+    "Licence": 86,
+    "BUT": 60,
+    "CPGE": 46,
+    "IFSI": 52,
+    "moyenne": 62
+   },
+   {
+    "academie": "Lille",
+    "n": 960,
+    "BTS": 62,
+    "Licence": 99,
+    "BUT": 59,
+    "CPGE": 43,
+    "IFSI": 48,
+    "moyenne": 62
+   },
+   {
+    "academie": "Amiens",
+    "n": 312,
+    "BTS": 59,
+    "Licence": 89,
+    "BUT": 69,
+    "CPGE": 50,
+    "IFSI": 55,
+    "moyenne": 64
+   },
+   {
+    "academie": "Normandie",
+    "n": 631,
+    "BTS": 65,
+    "Licence": 99,
+    "BUT": 60,
+    "CPGE": 46,
+    "IFSI": 50,
+    "moyenne": 64
+   },
+   {
+    "academie": "Guyane",
+    "n": 67,
+    "BTS": 33,
+    "Licence": 100,
+    "BUT": null,
+    "CPGE": null,
+    "IFSI": null,
+    "moyenne": 66
+   },
+   {
+    "academie": "Nancy-Metz",
+    "n": 471,
+    "BTS": 57,
+    "Licence": 98,
+    "BUT": 68,
+    "CPGE": 49,
+    "IFSI": 56,
+    "moyenne": 66
+   },
+   {
+    "academie": "Orléans-Tours",
+    "n": 461,
+    "BTS": 63,
+    "Licence": 99,
+    "BUT": 58,
+    "CPGE": 48,
+    "IFSI": 66,
+    "moyenne": 67
+   },
+   {
+    "academie": "Clermont-Ferrand",
+    "n": 316,
+    "BTS": 70,
+    "Licence": 90,
+    "BUT": 64,
+    "CPGE": 46,
+    "IFSI": null,
+    "moyenne": 68
+   },
+   {
+    "academie": "Reims",
+    "n": 294,
+    "BTS": 65,
+    "Licence": 99,
+    "BUT": 66,
+    "CPGE": 45,
+    "IFSI": null,
+    "moyenne": 69
+   },
+   {
+    "academie": "Besancon",
+    "n": 247,
+    "BTS": 65,
+    "Licence": 100,
+    "BUT": 68,
+    "CPGE": 45,
+    "IFSI": null,
+    "moyenne": 70
+   },
+   {
+    "academie": "Poitiers",
+    "n": 339,
+    "BTS": 72,
+    "Licence": 100,
+    "BUT": 68,
+    "CPGE": 41,
+    "IFSI": null,
+    "moyenne": 70
+   },
+   {
+    "academie": "La Réunion",
+    "n": 246,
+    "BTS": 42,
+    "Licence": 100,
+    "BUT": null,
+    "CPGE": 74,
+    "IFSI": null,
+    "moyenne": 72
+   },
+   {
+    "academie": "Limoges",
+    "n": 192,
+    "BTS": 76,
+    "Licence": 99,
+    "BUT": 63,
+    "CPGE": 50,
+    "IFSI": null,
+    "moyenne": 72
+   },
+   {
+    "academie": "Polynésie Française",
+    "n": 74,
+    "BTS": 52,
+    "Licence": 100,
+    "BUT": null,
+    "CPGE": null,
+    "IFSI": null,
+    "moyenne": 76
+   },
+   {
+    "academie": "Guadeloupe",
+    "n": 130,
+    "BTS": 64,
+    "Licence": 100,
+    "BUT": null,
+    "CPGE": 75,
+    "IFSI": null,
+    "moyenne": 80
+   },
+   {
+    "academie": "Corse",
+    "n": 75,
+    "BTS": 66,
+    "Licence": 100,
+    "BUT": null,
+    "CPGE": null,
+    "IFSI": null,
+    "moyenne": 83
+   },
+   {
+    "academie": "Martinique",
+    "n": 127,
+    "BTS": 67,
+    "Licence": 100,
+    "BUT": null,
+    "CPGE": null,
+    "IFSI": null,
+    "moyenne": 84
+   },
+   {
+    "academie": "Mayotte",
+    "n": 43,
+    "BTS": 10,
+    "Licence": null,
+    "BUT": null,
+    "CPGE": null,
+    "IFSI": null,
+    "moyenne": null
+   }
+  ],
+  "ecarts": {
+   "BTS": {
+    "dur": {
+     "academie": "Mayotte",
+     "taux": 10
+    },
+    "ouvert": {
+     "academie": "Limoges",
+     "taux": 76
+    },
+    "ecart": 66
+   },
+   "Licence": {
+    "dur": {
+     "academie": "Créteil",
+     "taux": 43
+    },
+    "ouvert": {
+     "academie": "Rennes",
+     "taux": 100
+    },
+    "ecart": 57
+   },
+   "BUT": {
+    "dur": {
+     "academie": "Paris",
+     "taux": 12
+    },
+    "ouvert": {
+     "academie": "Amiens",
+     "taux": 69
+    },
+    "ecart": 57
+   },
+   "CPGE": {
+    "dur": {
+     "academie": "Paris",
+     "taux": 26
+    },
+    "ouvert": {
+     "academie": "Guadeloupe",
+     "taux": 75
+    },
+    "ecart": 49
+   },
+   "IFSI": {
+    "dur": {
+     "academie": "Aix-Marseille",
+     "taux": 28
+    },
+    "ouvert": {
+     "academie": "Orléans-Tours",
+     "taux": 66
+    },
+    "ecart": 38
+   }
+  },
+  "seuil_cellule": 10
+ },
+ "croisement": [
+  {
+   "id": "CPGE",
+   "label": "Classes préparatoires (CPGE)",
+   "selectif": 9.2,
+   "ouvert": 12.4
+  },
+  {
+   "id": "Ecole d'Ingénieur",
+   "label": "Écoles d'ingénieurs",
+   "selectif": 8.9,
+   "ouvert": 5.4
+  },
+  {
+   "id": "Ecole de Commerce",
+   "label": "Écoles de commerce",
+   "selectif": 4.3,
+   "ouvert": 6.0
+  },
+  {
+   "id": "BUT",
+   "label": "BUT (ex-DUT)",
+   "selectif": 22.8,
+   "ouvert": 16.2
+  },
+  {
+   "id": "BTS",
+   "label": "BTS",
+   "selectif": 34.7,
+   "ouvert": 23.4
+  },
+  {
+   "id": "IFSI",
+   "label": "IFSI (soins infirmiers)",
+   "selectif": 28.0,
+   "ouvert": 21.6
+  },
+  {
+   "id": "Licence",
+   "label": "Licence",
+   "selectif": 19.7,
+   "ouvert": 26.1
+  }
+ ],
+ "notes": [
+  "Le taux d'accès (mesure officielle) est la part des candidats en position de recevoir une proposition, d'après le rang du dernier appelé : c'est la longueur de la file d'attente, pas le niveau exigé.",
+  "Le taux d'acceptation (acceptations / candidatures) mesure la conversion d'une candidature en inscription : il mélange sélectivité et attractivité, chaque candidat n'acceptant qu'un seul de ses vœux.",
+  "La pression (vœux par place) mesure la demande : une pression forte peut venir du manque de places comme de l'attractivité.",
+  "Toutes ces mesures reposent sur les candidatures exprimées : l'auto-censure (ne pas oser candidater) est invisible. Une filière qui « s'ouvre » peut reculer en attractivité comme gagner en auto-censure.",
+  "« Autres formations » change de composition au fil des intégrations à Parcoursup : son évolution reflète surtout l'arrivée de nouveaux types de formations.",
+  "« Boursiers » : néo-bacheliers boursiers du secondaire, parmi les admis.",
+  "Filières détaillées classées à partir de 15 formations ; cellules académie × filière à partir de 10 formations.",
+  "Classements et matrice : session 2025. Évolution : la pression et le taux d'acceptation remontent à 2018 ; le taux d'accès officiel n'existe que depuis 2022 et ne peut pas être recalculé avant (il repose sur le rang du dernier appelé, non publié). BUT = DUT avant 2021 ; PACES exclue (réforme des études de santé) ; session 2020 marquée par le covid."
+ ]
+}

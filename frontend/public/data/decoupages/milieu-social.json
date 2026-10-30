@@ -1,0 +1,132 @@
+{
+  "id": "milieu_social",
+  "note": "Cinq grandes catégories socioprofessionnelles, communes à tous les indicateurs. Les indépendants regroupent agriculteurs, artisans, commerçants et chefs d'entreprise (l'INSEE publie leur niveau de vie et leur pauvreté de façon agrégée). Là où l'INSEE détaille davantage (ouvriers non qualifiés, agriculteurs...), la précision figure en sous-note. Chiffres réels, sources et années indiquées par indicateur.",
+  "references": {
+    "niveau_vie": 33850,
+    "pauvrete": 10.1,
+    "chomage": 6.9
+  },
+  "sources": {
+    "niveau_vie": {
+      "label": "Insee, ERFS 2024",
+      "full": "Insee, enquêtes Revenus fiscaux et sociaux 2024, niveau de vie moyen selon la catégorie socioprofessionnelle (série 1996-2024, juillet 2026). Champ : actifs de 18 ans ou plus ayant déjà travaillé, France métropolitaine.",
+      "url": "https://www.insee.fr/fr/statistiques/2489735"
+    },
+    "pauvrete": {
+      "label": "Insee, ERFS 2024",
+      "full": "Insee, enquêtes Revenus fiscaux et sociaux 2024, taux de pauvreté au seuil de 60 % selon la catégorie socioprofessionnelle (série 1996-2024, juillet 2026). Champ : actifs de 18 ans ou plus ayant déjà travaillé, France métropolitaine.",
+      "url": "https://www.insee.fr/fr/statistiques/3566521"
+    },
+    "chomage": {
+      "label": "Insee, enquête Emploi 2025",
+      "full": "Insee, enquête Emploi 2025, Emploi, chômage, revenus du travail (édition 2026), fiche « Inégalités face au chômage ».",
+      "url": "https://www.insee.fr/fr/statistiques/8733055"
+    },
+    "esperance_vie_h": {
+      "label": "Insee, mortalité par CSP 2020-2022",
+      "full": "Insee, tables de mortalité par catégorie sociale 2020-2022.",
+      "url": "https://www.insee.fr/fr/statistiques/2383438"
+    },
+    "abstention": {
+      "label": "Insee Première n°1929",
+      "full": "Insee Première n°1929, Vingt ans de participation électorale (élections de 2022).",
+      "url": "https://www.insee.fr/fr/statistiques/6658143"
+    },
+    "numerique": {
+      "label": "Arcom 2024",
+      "full": "Arcom, Les Français et l'information (2024). Échantillon représentatif d'environ 3 400 personnes de 15 ans et plus.",
+      "url": "https://www.arcom.fr/se-documenter/etudes-et-donnees/etudes-bilans-et-rapports-de-larcom/les-francais-et-linformation"
+    }
+  },
+  "categories": [
+    {
+      "id": "independants",
+      "nom": "Indépendants",
+      "precision": "Agriculteurs, artisans, commerçants, chefs d'entreprise",
+      "couleur": "#F59E0B",
+      "valeurs": {
+        "niveau_vie": 36440,
+        "pauvrete": 21.5,
+        "chomage": null,
+        "esperance_vie_h": 46.4,
+        "abstention": 8,
+        "numerique": 56.0
+      },
+      "detail": {
+        "esperance_vie_h": {
+          "Agriculteurs": 47.2,
+          "Artisans, commerçants, chefs d'entreprise": 46.4
+        },
+        "abstention": {
+          "Agriculteurs": 7,
+          "Artisans, commerçants": 8
+        }
+      }
+    },
+    {
+      "id": "cadres",
+      "nom": "Cadres et professions intellectuelles sup.",
+      "couleur": "#3B82F6",
+      "valeurs": {
+        "niveau_vie": 47870,
+        "pauvrete": 3.2,
+        "chomage": 4.0,
+        "esperance_vie_h": 48.9,
+        "abstention": 7,
+        "numerique": 57.0
+      }
+    },
+    {
+      "id": "intermediaires",
+      "nom": "Professions intermédiaires",
+      "couleur": "#10B981",
+      "valeurs": {
+        "niveau_vie": 33080,
+        "pauvrete": 5.8,
+        "chomage": 5.0,
+        "esperance_vie_h": 47.4,
+        "abstention": 12,
+        "numerique": 56.1
+      }
+    },
+    {
+      "id": "employes",
+      "nom": "Employés",
+      "couleur": "#8B5CF6",
+      "valeurs": {
+        "niveau_vie": 27100,
+        "pauvrete": 13.3,
+        "chomage": 9.1,
+        "esperance_vie_h": 45.1,
+        "abstention": 16,
+        "numerique": 62.8
+      },
+      "detail": {
+        "chomage": {
+          "Employés peu qualifiés": 11.4
+        }
+      }
+    },
+    {
+      "id": "ouvriers",
+      "nom": "Ouvriers",
+      "couleur": "#EF4444",
+      "valeurs": {
+        "niveau_vie": 25600,
+        "pauvrete": 15.2,
+        "chomage": 11.4,
+        "esperance_vie_h": 43.6,
+        "abstention": 20,
+        "numerique": 45.1
+      },
+      "detail": {
+        "chomage": {
+          "Ouvriers peu qualifiés": 17.1
+        },
+        "abstention": {
+          "Ouvriers non qualifiés": 24
+        }
+      }
+    }
+  ]
+}

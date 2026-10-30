@@ -1,0 +1,1063 @@
+{
+ "meta": {
+  "titre": "Semaine de 4 jours ou 4,5 jours : quel effet sur les resultats ?",
+  "annee_resultats": 2025,
+  "unite": "ecart-type du score d'entree en 6e (1 ecart-type vaut environ 16 points)",
+  "lecture": "Un coefficient positif signifie de meilleurs resultats dans les communes restees a 4,5 jours.",
+  "avertissements": [
+   "Les donnees de rythme scolaire ne sont publiees que pour 2020-2021 et 2025-2026 : le retour massif aux 4 jours (2017-2018) n'est pas observable.",
+   "La carte scolaire des colleges ne suit pas les limites communales ; l'echantillon a college unique limite ce bruit sans le supprimer.",
+   "L'IVAC controle le score d'entree en 6e : il ne peut pas capter un effet du primaire, il est presente ici comme contre-exemple."
+  ],
+  "sources": [
+   {
+    "nom": "Organisation du temps scolaire",
+    "url": "https://data.education.gouv.fr/explore/dataset/fr-en-organisation-du-temps-scolaire/"
+   },
+   {
+    "nom": "Evaluations nationales de 6e par etablissement",
+    "url": "https://data.education.gouv.fr/explore/dataset/fr-en-evaluations_nationales_6eme_par_etablissement/"
+   },
+   {
+    "nom": "IPS des ecoles",
+    "url": "https://data.education.gouv.fr/explore/dataset/fr-en-ips-ecoles-ap2022/"
+   },
+   {
+    "nom": "IPS des colleges",
+    "url": "https://data.education.gouv.fr/explore/dataset/fr-en-ips-colleges-ap2023/"
+   },
+   {
+    "nom": "Indicateurs de valeur ajoutee des colleges",
+    "url": "https://data.education.gouv.fr/explore/dataset/fr-en-indicateurs-valeur-ajoutee-colleges/"
+   },
+   {
+    "nom": "Annuaire de l'education",
+    "url": "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+   }
+  ]
+ },
+ "couverture": {
+  "communes_appariees": 20637,
+  "communes_par_regime": {
+   "4j stable": 18436,
+   "4,5j stable": 1264,
+   "bascule 4,5j vers 4j": 743,
+   "mixte": 191,
+   "bascule 4j vers 4,5j": 3
+  },
+  "colleges_publics_analyses": 6418,
+  "annees_evaluations": [
+   2017,
+   2025
+  ]
+ },
+ "groupes": [
+  {
+   "regime": "4,5j stable",
+   "n_colleges": 561,
+   "n_communes": 274,
+   "n_colleges_commune_unique": 156,
+   "ips_college": 104.2,
+   "ips_ecoles_primaires": 105.2,
+   "population_mediane": 36849,
+   "revenu_median": 20270,
+   "ecoles_par_commune_mediane": 14.0,
+   "score_francais_z": -0.051,
+   "score_maths_z": -0.083
+  },
+  {
+   "regime": "4j stable",
+   "n_colleges": 4280,
+   "n_communes": 3083,
+   "n_colleges_commune_unique": 2008,
+   "ips_college": 99.9,
+   "ips_ecoles_primaires": 100.0,
+   "population_mediane": 8727,
+   "revenu_median": 19153,
+   "ecoles_par_commune_mediane": 5.0,
+   "score_francais_z": -0.223,
+   "score_maths_z": -0.199
+  },
+  {
+   "regime": "bascule 4,5j vers 4j",
+   "n_colleges": 225,
+   "n_communes": 160,
+   "n_colleges_commune_unique": 102,
+   "ips_college": 101.4,
+   "ips_ecoles_primaires": 100.6,
+   "population_mediane": 9388,
+   "revenu_median": 18825,
+   "ecoles_par_commune_mediane": 4.0,
+   "score_francais_z": -0.129,
+   "score_maths_z": -0.013
+  }
+ ],
+ "transversal": {
+  "francais": {
+   "ensemble": [
+    {
+     "n": 5065,
+     "n_communes": 3517,
+     "n_traites": 560,
+     "coef": 0.1671,
+     "ic_bas": -0.002,
+     "ic_haut": 0.3363,
+     "p": 0.0528,
+     "r2": 0.004,
+     "specification": "brut",
+     "controles": []
+    },
+    {
+     "n": 5049,
+     "n_communes": 3509,
+     "n_traites": 558,
+     "coef": -0.0366,
+     "ic_bas": -0.1348,
+     "ic_haut": 0.0616,
+     "p": 0.465,
+     "r2": 0.667,
+     "specification": "+ IPS du college",
+     "controles": [
+      "ips_col"
+     ]
+    },
+    {
+     "n": 5022,
+     "n_communes": 3482,
+     "n_traites": 557,
+     "coef": -0.0384,
+     "ic_bas": -0.1384,
+     "ic_haut": 0.0616,
+     "p": 0.4516,
+     "r2": 0.669,
+     "specification": "+ IPS des ecoles primaires",
+     "controles": [
+      "ips_col",
+      "ips_ecoles"
+     ]
+    },
+    {
+     "n": 4946,
+     "n_communes": 3435,
+     "n_traites": 522,
+     "coef": 0.0883,
+     "ic_bas": 0.0374,
+     "ic_haut": 0.1393,
+     "p": 0.0007,
+     "r2": 0.683,
+     "specification": "+ taille et revenu commune",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    },
+    {
+     "n": 4946,
+     "n_communes": 3435,
+     "n_traites": 522,
+     "coef": 0.0121,
+     "ic_bas": -0.0495,
+     "ic_haut": 0.0737,
+     "p": 0.7002,
+     "r2": 0.714,
+     "specification": "+ effets fixes departement",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    }
+   ],
+   "college_unique": [
+    {
+     "n": 2266,
+     "n_communes": 2266,
+     "n_traites": 156,
+     "coef": 0.0668,
+     "ic_bas": -0.0916,
+     "ic_haut": 0.2251,
+     "p": 0.4084,
+     "r2": 0.001,
+     "specification": "brut",
+     "controles": []
+    },
+    {
+     "n": 2260,
+     "n_communes": 2260,
+     "n_traites": 156,
+     "coef": -0.0838,
+     "ic_bas": -0.1829,
+     "ic_haut": 0.0153,
+     "p": 0.0973,
+     "r2": 0.535,
+     "specification": "+ IPS du college",
+     "controles": [
+      "ips_col"
+     ]
+    },
+    {
+     "n": 2237,
+     "n_communes": 2237,
+     "n_traites": 156,
+     "coef": -0.0841,
+     "ic_bas": -0.183,
+     "ic_haut": 0.0149,
+     "p": 0.0958,
+     "r2": 0.539,
+     "specification": "+ IPS des ecoles primaires",
+     "controles": [
+      "ips_col",
+      "ips_ecoles"
+     ]
+    },
+    {
+     "n": 2218,
+     "n_communes": 2218,
+     "n_traites": 149,
+     "coef": 0.0019,
+     "ic_bas": -0.07,
+     "ic_haut": 0.0738,
+     "p": 0.9587,
+     "r2": 0.536,
+     "specification": "+ taille et revenu commune",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    },
+    {
+     "n": 2218,
+     "n_communes": 2218,
+     "n_traites": 149,
+     "coef": 0.0138,
+     "ic_bas": -0.0807,
+     "ic_haut": 0.1083,
+     "p": 0.775,
+     "r2": 0.603,
+     "specification": "+ effets fixes departement",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    }
+   ]
+  },
+  "maths": {
+   "ensemble": [
+    {
+     "n": 5062,
+     "n_communes": 3514,
+     "n_traites": 559,
+     "coef": 0.1061,
+     "ic_bas": -0.0545,
+     "ic_haut": 0.2667,
+     "p": 0.1955,
+     "r2": 0.001,
+     "specification": "brut",
+     "controles": []
+    },
+    {
+     "n": 5046,
+     "n_communes": 3506,
+     "n_traites": 557,
+     "coef": -0.1003,
+     "ic_bas": -0.1901,
+     "ic_haut": -0.0106,
+     "p": 0.0284,
+     "r2": 0.631,
+     "specification": "+ IPS du college",
+     "controles": [
+      "ips_col"
+     ]
+    },
+    {
+     "n": 5019,
+     "n_communes": 3479,
+     "n_traites": 556,
+     "coef": -0.0919,
+     "ic_bas": -0.1841,
+     "ic_haut": 0.0003,
+     "p": 0.0507,
+     "r2": 0.635,
+     "specification": "+ IPS des ecoles primaires",
+     "controles": [
+      "ips_col",
+      "ips_ecoles"
+     ]
+    },
+    {
+     "n": 4944,
+     "n_communes": 3433,
+     "n_traites": 522,
+     "coef": 0.1137,
+     "ic_bas": 0.0528,
+     "ic_haut": 0.1746,
+     "p": 0.0003,
+     "r2": 0.658,
+     "specification": "+ taille et revenu commune",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    },
+    {
+     "n": 4944,
+     "n_communes": 3433,
+     "n_traites": 522,
+     "coef": 0.0098,
+     "ic_bas": -0.0542,
+     "ic_haut": 0.0739,
+     "p": 0.7638,
+     "r2": 0.724,
+     "specification": "+ effets fixes departement",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    }
+   ],
+   "college_unique": [
+    {
+     "n": 2265,
+     "n_communes": 2265,
+     "n_traites": 156,
+     "coef": 0.0871,
+     "ic_bas": -0.0776,
+     "ic_haut": 0.2518,
+     "p": 0.2998,
+     "r2": 0.001,
+     "specification": "brut",
+     "controles": []
+    },
+    {
+     "n": 2259,
+     "n_communes": 2259,
+     "n_traites": 156,
+     "coef": -0.0587,
+     "ic_bas": -0.166,
+     "ic_haut": 0.0485,
+     "p": 0.283,
+     "r2": 0.469,
+     "specification": "+ IPS du college",
+     "controles": [
+      "ips_col"
+     ]
+    },
+    {
+     "n": 2236,
+     "n_communes": 2236,
+     "n_traites": 156,
+     "coef": -0.0584,
+     "ic_bas": -0.165,
+     "ic_haut": 0.0483,
+     "p": 0.2833,
+     "r2": 0.477,
+     "specification": "+ IPS des ecoles primaires",
+     "controles": [
+      "ips_col",
+      "ips_ecoles"
+     ]
+    },
+    {
+     "n": 2217,
+     "n_communes": 2217,
+     "n_traites": 149,
+     "coef": 0.0392,
+     "ic_bas": -0.0392,
+     "ic_haut": 0.1175,
+     "p": 0.3273,
+     "r2": 0.48,
+     "specification": "+ taille et revenu commune",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    },
+    {
+     "n": 2217,
+     "n_communes": 2217,
+     "n_traites": 149,
+     "coef": 0.0112,
+     "ic_bas": -0.0862,
+     "ic_haut": 0.1085,
+     "p": 0.8221,
+     "r2": 0.599,
+     "specification": "+ effets fixes departement",
+     "controles": [
+      "ips_col",
+      "ips_ecoles",
+      "log_pop",
+      "revenu",
+      "diplome_sup"
+     ]
+    }
+   ]
+  }
+ },
+ "difference_en_differences": {
+  "francais": {
+   "coef": -0.1085,
+   "ic_bas": -0.1809,
+   "ic_haut": -0.0361,
+   "p": 0.0033,
+   "n_obs": 5374,
+   "n_colleges": 780,
+   "n_colleges_traites": 225,
+   "n_communes": 431,
+   "tendances_paralleles": false,
+   "interpretation": "NON INTERPRETABLE comme un effet du rythme : les deux groupes divergeaient deja avant la bascule (tendances paralleles rejetees)."
+  },
+  "maths": {
+   "coef": -0.0181,
+   "ic_bas": -0.0909,
+   "ic_haut": 0.0547,
+   "p": 0.6259,
+   "n_obs": 5374,
+   "n_colleges": 780,
+   "n_colleges_traites": 225,
+   "n_communes": 431,
+   "tendances_paralleles": true,
+   "interpretation": "Effet interpretable comme causal sous reserve des autres hypotheses."
+  }
+ },
+ "event_study": {
+  "francais": {
+   "coefficients": [
+    {
+     "annee": 2017,
+     "coef": 0.0344,
+     "ic_bas": -0.0627,
+     "ic_haut": 0.1314,
+     "p": 0.4877
+    },
+    {
+     "annee": 2018,
+     "coef": 0.1572,
+     "ic_bas": 0.0543,
+     "ic_haut": 0.26,
+     "p": 0.0028
+    },
+    {
+     "annee": 2019,
+     "coef": 0.1094,
+     "ic_bas": 0.0051,
+     "ic_haut": 0.2138,
+     "p": 0.0399
+    },
+    {
+     "annee": 2020,
+     "coef": 0.0174,
+     "ic_bas": -0.0519,
+     "ic_haut": 0.0867,
+     "p": 0.622
+    },
+    {
+     "annee": 2021,
+     "coef": 0.0,
+     "ic_bas": 0.0,
+     "ic_haut": 0.0,
+     "p": null,
+     "reference": true
+    },
+    {
+     "annee": 2022,
+     "coef": 0.0059,
+     "ic_bas": -0.0688,
+     "ic_haut": 0.0805,
+     "p": 0.8779
+    },
+    {
+     "annee": 2023,
+     "coef": -0.0514,
+     "ic_bas": -0.1299,
+     "ic_haut": 0.0272,
+     "p": 0.2001
+    },
+    {
+     "annee": 2024,
+     "coef": -0.0394,
+     "ic_bas": -0.124,
+     "ic_haut": 0.0452,
+     "p": 0.3609
+    },
+    {
+     "annee": 2025,
+     "coef": -0.0492,
+     "ic_bas": -0.142,
+     "ic_haut": 0.0436,
+     "p": 0.2986
+    }
+   ],
+   "annee_reference": 2021,
+   "pente_pre_traitement": -0.0209,
+   "p_test_joint_pre_traitement": 0.0244,
+   "tendances_paralleles": false
+  },
+  "maths": {
+   "coefficients": [
+    {
+     "annee": 2017,
+     "coef": 0.046,
+     "ic_bas": -0.059,
+     "ic_haut": 0.151,
+     "p": 0.3905
+    },
+    {
+     "annee": 2018,
+     "coef": 0.0559,
+     "ic_bas": -0.0388,
+     "ic_haut": 0.1506,
+     "p": 0.2477
+    },
+    {
+     "annee": 2019,
+     "coef": 0.0026,
+     "ic_bas": -0.0925,
+     "ic_haut": 0.0977,
+     "p": 0.9566
+    },
+    {
+     "annee": 2020,
+     "coef": -0.0119,
+     "ic_bas": -0.0791,
+     "ic_haut": 0.0554,
+     "p": 0.7296
+    },
+    {
+     "annee": 2021,
+     "coef": 0.0,
+     "ic_bas": 0.0,
+     "ic_haut": 0.0,
+     "p": null,
+     "reference": true
+    },
+    {
+     "annee": 2022,
+     "coef": -0.0098,
+     "ic_bas": -0.0745,
+     "ic_haut": 0.055,
+     "p": 0.7674
+    },
+    {
+     "annee": 2023,
+     "coef": -0.0482,
+     "ic_bas": -0.1165,
+     "ic_haut": 0.0202,
+     "p": 0.1671
+    },
+    {
+     "annee": 2024,
+     "coef": -0.0128,
+     "ic_bas": -0.0949,
+     "ic_haut": 0.0694,
+     "p": 0.7604
+    },
+    {
+     "annee": 2025,
+     "coef": 0.0129,
+     "ic_bas": -0.0697,
+     "ic_haut": 0.0956,
+     "p": 0.7591
+    }
+   ],
+   "annee_reference": 2021,
+   "pente_pre_traitement": -0.016,
+   "p_test_joint_pre_traitement": 0.6112,
+   "tendances_paralleles": true
+  }
+ },
+ "trajectoire": [
+  {
+   "discipline": "francais",
+   "annee": 2017,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 537
+  },
+  {
+   "discipline": "francais",
+   "annee": 2017,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1016,
+   "n": 224
+  },
+  {
+   "discipline": "francais",
+   "annee": 2017,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0887,
+   "n": 4181
+  },
+  {
+   "discipline": "francais",
+   "annee": 2018,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 533
+  },
+  {
+   "discipline": "francais",
+   "annee": 2018,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1846,
+   "n": 224
+  },
+  {
+   "discipline": "francais",
+   "annee": 2018,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0864,
+   "n": 4198
+  },
+  {
+   "discipline": "francais",
+   "annee": 2019,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 541
+  },
+  {
+   "discipline": "francais",
+   "annee": 2019,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1714,
+   "n": 225
+  },
+  {
+   "discipline": "francais",
+   "annee": 2019,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.1017,
+   "n": 4201
+  },
+  {
+   "discipline": "francais",
+   "annee": 2020,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 546
+  },
+  {
+   "discipline": "francais",
+   "annee": 2020,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1106,
+   "n": 224
+  },
+  {
+   "discipline": "francais",
+   "annee": 2020,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0259,
+   "n": 4214
+  },
+  {
+   "discipline": "francais",
+   "annee": 2021,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 551
+  },
+  {
+   "discipline": "francais",
+   "annee": 2021,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.0946,
+   "n": 225
+  },
+  {
+   "discipline": "francais",
+   "annee": 2021,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0432,
+   "n": 4232
+  },
+  {
+   "discipline": "francais",
+   "annee": 2022,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 557
+  },
+  {
+   "discipline": "francais",
+   "annee": 2022,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1099,
+   "n": 225
+  },
+  {
+   "discipline": "francais",
+   "annee": 2022,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0397,
+   "n": 4250
+  },
+  {
+   "discipline": "francais",
+   "annee": 2023,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 559
+  },
+  {
+   "discipline": "francais",
+   "annee": 2023,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.0561,
+   "n": 225
+  },
+  {
+   "discipline": "francais",
+   "annee": 2023,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0314,
+   "n": 4267
+  },
+  {
+   "discipline": "francais",
+   "annee": 2024,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 559
+  },
+  {
+   "discipline": "francais",
+   "annee": 2024,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.0735,
+   "n": 225
+  },
+  {
+   "discipline": "francais",
+   "annee": 2024,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0351,
+   "n": 4266
+  },
+  {
+   "discipline": "francais",
+   "annee": 2025,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 558
+  },
+  {
+   "discipline": "francais",
+   "annee": 2025,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.0528,
+   "n": 225
+  },
+  {
+   "discipline": "francais",
+   "annee": 2025,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0354,
+   "n": 4266
+  },
+  {
+   "discipline": "maths",
+   "annee": 2017,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 536
+  },
+  {
+   "discipline": "maths",
+   "annee": 2017,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.2028,
+   "n": 224
+  },
+  {
+   "discipline": "maths",
+   "annee": 2017,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.168,
+   "n": 4182
+  },
+  {
+   "discipline": "maths",
+   "annee": 2018,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 535
+  },
+  {
+   "discipline": "maths",
+   "annee": 2018,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1974,
+   "n": 224
+  },
+  {
+   "discipline": "maths",
+   "annee": 2018,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.1001,
+   "n": 4197
+  },
+  {
+   "discipline": "maths",
+   "annee": 2019,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 540
+  },
+  {
+   "discipline": "maths",
+   "annee": 2019,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1653,
+   "n": 225
+  },
+  {
+   "discipline": "maths",
+   "annee": 2019,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.073,
+   "n": 4205
+  },
+  {
+   "discipline": "maths",
+   "annee": 2020,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 547
+  },
+  {
+   "discipline": "maths",
+   "annee": 2020,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1817,
+   "n": 224
+  },
+  {
+   "discipline": "maths",
+   "annee": 2020,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0355,
+   "n": 4212
+  },
+  {
+   "discipline": "maths",
+   "annee": 2021,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 551
+  },
+  {
+   "discipline": "maths",
+   "annee": 2021,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1914,
+   "n": 225
+  },
+  {
+   "discipline": "maths",
+   "annee": 2021,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.041,
+   "n": 4230
+  },
+  {
+   "discipline": "maths",
+   "annee": 2022,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 557
+  },
+  {
+   "discipline": "maths",
+   "annee": 2022,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1882,
+   "n": 225
+  },
+  {
+   "discipline": "maths",
+   "annee": 2022,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0416,
+   "n": 4250
+  },
+  {
+   "discipline": "maths",
+   "annee": 2023,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 560
+  },
+  {
+   "discipline": "maths",
+   "annee": 2023,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1552,
+   "n": 225
+  },
+  {
+   "discipline": "maths",
+   "annee": 2023,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0628,
+   "n": 4266
+  },
+  {
+   "discipline": "maths",
+   "annee": 2024,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 560
+  },
+  {
+   "discipline": "maths",
+   "annee": 2024,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.1892,
+   "n": 225
+  },
+  {
+   "discipline": "maths",
+   "annee": 2024,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.0793,
+   "n": 4264
+  },
+  {
+   "discipline": "maths",
+   "annee": 2025,
+   "regime": "4,5j stable",
+   "ecart_a_45j": 0.0,
+   "n": 557
+  },
+  {
+   "discipline": "maths",
+   "annee": 2025,
+   "regime": "bascule 4,5j vers 4j",
+   "ecart_a_45j": 0.2029,
+   "n": 225
+  },
+  {
+   "discipline": "maths",
+   "annee": 2025,
+   "regime": "4j stable",
+   "ecart_a_45j": 0.094,
+   "n": 4264
+  }
+ ],
+ "ivac_contre_exemple": {
+  "note_a_l_ecrit_g": {
+   "libelle": "note brute a l'ecrit du DNB",
+   "brut": {
+    "n": 5040,
+    "n_communes": 3496,
+    "n_traites": 558,
+    "coef": 0.3992,
+    "ic_bas": 0.1921,
+    "ic_haut": 0.6063,
+    "p": 0.0002,
+    "r2": 0.008
+   },
+   "controle": {
+    "n": 4939,
+    "n_communes": 3424,
+    "n_traites": 522,
+    "coef": -0.0652,
+    "ic_bas": -0.1616,
+    "ic_haut": 0.0311,
+    "p": 0.1845,
+    "r2": 0.714
+   }
+  },
+  "va_de_la_note_g": {
+   "libelle": "valeur ajoutee de cette note (IVAC)",
+   "brut": {
+    "n": 4710,
+    "n_communes": 3217,
+    "n_traites": 508,
+    "coef": -0.0503,
+    "ic_bas": -0.1133,
+    "ic_haut": 0.0127,
+    "p": 0.1177,
+    "r2": 0.001
+   },
+   "controle": {
+    "n": 4652,
+    "n_communes": 3175,
+    "n_traites": 503,
+    "coef": -0.0327,
+    "ic_bas": -0.1128,
+    "ic_haut": 0.0474,
+    "p": 0.4233,
+    "r2": 0.213
+   }
+  },
+  "taux_de_reussite_g": {
+   "libelle": "taux de reussite brut",
+   "brut": {
+    "n": 5040,
+    "n_communes": 3496,
+    "n_traites": 558,
+    "coef": 0.7419,
+    "ic_bas": -0.4631,
+    "ic_haut": 1.9468,
+    "p": 0.2275,
+    "r2": 0.001
+   },
+   "controle": {
+    "n": 4939,
+    "n_communes": 3424,
+    "n_traites": 522,
+    "coef": 0.1351,
+    "ic_bas": -0.6922,
+    "ic_haut": 0.9624,
+    "p": 0.749,
+    "r2": 0.47
+   }
+  },
+  "va_du_taux_de_reussite_g": {
+   "libelle": "valeur ajoutee du taux (IVAC)",
+   "brut": {
+    "n": 4710,
+    "n_communes": 3217,
+    "n_traites": 508,
+    "coef": -0.4255,
+    "ic_bas": -1.0311,
+    "ic_haut": 0.18,
+    "p": 0.1684,
+    "r2": 0.0
+   },
+   "controle": {
+    "n": 4652,
+    "n_communes": 3175,
+    "n_traites": 503,
+    "coef": 0.3054,
+    "ic_bas": -0.4721,
+    "ic_haut": 1.0829,
+    "p": 0.4414,
+    "r2": 0.188
+   }
+  }
+ }
+}

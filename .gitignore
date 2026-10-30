@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+.ipynb_checkpoints/
+
+# Données brutes (trop volumineuses pour Git)
+python/data/*.csv
+python/data/*.xlsx
+python/data/*.xls
+!python/data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node/Frontend
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+.parcel-cache/
+
+# ---- Ajouts du 30/10/2026 (mise sous Git, dépôt privé GitHub dataoutsiders/outsiders) ----
+# Données brutes téléchargées (plusieurs Go, retéléchargeables par les scripts) et listes
+# nominatives de l'exploration élite (python/data/sport/elite) : jamais dans le dépôt.
+python/data/
+python/outputs/
+python/tools/_cache_*/
+python/tools/_cache_*
+
+# Sauvegardes datées : hors du dépôt (l'historique Git les remplace)
+_archive/
+*.bak_*
+*.bak
+
+# Réglages locaux (chemins de la machine) et outils
+.claude/
+frontend/.wrangler/
+.wrangler/
+*.log
+
+# Documents personnels hors projet public (métadonnées nominatives)
+docs/Catalogue_offres_resserre.docx
+
+# Secrets éventuels
+.env
+.env.*

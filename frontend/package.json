@@ -1,0 +1,31 @@
+{
+  "name": "outsiders-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/generate-og.mjs && node scripts/prerender-meta.mjs && node scripts/generate-sitemap.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name=outsiders --branch=main"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@resvg/resvg-js": "^2.6.2",
+    "@tailwindcss/vite": "^4.1.17",
+    "@vitejs/plugin-react": "^5.1.1",
+    "satori": "^0.26.0",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.4",
+    "vitest": "^4.1.9"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.556.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-router-dom": "^7.10.1",
+    "recharts": "^3.5.1"
+  }
+}
