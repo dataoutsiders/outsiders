@@ -177,6 +177,15 @@ def pct(part, total):
     return round(part / total * 100, 1) if total else None
 
 
+# Diversité des noms : une part n'est publiée qu'à partir de 30 noms reconnus. En dessous,
+# un pourcentage décrirait presque des personnes (14 noms et 7,1 % = un seul député).
+MIN_NOMS = 30
+
+
+def idp_publiable(valeurs):
+    return pct(sum(valeurs), len(valeurs)) if len(valeurs) >= MIN_NOMS else None
+
+
 def agg(sub):
     n = len(sub)
     ages = [d["age"] for d in sub if d["age"] is not None]
@@ -188,7 +197,7 @@ def agg(sub):
         "n": n,
         "femmes_pct": pct(sum(d["femme"] for d in sub), n),
         "age_moyen": round(sum(ages) / len(ages), 1) if ages else None,
-        "idp_pct": pct(sum(idp), len(idp)),
+        "idp_pct": idp_publiable(idp),
         "idp_n_reconnus": len(idp),
         "pcs": {fid: pct(pcs_counts.get(fid, 0), n) for fid in PCS_LABELS},
         "pcs_n": {fid: pcs_counts.get(fid, 0) for fid in PCS_LABELS},
@@ -196,7 +205,7 @@ def agg(sub):
             "n": len(cols),
             "par_depute": round(len(cols) / n, 1) if n else None,
             "femmes_pct": pct(sum(c["femme"] for c in cols), len(cols)),
-            "idp_pct": pct(sum(cols_idp), len(cols_idp)),
+            "idp_pct": idp_publiable(cols_idp),
             "idp_n_reconnus": len(cols_idp),
         },
     }

@@ -101,7 +101,7 @@ export const QUESTIONS = [
     chiffreLabel: 'députés ouvriers, quand les ouvriers sont 18,6 % des personnes en emploi',
     couleur: '#4F46E5',
     texte:
-      "66 % des députés se déclarent cadres ou professions intellectuelles supérieures (22 % des personnes en emploi). Côté noms, 4,2 % des députés portent un nom classé « diversité » (indice IDP), contre 6,4 % de leurs collaborateurs, plus jeunes, et 7 % de la population : un écart à confirmer, sur une vingtaine de députés.",
+      "66 % des députés se déclarent cadres ou professions intellectuelles supérieures (22 % des personnes en emploi). Côté noms, 4,2 % des députés portent un nom classé « diversité » (indice IDP), contre 6,4 % de leurs collaborateurs et 7 % de la population : un écart à confirmer, sur une vingtaine de députés.",
     source: {
       label: 'Open data Assemblée nationale · INSEE',
       url: 'https://data.assemblee-nationale.fr/acteurs/deputes-en-exercice',

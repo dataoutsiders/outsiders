@@ -145,7 +145,7 @@ On colle une liste de noms (par exemple les candidats d'une liste, les membres d
     parlementaires au miroir de la France : profession (nomenclature INSEE fournie par l'AN), sexe, âge et
     diversité des noms (IDP), groupe par groupe avec repères population (INSEE, TEPP). Findings : 66 % de
     cadres (22 % des personnes en emploi), 6 députés ouvriers ; côté noms, 4,2 % des députés contre 6,4 %
-    des collaborateurs, plus jeunes : un écart à confirmer (non significatif).
+    des collaborateurs : un écart à confirmer (non significatif). Diversité par groupe masquée sous 30 noms reconnus.
   - **Sélectivité** (`/terrains/selectivite`) : « qui peut entrer dans le supérieur ? ». Les 14 000
     formations Parcoursup au crible du taux d'accès : la hiérarchie réelle de la sélection (le sport et
     les arts ferment plus que la prépa), la licence « ouverte à tous » devenue minoritaire (33 %, de 20 %

@@ -151,7 +151,7 @@ export default function TerrainAssemblee() {
         {/* La porte du mandat */}
         <Section
           title="Des collaborateurs aux députés"
-          description={`Pour la parité, l'écart est net : ${f1(e.collaborateurs.femmes_pct)} % de femmes chez les collaborateurs, ${f1(e.femmes_pct)} % chez les députés. Pour les noms, l'écart (${f1(e.collaborateurs.idp_pct)} % contre ${f1(e.idp_pct)} %) repose sur une vingtaine de députés et n'est pas établi statistiquement ; les collaborateurs sont aussi plus jeunes, ce qui relève l'indice.`}
+          description={`Pour la parité, l'écart est net : ${f1(e.collaborateurs.femmes_pct)} % de femmes chez les collaborateurs, ${f1(e.femmes_pct)} % chez les députés. Pour les noms, l'écart (${f1(e.collaborateurs.idp_pct)} % contre ${f1(e.idp_pct)} %) repose sur une vingtaine de députés et n'est pas établi statistiquement ; l'âge des collaborateurs n'est pas publié, alors que l'indice monte avec les générations.`}
         >
           <div className="grid md:grid-cols-2 gap-6">
             <Porte titre="Diversité des noms (IDP)" unite=" %" pop={refs.idp} collabs={e.collaborateurs.idp_pct} deputes={e.idp_pct} couleur="#0D9488" />
@@ -220,13 +220,13 @@ export default function TerrainAssemblee() {
                 color={g.couleur}
                 suffix={m.suffix}
                 refValue={refVal}
-                faible={m.id === 'idp' && g.idp_n_reconnus < 20}
+                faible={m.id === 'idp' && g.idp_pct == null}
               />
             ))}
             {m.id === 'idp' && (
               <p className="text-xs text-gray-400 mt-4">
-                IDP calculé sur les noms reconnus par le référentiel ; valeurs en italique : moins de
-                20 noms reconnus, statistique indicative.
+                IDP calculé sur les noms reconnus par le référentiel ; « n/d » : moins de 30 noms reconnus
+                dans le groupe, valeur non publiée pour qu'aucune personne ne soit identifiable.
               </p>
             )}
           </div>
