@@ -6,6 +6,18 @@
 > pas encore, d'autres sources possibles et les points à relire.
 > Méthode : l'usager relit une carte, tranche ; on corrige ; carte suivante. Noter la décision en bas de la fiche.
 
+## Nouvelles études à relire (ajoutées le 30/10/2026, déjà en ligne)
+
+Ces fiches suivent le même plan. Elles ne décrivent pas une carte de l'accueil, mais des dossiers ou indicateurs nouveaux.
+Les points de relecture signalent les choix faits sans ton avis.
+
+| # | Étude | À regarder en priorité |
+|---|---|---|
+| [17](17_acces-soins.md) | L'accès aux soins dans l'Atlas et les fiches territoire | Seuil de 2,5 consultations ; tous âges ou 65 ans et moins ; carte d'accueil à créer ? |
+| [18](18_modes-de-vie.md) | Manger, bouger, fumer : le poids du milieu social | Le mot « qualité » sur la carte ; données de 2014-2015 ; titre de la partie régionale |
+| [19](19_omnivore.md) | L'omnivore à l'épreuve | Seuil « majoritaire » (43 aliments sur 62) ; prix sur 28 aliments ; définition des classes populaires |
+| [20](20_votes-assemblee.md) | Comment votent les députés ? | Pas de classement individuel ; 982 scrutins sans sujet ; noms des groupes |
+
 ## Déjà corrigé sur le site le 30/10/2026 (relevé pendant la préparation)
 
 - **Assemblée** : la diversité des noms était affichée pour des groupes de moins de 30 noms reconnus (pour deux

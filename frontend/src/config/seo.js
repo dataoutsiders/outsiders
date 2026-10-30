@@ -65,7 +65,7 @@ export const ROUTES_META = {
   '/terrains/assemblee': {
     title: "Qui représente qui ? L'Assemblée au miroir de la France",
     description:
-      "66 % de cadres, 6 ouvriers sur 577 députés, et des collaborateurs plus divers que les élus : l'Assemblée nationale comparée à la France, groupe par groupe. Open data AN et INSEE.",
+      "66 % de cadres, 6 ouvriers sur 577 députés, et des collaborateurs plus divers que les élus : l'Assemblée nationale comparée à la France, groupe par groupe. Et qui vote avec qui, sujet par sujet. Open data AN et INSEE.",
   },
   '/terrains/sport': {
     title: 'Le sport, miroir des inégalités ?',

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Loader2, AlertCircle, ArrowRight, Filter, Info, Landmark } from 'lucide-react'
 import { useRouteMeta } from '../../lib/meta'
+import AssembleeVotes from './AssembleeVotes'
 
 const f1 = (v) => (v == null ? 'n/d' : v.toLocaleString('fr-FR', { maximumFractionDigits: 1 }))
 
@@ -231,6 +232,8 @@ export default function TerrainAssemblee() {
             )}
           </div>
         </Section>
+
+        <AssembleeVotes />
 
         {/* Note méthodo */}
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8 flex items-start gap-3">

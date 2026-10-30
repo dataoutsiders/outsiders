@@ -53,7 +53,7 @@ export const TERRAINS = [
     titre: "L'Assemblée",
     sousTitre: '17ᵉ législature',
     description:
-      "577 députés et 2 060 collaborateurs au miroir de la France : profession, sexe, âge, diversité, groupe par groupe.",
+      "577 députés et 2 060 collaborateurs au miroir de la France, et plus de 9 000 scrutins : qui ils sont, qui vote avec qui, sur quels sujets.",
     icon: Landmark,
     color: '#4F46E5',
     statut: 'disponible',

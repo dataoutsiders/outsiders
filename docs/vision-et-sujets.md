@@ -718,7 +718,9 @@ stables au rééchantillonnage, axe 3 fragile. Résultat ajouté : l'axe 1 suit 
 (corrélation −0,65), lien avec l'omnivore de Peterson ; ce répertoire suit le diplôme à revenu égal, pas
 le revenu à diplôme égal. Âge en 3 classes seulement. Jugement sur son corps : toujours comparer à IMC
 égal, pas à poids égal ; à IMC égal, la masse grasse diffère entre femmes et hommes (non mesurée).
-Test de l'omnivore (`python/tools/build_omnivore.py`, section du dossier) : critères objectifs seulement,
+Votes de l'Assemblée (`python/tools/build_votes.py`, dossier Assemblée) : qui vote avec qui, sujets par
+commission au fond, participation, profil et territoire à groupe égal ; reste possible : le Sénat (2 176
+scrutins depuis 2017, NosParlementaires), les textes un par un. Test de l'omnivore (`python/tools/build_omnivore.py`, section du dossier) : critères objectifs seulement,
 « majoritaire » (plus de 50 % de consommateurs mensuels) et « pas cher » (sous le prix médian Insee, 28
 aliments sur 62, pas de produits industriels), testés séparément sur trois définitions des classes
 populaires (PCS, diplôme, revenu). L'énergie par aliment d'INCA 3 n'est pas exploitable ; refaire le prix à
