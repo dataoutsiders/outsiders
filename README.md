@@ -17,7 +17,8 @@ Le nom est un clin d'œil à Howard Becker (*Outsiders*, 1963).
 
 | Entrée | Contenu |
 |---|---|
-| Accueil | 16 cartes-questions (idée reçue, verdict, chiffre sourcé, lien vers la preuve), vérifiées le 30/10/2026 |
+| Accueil | 16 cartes-questions (idée reçue, verdict, chiffre sourcé, lien vers la preuve), vérifiées le 30/10/2026 ; carrousel sur téléphone |
+| Le fil (`/fil`) | Les mêmes cartes en plein écran, une par écran, à faire défiler et partager |
 | Atlas (`/atlas`) | Carte de France, 20 indicateurs, mailles département, intercommunalité, commune ; croisement de deux indicateurs et « outsiders » (écart à la droite de pronostic) ; code d'intégration |
 | Fiches territoire (`/territoires`) | Commune, intercommunalité, département, région : atypies, jumeau statistique, indicateurs situés, rubrique « Dans nos dossiers » |
 | Comparer des groupes (`/explorer/...`) | Milieu social, sexe, âge, 30 pays européens |
@@ -25,6 +26,7 @@ Le nom est un clin d'œil à Howard Becker (*Outsiders*, 1963).
 | Outil Représentativité | Diversité des noms, parité, âge d'une liste de noms, calculés dans le navigateur |
 | Presse et réutilisation (`/presse`) | Résultats à reprendre avec leur source, formule de citation, code d'intégration, images |
 | Newsletter (`/newsletter`) | Inscription (Brevo, sans script tiers sur le site), aussi en bas de l'accueil, sur `/presse` et dans le pied de page |
+| Sur téléphone | Barre d'onglets en bas ; site installable comme une application (icône, plein écran) |
 
 ---
 
@@ -64,11 +66,16 @@ cd frontend
 npm install
 npm run dev          # http://localhost:5173
 npx vitest run       # tests (79 au 30/10/2026)
+node scripts/generate-icons.mjs   # icônes de l'application (seulement si le dessin change)
 npm run deploy       # build + images de partage + pré-rendu + plan du site + publication Cloudflare
 
 # Données (venv à la racine)
 .venv\Scripts\python.exe python/tools/<script>.py    # avec PYTHONIOENCODING=utf-8 sous Windows
 ```
+
+**Sauvegarde** : dépôt Git privé `github.com/dataoutsiders/outsiders`, identité locale « Outsiders » (adresse
+anonyme GitHub). Après chaque lot : `git add -A && git commit -m "..." && git push`. Jamais l'identité Git globale
+de la machine, jamais la forge professionnelle.
 
 L'ordre des pipelines compte : voir `docs/DEPLOIEMENT.md`, section des données. Piège connu : `build_atlas_epci.py` réécrit `atlas/epci.json` en entier, il faut ensuite relancer les scripts qui y ajoutent leurs indicateurs.
 
@@ -81,6 +88,7 @@ L'ordre des pipelines compte : voir `docs/DEPLOIEMENT.md`, section des données.
 | `docs/projet.md` | Présentation complète : produit, indicateurs, moteur onomastique, sources, principes, pipelines, suite |
 | `docs/DEPLOIEMENT.md` | Comptes, domaine, newsletter (Brevo, DNS), publication, ordre des pipelines |
 | `docs/verification_cartes_accueil.md` | Vérification des cartes de l'accueil et corrections du 30/10/2026 |
+| `docs/relecture/` | Une fiche par carte (données, liens, toutes les colonnes, pistes) ; sommaire et décisions dans `README.md` |
 | `docs/millesimes_20261030.md` | Millésime de chaque source et mises à jour restantes |
 | `docs/fiches_territoire_20261030.md` | Fiches à quatre échelles, registre « Dans nos dossiers », valeurs régionales |
 | `docs/sport/` | Exploration des licences INJEP, de l'offre et de l'élite |

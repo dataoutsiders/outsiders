@@ -102,10 +102,27 @@ Puis re-déployer : `cd frontend ; npm run deploy`.
 > champs). Il peut tourner en mode échantillon : `python build_segregation.py 75056 13055` (affiche, n'écrit rien).
 
 ### C. Déploiement **100 % automatique** (sur `git push`), optionnel, pour plus tard
-1. Mettre le code sur **GitHub** (le projet n'est pas encore un dépôt git).
+1. Le code est déjà sur **GitHub** (§ D ci-dessous).
 2. Cloudflare → projet `outsiders` → **Connect to Git**.
    - Build command : `npm run build` · Build output : `frontend/dist` · Root : `frontend`
 3. Chaque `git push` redéploie automatiquement. (Pratique si plusieurs contributeurs ou maj fréquentes.)
+
+### D. Sauvegarder (Git et GitHub), après chaque lot de modifications
+
+Le dépôt est sur GitHub (privé) depuis le 2026-10-30, voir §2. Depuis la racine du projet :
+```bash
+git status                      # ce qui a changé
+git add -A
+git commit -m "Ce qui a changé, en une phrase"
+git push                        # vers github.com/dataoutsiders/outsiders
+```
+- L'identité est **locale au dépôt** (`git config user.name` doit afficher « Outsiders ») ; ne jamais commiter avec
+  l'identité globale de la machine. L'adresse distante contient `dataoutsiders@` pour que Git utilise ce compte et
+  pas un autre compte GitHub présent sur le poste.
+- Avant un enregistrement important : `git grep -i -l "<nom réel>"` ne doit rien trouver hors des fichiers publics
+  de prénoms et de noms de l'Insee.
+- `.gitignore` exclut `python/data/`, les caches, `_archive/`, les `.bak` : copier `python/data/` sur un disque
+  externe de temps en temps.
 
 ---
 

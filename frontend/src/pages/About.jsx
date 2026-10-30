@@ -93,6 +93,11 @@ function About() {
               <li>
                 <strong>Des comparaisons de groupes</strong> : milieu social, sexe, âge, et 30 pays européens.
               </li>
+              <li>
+                <strong>Sur téléphone</strong>, les idées reçues une par écran dans{' '}
+                <Link to="/fil" className="text-blue-600 hover:underline">le fil</Link>, et le site s'installe comme
+                une application sur l'écran d'accueil.
+              </li>
             </ul>
           </section>
 

@@ -5,7 +5,7 @@
 
 - **En ligne** : https://dataoutsiders.fr/ (ancienne adresse toujours active : https://outsiders-pu2.pages.dev/)
 - **Contact public** : contact@dataoutsiders.fr (redirigé par Cloudflare Email Routing) ; compte technique : dataoutsiders@gmail.com
-- **Dernière mise à jour de ce document** : 30 octobre 2026
+- **Dernière mise à jour de ce document** : 30 octobre 2026 (soir)
 - **Documents liés** : cadrage et sujets (`docs/vision-et-sujets.md`), veille de données ouvertes (`docs/veille-open-data.md`), déploiement (`docs/DEPLOIEMENT.md`), ajouter une unité d'analyse (`docs/AJOUTER_UN_DECOUPAGE.md`), design (`docs/design.md`), vérification des cartes de l'accueil (`docs/verification_cartes_accueil.md`), millésimes (`docs/millesimes_20261030.md`), fiches territoire (`docs/fiches_territoire_20261030.md`), sport (`docs/sport/`), PISA (`docs/international/`), promotion (`docs/promotion/`), idées en réflexion (`docs/idees/`).
 
 ---
@@ -47,15 +47,44 @@ Conséquence concrète : **ajouter une unité d'analyse = activer un découpage*
 **La page d'accueil** mène par des **cartes-questions** (idées reçues déconstruites par les données) :
 une accroche, un verdict, un chiffre cité et cliquable vers la vue exacte qui le prouve. Objectif :
 attirer journalistes, décideurs et curieux par une question concrète, pas par une taxonomie.
+Ordre de la page : titre et une phrase, les cartes, puis « Et chez vous ? » (recherche de territoire avec trois
+exemples : Marseille, Seine-Saint-Denis, Bretagne), les outils, la newsletter.
+
+**Sur téléphone** (pensé comme une application) :
+- les cartes défilent dans un **carrousel horizontal** (une carte entière visible dès l'arrivée, le bord de la
+  suivante invite à glisser) ; texte de la carte limité à deux lignes, le reste est dans le fil et le dossier ;
+- **le fil** (`/fil`, `pages/Fil.jsx`) : les mêmes cartes en plein écran, une par écran, défilement vertical
+  aimanté comme des stories ; boutons « Voir la preuve » et « Partager » (menu de partage du téléphone, ou copie
+  du lien) ; `?q=<id>` ouvre le fil sur une carte (lien partagé) ; dernier écran : carte, dossiers, newsletter ;
+- une **barre d'onglets** en bas (`components/BarreOnglets.jsx` : Accueil, Le fil, Carte, Territoires,
+  Dossiers), cachée à partir de la tablette ; la mise en page réserve sa hauteur ;
+- le site est une **application web installable** (`public/manifest.webmanifest`, icônes produites par
+  `scripts/generate-icons.mjs` : points blancs sur une droite et un point rouge à l'écart). Bouton
+  « Installer l'application » (Android, ordinateur) ou consigne iPhone (`components/InstallerApplication.jsx`)
+  dans le pied de page et à la fin du fil. Pas de fonctionnement hors connexion (pas de service worker,
+  volontairement : pas de chiffres périmés en cache). Ouverture depuis l'application mesurée par
+  `/?source=application` ;
+- les champs de saisie font 16 px sur téléphone (sinon l'iPhone zoome au toucher, `index.css`).
+Mesures faites dans un cadre de 390 x 660 px : la première carte de l'accueil tient au-dessus de la barre
+d'onglets, chaque écran du fil tient sans chevaucher la barre du haut ni le compteur.
+
+**Défilement entre les pages** (`components/GestionDefilement.jsx`) : nouvelle page en haut, lien vers une
+section (`#ancre`) sur la section sous l'en-tête, retour du navigateur laissé au navigateur. Le saut est
+instantané : `index.css` rend le défilement animé, et une animation interrompue par le chargement de la page
+laissait l'usager en bas de page. `/territoires` change de page quand `code` ou `niveau` change ; l'Atlas non.
 
 **Le menu** est rangé par tâche, pas par type d'objet. Deux portes :
 
 - **Outils** : des instruments qu'on fait tourner soi-même (la carte / Atlas et la fiche territoire ;
   les comparateurs de groupes milieu social / sexe / âge ; le test de représentativité d'un fichier).
 - **Dossiers** : des récits prêts à lire qui s'appuient sur les données : France en Europe, PISA 2025, Villes, Revenus, Sport, École, Élus, Assemblée, Sélectivité, Auto-écoles.
-- En méta, à droite : **Méthodologie** et **À propos**. En pied de page : **Presse et réutilisation**, **Travailler avec nous**, **Mentions légales**.
+- En méta, à droite : **Méthodologie** et **À propos**. En pied de page : **Presse et réutilisation**, **Newsletter**, **Vrai ou faux, le fil**, **Travailler avec nous**, **Mentions légales**, et l'inscription à la newsletter.
 
-**Vérification des cartes de l'accueil.** Chaque carte a été vérifiée le 30/10/2026 (chiffre retrouvé dans les données, source, logique du verdict, formulation, fraîcheur) et corrigée au besoin : `docs/verification_cartes_accueil.md`. Les cartes sont exportées (`QUESTIONS`, `VERDICTS` dans `pages/Home.jsx`) et relues par la page presse : un chiffre corrigé l'est partout.
+**Vérification des cartes de l'accueil.** Chaque carte a été vérifiée le 30/10/2026 (chiffre retrouvé dans les données, source, logique du verdict, formulation, fraîcheur) et corrigée au besoin : `docs/verification_cartes_accueil.md`. Les cartes sont exportées (`QUESTIONS`, `VERDICTS` dans `pages/Home.jsx`) et relues par la page presse et le fil : un chiffre corrigé l'est partout.
+
+**Relecture carte par carte** (en cours, menée par l'usager) : une fiche par carte dans `docs/relecture/`
+(données utilisées, liens de téléchargement, toutes les colonnes disponibles, pistes d'amélioration) ; sommaire,
+défauts en ligne restant à corriger et tableau des décisions dans `docs/relecture/README.md`.
 
 *(Les Thèmes, un angle vu sur tous les terrains, existent mais sont masqués de la navigation tant qu'un
 seul terrain est mesuré ; ils rouvriront avec un 2e terrain comparable, par exemple le sport.)*
@@ -231,6 +260,14 @@ identité tricolore) et un **fichier HTML par route** avec les bonnes balises (`
 pour que les aperçus soient corrects quand un lien est partagé sur les réseaux. Un hook (`lib/meta.js`)
 met aussi le titre à jour au fil de la navigation.
 
+### Sauvegarde et historique (Git)
+
+Depuis le 30/10/2026, le dossier est un dépôt Git, sauvegardé dans le dépôt **privé** GitHub
+`dataoutsiders/outsiders`. Identité **locale au dépôt** : « Outsiders » et l'adresse anonyme de GitHub (l'identité
+Git globale de la machine est nominative). Hors du dépôt : données brutes (`python/data/`), caches, `_archive/`,
+`.bak`, réglages locaux. Après chaque lot de modifications : enregistrement (commit) puis envoi (push).
+Détails : `docs/DEPLOIEMENT.md`, §2 et §4 D.
+
 ### Statistiques de fréquentation
 
 Mesurées par **GoatCounter** (sans cookies, sans bandeau de consentement, visites `localhost` ignorées),
@@ -240,7 +277,9 @@ comptent des actions, jamais des personnes : fiche consultée (`fiche/<niveau>/<
 croisement choisi dans l'Atlas, code d'intégration copié, phrase, formule, code ou image repris sur `/presse`, analyse lancée
 dans l'outil Représentativité (sans son contenu). Les cartes intégrées ailleurs sont comptées comme pages `/embed/...`, avec le
 site d'accueil en provenance. Pour ne pas compter ses propres visites : ouvrir une fois `https://dataoutsiders.fr/#toggle-goatcounter`
-dans chaque navigateur. Liste à jour : `docs/idees/statistiques_usages.md`.
+dans chaque navigateur. Liste à jour : `docs/idees/statistiques_usages.md`. Ajoutés ensuite : `accueil-carte/<id>`,
+`accueil-recherche`, `accueil-exemple`, `fil-vue/<id>`, `fil-preuve/<id>`, `fil-partage/<id>`, `onglet/<nom>`,
+`application-proposee`, `application-installee`, `newsletter-inscription/<page>`.
 
 ### Vie privée
 
@@ -334,16 +373,22 @@ frontend/
       international/             International (France en Europe), Pisa
       segregation/Segregation.jsx  étude ségrégation (« tape ta ville »)
       Presse.jsx                 page presse et réutilisation
-      Home.jsx                   cartes-questions (QUESTIONS exporté)
-    components/                  Header, ExplorerBar, ChoroplethMap, PointMap, CarreauxMap...
+      Newsletter.jsx             inscription à la newsletter (Brevo)
+      Fil.jsx                    le fil plein écran (stories)
+      Home.jsx                   cartes-questions (QUESTIONS exporté), carrousel sur téléphone
+    components/                  Header, Footer, BarreOnglets, GestionDefilement, NewsletterForm,
+                                 InstallerApplication, ExplorerBar, ChoroplethMap, PointMap, CarreauxMap...
     lib/                         meta (SEO), analytics (GoatCounter), residuals, territoire, jumeau
     tools/onomastics/engine.js   inférence IDP / sexe / âge (navigateur)
-  scripts/                       generate-og.mjs, prerender-meta.mjs (post-build SEO / og:image)
+  scripts/                       generate-og.mjs, prerender-meta.mjs, generate-sitemap.mjs (post-build),
+                                 generate-icons.mjs (icônes de l'application, à relancer si le dessin change)
+  public/manifest.webmanifest    application web installable ; public/icons/, public/favicon.svg
   public/data/                   tous les JSON pré-calculés (dont segregation/)
 python/tools/                    pipelines de génération des données (dont build_segregation.py)
 docs/                            projet (ce fichier), vision-et-sujets, veille-open-data,
                                  DEPLOIEMENT, AJOUTER_UN_DECOUPAGE, design, vérification des cartes,
-                                 millésimes, fiches territoire, sport/, international/, promotion/, idees/
+                                 millésimes, fiches territoire, sport/, international/, promotion/, idees/,
+                                 relecture/ (une fiche par carte de l'accueil)
 _archive/                        sauvegardes datées hors du dossier publié
 ```
 
@@ -351,7 +396,11 @@ _archive/                        sauvegardes datées hors du dossier publié
 
 ## 13. Ce qui peut venir ensuite (état au 30 octobre 2026)
 
-**Fait en octobre 2026** : domaine dataoutsiders.fr et adresse de contact ; newsletter (Brevo) ; mentions légales, page 404, plan du site ; recensement 2023 et Filosofi 2023 ; dossiers Revenus, Sport (avec l'encadré élite), PISA ; vérification et correction des cartes de l'accueil ; page presse ; fiches à quatre échelles avec « Dans nos dossiers » ; millésimes à jour ; statistiques d'usage.
+**Fait en octobre 2026** : domaine dataoutsiders.fr et adresse de contact ; newsletter (Brevo) ; mentions légales, page 404, plan du site ; recensement 2023 et Filosofi 2023 ; dossiers Revenus, Sport (avec l'encadré élite), PISA ; vérification et correction des cartes de l'accueil ; page presse ; fiches à quatre échelles avec « Dans nos dossiers » ; millésimes à jour ; statistiques d'usage ; version téléphone (carrousel, fil, barre d'onglets, application installable) ; défilement entre pages corrigé ; sauvegarde Git et GitHub ; fiches de relecture des 16 cartes ; Assemblée : diversité masquée sous 30 noms.
+
+**En cours** : relecture des cartes une par une par l'usager (`docs/relecture/README.md`), en commençant par les
+défauts encore en ligne (Public-privé « le plus grand écart de métropole », fiche ville de la ségrégation, formules
+du dossier Sport, données de l'âge sans script).
 
 **Promotion** (plan validé par l'usager, dans l'ordre) :
 1. Déclarer les réutilisations sur data.gouv.fr (textes prêts : `docs/promotion/reutilisations_datagouv.md` ; Élus, Assemblée, Sélectivité et l'outil Représentativité à ne pas mettre en avant).
