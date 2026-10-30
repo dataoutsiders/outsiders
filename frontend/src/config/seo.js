@@ -72,6 +72,11 @@ export const ROUTES_META = {
     description:
       "Le foot, sport des quartiers ? Les filles arrêtent plus tôt ? Les enfants aisés lâchent le sport pour l'école ? 13 millions de licences et l'offre de clubs et d'équipements pour vérifier.",
   },
+  '/terrains/pratiques': {
+    title: 'Manger, bouger, fumer : le poids du milieu social',
+    description:
+      "La carte de nos pratiques, de la table au sport, et la thèse de l'omnivore à l'épreuve. À âge, sexe et revenu égaux, le tabac et l'obésité suivent le diplôme ; à IMC égal, les femmes se jugent plus souvent trop grosses. Anses, Santé publique France, Assurance maladie.",
+  },
   '/terrains/revenus': {
     title: "Qui s'enrichit, qui décroche ?",
     description:

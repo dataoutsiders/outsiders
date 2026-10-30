@@ -687,3 +687,41 @@ Ce que socio-analyse apporte à Outsiders, c'est **des questions testables et de
 - **Boussole éditoriale transverse** : la thèse « la non-nomination rend les alternatives impensables »
   est exactement ce que fait Outsiders quand il nomme les idées reçues et rend des verdicts. À garder
   en tête au moment de choisir angles et titres, pas comme sujet autonome.
+
+### L. Volet santé, puis questionnaire « Où habiter ? » (idée S., 2026-10-30)
+
+**Fait** : accès aux soins dans l'Atlas et les fiches Territoires (`build_atlas_sante.py`).
+
+**Reste, dans l'ordre** : (1) pathologies par département, standardisées par âge (`effectifs`,
+data.ameli.fr, 2015-2024, ODbL), lecture par l'écart au pronostic ; (2) dossier « inégalités sociales
+de santé » : table Drees `er_inegalites_maladies_chroniques`, tables de mortalité Insee par niveau de
+vie et par diplôme, Baromètre Santé publique France 2024, INCA 3 pour l'écart brut puis contrôlé
+(écart à préciser par S. avant de commencer).
+
+**Questionnaire, à la fin** : « Dans quelle ville me conseilles-tu d'habiter ? » Des questions par thème
+(budget, soins, école, densité, âge du voisinage...), dont les réponses pondèrent les indicateurs.
+Calcul 100 % navigateur, réponses jamais envoyées, comme le jumeau statistique. Le résultat est une
+liste de communes avec, pour chacune, les indicateurs qui la font ressortir, jamais un verdict.
+Points à prévoir : ajouter les indicateurs de santé à `communes-vecteurs.json` sans changer le jumeau
+(un fichier ou des colonnes à part) ; une commune de moins de 1 000 habitants reste hors du fichier ;
+afficher que l'outil reflète les critères choisis, pas la « meilleure » ville. Test n°3 (livrable
+réutilisable) passé ; à vérifier : ne pas produire un palmarès déguisé.
+
+**Dossier « Modes de vie » (idée S., 2026-10-30), route `/terrains/pratiques`.**
+Pipeline `python/tools/build_pratiques.py` (tables dans `_cache_inca3/`). ACM pondérée sur 2 153 adultes,
+60 variables actives (aliments, achats, critères de choix, sources d'information, activités) ; social
+et santé en supplémentaires. Axe 1 (46 % de l'inertie corrigée) : consommation choisie et informée
+(bio, marché, labels, yoga, randonnée) contre prix et grande surface, porté par diplôme, PCS et revenu.
+Axe 2 (26 %) : âge (restauration rapide, grignotage, sport contre repas à domicile). Pas d'opposition
+nette capital culturel / capital économique sur les premiers axes, à tester plus finement. Axes 1 et 2
+stables au rééchantillonnage, axe 3 fragile. Résultat ajouté : l'axe 1 suit le nombre d'aliments jamais consommés
+(corrélation −0,65), lien avec l'omnivore de Peterson ; ce répertoire suit le diplôme à revenu égal, pas
+le revenu à diplôme égal. Âge en 3 classes seulement. Jugement sur son corps : toujours comparer à IMC
+égal, pas à poids égal ; à IMC égal, la masse grasse diffère entre femmes et hommes (non mesurée).
+Test de l'omnivore (`python/tools/build_omnivore.py`, section du dossier) : critères objectifs seulement,
+« majoritaire » (plus de 50 % de consommateurs mensuels) et « pas cher » (sous le prix médian Insee, 28
+aliments sur 62, pas de produits industriels), testés séparément sur trois définitions des classes
+populaires (PCS, diplôme, revenu). L'énergie par aliment d'INCA 3 n'est pas exploitable ; refaire le prix à
+la calorie avec Ciqual quand le site répondra. Cartes régionales : Baromètre Santé publique France 2024 (tabac, alcool,
+sédentarité, activité physique, dépression, de 1 300 à 3 900 répondants par région) et Assurance maladie
+(troubles addictifs, diabète, par département), pas INCA 3 (obésité à ± 5 à 13 points par région).

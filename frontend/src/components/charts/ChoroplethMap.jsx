@@ -26,6 +26,7 @@ export default function ChoroplethMap({
   highlightCode = null,
   fitBounds = false,
   divergingBreaks = null,
+  legendPosition = 'bottomright',
 }) {
   const containerRef = useRef(null)
   const mapRef = useRef(null)
@@ -113,6 +114,7 @@ export default function ChoroplethMap({
     // Légende (quantiles)
     if (legendRef.current) legendRef.current.remove()
     const legend = legendControl({
+      position: legendPosition,
       label,
       unit,
       breaks,

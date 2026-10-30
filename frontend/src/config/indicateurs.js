@@ -3,12 +3,18 @@
  * Chaque indicateur sait où lire sa valeur (département ET commune) et comment l'afficher.
  *
  * deptKey    : clé dans ecole-ips.json -> departements[]
- * communeKey : clé dans data/atlas/communes/<dep>.json -> { code: {...} }
+ * communeKey : clé dans data/atlas/communes/<dep>.json -> { code: {...} } ; null si l'indicateur
+ *              n'existe qu'au département (pas de drill communal, pas de maille EPCI)
  * fmt        : (v) => string pour l'affichage
+ * precision  : unité en toutes lettres, sous la valeur abrégée de la fiche territoire (facultatif)
  */
 const eur = (v) => Math.round(v).toLocaleString('fr-FR') + ' €'
 const eurM2 = (v) => Math.round(v).toLocaleString('fr-FR') + ' €/m²'
 const dec = (v) => v.toLocaleString('fr-FR', { maximumFractionDigits: 1 })
+const consult = (v) => dec(v) + ' consult.'
+const etp = (v) => dec(v) + ' ETP'
+const POUR_100K = 'équivalents temps plein pour 100 000 habitants'
+const DREES_APL ='https://data.drees.solidarites-sante.gouv.fr/explore/dataset/530_l-accessibilite-potentielle-localisee-apl/'
 
 export const INDICATEURS = [
   {
@@ -299,6 +305,127 @@ export const INDICATEURS = [
     source: 'INSEE, recensement 2023 (emploi)',
     sourceUrl: 'https://www.insee.fr/fr/statistiques/9002680',
     aide: "Part d'ouvriers parmi les actifs occupés (15-64 ans). Recensement 2023.",
+  },
+  {
+    id: 'apl_mg',
+    label: 'Accès aux généralistes',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'apl_mg',
+    communeKey: 'apl_mg',
+    epci: true,
+    unite: 'consultations',
+    fmt: consult,
+    precision: 'consultations par an et par habitant',
+    source: 'Drees, accessibilité potentielle localisée (APL) 2024',
+    sourceUrl: DREES_APL,
+    aide:
+      "Consultations de médecine générale accessibles par an et par habitant, en tenant compte des médecins proches (moins de 20 minutes), de leur activité et de l'âge des habitants. Tous âges de médecins confondus, hors Mayotte. Sous 2,5, l'Insee parle de commune sous-dotée. Au-delà de la commune : moyenne pondérée par la population standardisée.",
+  },
+  {
+    id: 'apl_mg_60',
+    label: 'Accès porté par les plus de 60 ans',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'apl_mg_60',
+    communeKey: 'apl_mg_60',
+    epci: true,
+    unite: '%',
+    fmt: (v) => dec(v) + ' %',
+    source: 'Drees, accessibilité potentielle localisée (APL) 2024',
+    sourceUrl: DREES_APL,
+    aide:
+      "Part de l'accès aux généralistes assurée par des médecins de plus de 60 ans. C'est ce que perdrait le territoire s'ils cessaient tous leur activité sans être remplacés : une mesure de dépendance, pas une prévision.",
+  },
+  {
+    id: 'apl_dentistes',
+    label: 'Accès aux dentistes',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'apl_dentistes',
+    communeKey: 'apl_dentistes',
+    epci: true,
+    unite: 'ETP pour 100 000',
+    fmt: etp,
+    precision: POUR_100K,
+    source: 'Drees, accessibilité potentielle localisée (APL) 2024',
+    sourceUrl: DREES_APL,
+    aide: "Chirurgiens-dentistes accessibles, en équivalents temps plein pour 100 000 habitants standardisés selon l'âge. Libéraux de 65 ans ou moins et salariés en centre de santé, hors Mayotte.",
+  },
+  {
+    id: 'apl_kines',
+    label: 'Accès aux kinésithérapeutes',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'apl_kines',
+    communeKey: 'apl_kines',
+    epci: true,
+    unite: 'ETP pour 100 000',
+    fmt: etp,
+    precision: POUR_100K,
+    source: 'Drees, accessibilité potentielle localisée (APL) 2024',
+    sourceUrl: DREES_APL,
+    aide: "Kinésithérapeutes accessibles, en équivalents temps plein pour 100 000 habitants standardisés selon l'âge. Libéraux de 65 ans ou moins et salariés en centre de santé, hors Mayotte.",
+  },
+  {
+    id: 'apl_infirmieres',
+    label: 'Accès aux infirmières',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'apl_infirmieres',
+    communeKey: 'apl_infirmieres',
+    epci: true,
+    unite: 'ETP pour 100 000',
+    fmt: etp,
+    precision: POUR_100K,
+    source: 'Drees, accessibilité potentielle localisée (APL) 2024',
+    sourceUrl: DREES_APL,
+    aide: "Infirmières accessibles, en équivalents temps plein pour 100 000 habitants standardisés selon l'âge. Libérales de 65 ans ou moins et salariées en centre de santé, hors Mayotte.",
+  },
+  {
+    id: 'apl_sages_femmes',
+    label: 'Accès aux sages-femmes',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'apl_sages_femmes',
+    communeKey: 'apl_sages_femmes',
+    epci: true,
+    unite: 'ETP pour 100 000 femmes',
+    fmt: etp,
+    precision: 'équivalents temps plein pour 100 000 femmes',
+    source: 'Drees, accessibilité potentielle localisée (APL) 2024',
+    sourceUrl: DREES_APL,
+    aide: "Sages-femmes accessibles, en équivalents temps plein pour 100 000 habitantes standardisées selon l'âge. Libérales de 65 ans ou moins et salariées en centre de santé, hors Mayotte.",
+  },
+  {
+    id: 'depassement_spe',
+    label: 'Dépassements des spécialistes',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'depassement_spe',
+    communeKey: null,
+    epci: false,
+    unite: '%',
+    fmt: (v) => dec(v) + ' %',
+    source: 'Assurance maladie, honoraires des professionnels libéraux 2025',
+    sourceUrl: 'https://data.ameli.fr/explore/dataset/honoraires/',
+    aide:
+      "Dépassements d'honoraires rapportés aux honoraires sans dépassement, pour les médecins spécialistes libéraux hors généralistes : 50 % veut dire 50 € de dépassement pour 100 € d'honoraires de base. Le département est celui où exerce le médecin, pas celui où vit le patient. Disponible au département seulement.",
+  },
+  {
+    id: 'secteur2_spe',
+    label: 'Spécialistes en secteur 2',
+    groupe: 'Santé',
+    couleur: '#EF4444',
+    deptKey: 'secteur2_spe',
+    communeKey: null,
+    epci: false,
+    unite: '%',
+    fmt: (v) => dec(v) + ' %',
+    source: 'Assurance maladie, effectifs par secteur conventionnel 2025',
+    sourceUrl: 'https://data.ameli.fr/explore/dataset/demographie-secteurs-conventionnels/',
+    aide:
+      "Part des médecins spécialistes libéraux, hors généralistes, installés en secteur 2, celui qui autorise les dépassements d'honoraires. Disponible au département seulement.",
   },
 ]
 

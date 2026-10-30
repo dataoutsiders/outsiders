@@ -36,8 +36,9 @@ const DOSSIERS = {
 export default function Atlas() {
   const [params, setParams] = useSearchParams()
   const indId = params.get('i') || DEFAULT_INDICATEUR
-  const dep = params.get('dep')
   const ind = INDICATEUR_BY_ID[indId] || INDICATEUR_BY_ID[DEFAULT_INDICATEUR]
+  // Un indicateur sans valeur communale reste à la vue nationale.
+  const dep = ind.communeKey ? params.get('dep') : null
   const vsId = params.get('vs')
   const vsInd = vsId && vsId !== indId ? INDICATEUR_BY_ID[vsId] : null
   const dossier = DOSSIERS[ind.groupe]
@@ -366,7 +367,9 @@ export default function Atlas() {
             ) : (
               <span className="text-gray-400">
                 {m === 'dept'
-                  ? 'France · cliquez un département pour voir ses communes'
+                  ? ind.communeKey
+                    ? 'France · cliquez un département pour voir ses communes'
+                    : 'France · donnée publiée au département, cliquez-en un pour sa fiche'
                   : m === 'epci'
                     ? 'Intercommunalités · zoomez pour explorer'
                     : 'Établissements · zoomez et survolez un point'}
@@ -430,7 +433,7 @@ export default function Atlas() {
               label={ind.label}
               unit={ind.unite}
               format={ind.fmt}
-              onSelectFeature={(code) => setDep(code)}
+              onSelectFeature={(code) => (ind.communeKey ? setDep(code) : selectOutsider(code))}
               highlightCode={highlightCode}
             />
           )}

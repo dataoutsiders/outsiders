@@ -62,11 +62,12 @@ GROUPE_TO_DIM = {
     "Population": "pcs",
     "Logement": "logement",
     "Démographie": "demographie",
+    "Santé": "sante",
 }
 DIM_OVERRIDES = {"va_lycee": "perf-ecole"}  # une performance, pas une composition sociale
 
 # Orientation des cartes : Y = la dimension la plus « resultat », X = la plus structurelle.
-PRIORITE_Y = ["perf-ecole", "ecole", "politique", "richesse", "pcs", "logement", "demographie"]
+PRIORITE_Y = ["perf-ecole", "sante", "ecole", "politique", "richesse", "pcs", "logement", "demographie"]
 
 FRONT_OUT = ATLAS / "croisements.json"
 OVERRIDES = OUT_DIR / "overrides.json"

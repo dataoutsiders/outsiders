@@ -48,6 +48,15 @@ function Methodologie() {
                 taux de natalité rapporté à la population.
               </li>
               <li>
+                <strong>Santé</strong> : l'<strong>accessibilité potentielle localisée</strong> (APL, Drees)
+                aux généralistes, dentistes, kinésithérapeutes, infirmières et sages-femmes, par commune, et
+                les <strong>dépassements d'honoraires</strong> des spécialistes, par département (Assurance
+                maladie). L'APL décrit l'offre accessible à moins de 20 minutes, pas les délais pour obtenir
+                un rendez-vous. Le dossier Modes de vie s'appuie sur l'<strong>étude INCA 3</strong> de l'Anses
+                (2014-2015), le <strong>Baromètre de Santé publique France</strong> 2024 et les effectifs de
+                patients de l'Assurance maladie.
+              </li>
+              <li>
                 <strong>Permis de conduire</strong> : le <strong>taux de réussite de chaque auto-école</strong>{' '}
                 au permis B en première présentation, publié par la Sécurité routière.
               </li>

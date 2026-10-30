@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import {
   Building2, MapPin, ArrowRight, ArrowLeft, Loader2, Map as MapIcon,
   Info, GraduationCap, Banknote, Users, ArrowUp, ArrowDown, Sparkles,
-  GitCompare, Layers, BookOpen, ChevronRight,
+  GitCompare, Layers, BookOpen, ChevronRight, HeartPulse,
 } from 'lucide-react'
 import { INDICATEURS, GROUPES, INDICATEUR_BY_ID } from '../../config/indicateurs'
 import {
@@ -23,7 +23,7 @@ import { trackEvent } from '../../lib/analytics'
 // références calculées à la volée (département, intercommunalités, régions).
 const FLOORS = { prix_m2: 100, revenu: 1000 }
 
-const GROUPE_ICON = { École: GraduationCap, Richesse: Banknote, 'Représentation politique': Users }
+const GROUPE_ICON = { École: GraduationCap, Richesse: Banknote, 'Représentation politique': Users, Santé: HeartPulse }
 const NIVEAU_ICON = { commune: Building2, epci: Layers, dept: MapPin, region: MapIcon }
 
 // Fichiers chargés à la demande, une seule fois par session.
@@ -112,7 +112,7 @@ function IndicatorCard({ ind, value, st }) {
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="font-medium text-gray-900">{ind.label}</div>
-          <div className="text-xs text-gray-500">{sous}</div>
+          <div className="text-xs text-gray-500">{sous}{ind.precision ? ` · ${ind.precision}` : ''}</div>
         </div>
         <div className="text-2xl font-bold shrink-0" style={{ color: value == null ? '#9CA3AF' : ind.couleur }}>
           {value == null ? 'n/d' : ind.fmt(value)}
@@ -212,6 +212,11 @@ function buildInsights(vals, pcts, level, deptRec) {
 
   if (pcts.idp != null && pcts.idp >= 85)
     out.push({ tone: 'info', text: "Diversité d'origine élevée parmi les candidats aux municipales, au regard du reste du pays." })
+
+  if (vals.apl_mg != null && vals.apl_mg <= 2.5)
+    out.push({ tone: 'warn', text: "Sous-dotation en généralistes : 2,5 consultations accessibles par an et par habitant ou moins, le seuil sous lequel l'Insee parle de commune sous-dotée." })
+  if (pcts.apl_mg_60 != null && pcts.apl_mg_60 >= 85)
+    out.push({ tone: 'warn', text: "Accès fragile : une part élevée des consultations de généraliste accessibles repose sur des médecins de plus de 60 ans, au regard du reste du pays." })
 
   return out
 }
@@ -476,7 +481,8 @@ function FicheTerritoire({ code, level, stats, depts, nameByCode, epciNom }) {
   }, [code, level, state, rec])
   const twinsEpci = useMemo(() => {
     if (level !== 'epci' || !pairs || !rec) return null
-    return findTwins(vecteursDepuis(pairs, INDICATEURS.map((i) => i.communeKey)), code)
+    // Hors santé : mêmes critères de ressemblance qu'avant l'ajout de l'accès aux soins.
+    return findTwins(vecteursDepuis(pairs, INDICATEURS.filter((i) => i.groupe !== 'Santé').map((i) => i.communeKey)), code)
   }, [level, pairs, rec, code])
   const twins = level === 'epci' ? twinsEpci : twinsCommune
 
@@ -694,7 +700,7 @@ function FicheTerritoire({ code, level, stats, depts, nameByCode, epciNom }) {
           {/* Indicateurs par thème */}
           {GROUPES.map((g) => {
             const GIcon = GROUPE_ICON[g.nom] || Info
-            const inds = level === 'region' ? g.indicateurs.filter((ind) => get(ind) != null) : g.indicateurs
+            const inds = g.indicateurs.filter((ind) => (level === 'region' ? get(ind) != null : keyOf(ind) != null))
             const dispo = inds.some((ind) => get(ind) != null)
             if (!dispo) return null
             return (

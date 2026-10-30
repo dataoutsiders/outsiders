@@ -31,6 +31,7 @@ const TerrainSelectivite = lazy(() => import('./pages/terrains/TerrainSelectivit
 const TerrainAutoEcoles = lazy(() => import('./pages/terrains/TerrainAutoEcoles'))
 const TerrainRevenus = lazy(() => import('./pages/terrains/TerrainRevenus'))
 const TerrainSport = lazy(() => import('./pages/terrains/TerrainSport'))
+const TerrainPratiques = lazy(() => import('./pages/terrains/TerrainPratiques'))
 
 const Segregation = lazy(() => import('./pages/segregation/Segregation'))
 const International = lazy(() => import('./pages/international/International'))
@@ -84,6 +85,7 @@ function MainApp() {
             <Route path="/terrains/auto-ecoles" element={<TerrainAutoEcoles />} />
             <Route path="/terrains/revenus" element={<TerrainRevenus />} />
             <Route path="/terrains/sport" element={<TerrainSport />} />
+            <Route path="/terrains/pratiques" element={<TerrainPratiques />} />
 
             {/* Ségrégation résidentielle (revenu + âge, carreaux FiLoSoFi) */}
             <Route path="/segregation" element={<Segregation />} />

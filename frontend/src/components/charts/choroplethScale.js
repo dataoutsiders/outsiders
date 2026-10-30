@@ -56,8 +56,8 @@ const signe = (x) => `${x > 0 ? '+' : x < 0 ? '−' : ''}${Math.abs(+x).toLocale
  * Contrôle de légende Leaflet (quantiles). swatch : 'square' (surfaces) ou
  * 'circle' (points) ; noDataRow ajoute la ligne « n/d ».
  */
-export function legendControl({ label, unit, breaks, values, swatch = 'square', noDataRow = false, ramp = RAMP, diverging = false }) {
-  const legend = L.control({ position: 'bottomright' })
+export function legendControl({ label, unit, breaks, values, swatch = 'square', noDataRow = false, ramp = RAMP, diverging = false, position = 'bottomright' }) {
+  const legend = L.control({ position })
   legend.onAdd = () => {
     const div = L.DomUtil.create('div')
     div.style.cssText =
@@ -78,7 +78,11 @@ export function legendControl({ label, unit, breaks, values, swatch = 'square', 
       } else {
         const a = lo[i]
         const b = breaks[i]
-        lab = b != null ? `${(+a).toFixed(0)}–${(+b).toFixed(0)}${unit}` : `≥ ${(+a).toFixed(0)}${unit}`
+        // Une décimale quand l'étendue est faible (sinon « 3–3 ») ; espace devant une unité en toutes lettres.
+        const d = Math.max(...breaks) - Math.min(...breaks) < 10 ? 1 : 0
+        const n = (x) => (+x).toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d, useGrouping: false })
+        const u = /^[a-zà-ÿ]/i.test(unit) ? ` ${unit}` : unit
+        lab = b != null ? `${n(a)}–${n(b)}${u}` : `≥ ${n(a)}${u}`
       }
       html += `<div>${sw(ramp[i])}${lab}</div>`
     }

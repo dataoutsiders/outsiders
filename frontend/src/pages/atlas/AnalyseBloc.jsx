@@ -45,6 +45,10 @@ export default function AnalyseBloc({
   const keyOf = (i) => (level === 'commune' ? i.communeKey : i.deptKey)
   const mot = level === 'commune' ? 'communes' : level === 'epci' ? 'intercommunalités' : 'départements'
   const k = keyOf(ind)
+  // Indicateurs disponibles à cette maille, seuls proposés au croisement.
+  const croisables = INDICATEURS.filter(
+    (i) => i.id !== ind.id && (level === 'commune' ? i.communeKey : level === 'epci' ? i.epci : true),
+  )
 
   const recs = records
     .filter((d) => d[k] != null)
@@ -108,7 +112,7 @@ export default function AnalyseBloc({
           indicateur. Les outsiders sont ceux qui s'en écartent le plus, au-dessus ou en dessous.
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
-          {INDICATEURS.filter((i) => i.id !== ind.id).map((i) => {
+          {croisables.map((i) => {
             const active = vsInd?.id === i.id
             return (
               <button

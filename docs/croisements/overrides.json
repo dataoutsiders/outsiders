@@ -42,5 +42,17 @@
   "diplome_sup__ages65": {
     "question": "Les communes âgées sont-elles aussi les moins diplômées ?",
     "note": "Deux mécanismes se combinent : les générations anciennes sont moins souvent diplômées du supérieur, et les jeunes diplômés partent vers les métropoles."
+  },
+  "apl_dentistes__maisons": {
+    "question": "Moins de dentistes accessibles dans la France des maisons ?",
+    "note": "L'accessibilité compte les dentistes à moins de 20 minutes, pas seulement ceux de la commune : elle mesure l'éloignement des centres urbains autant que l'offre locale."
+  },
+  "apl_dentistes__prix_m2": {
+    "question": "Les dentistes sont-ils plus accessibles là où l'immobilier est cher ?",
+    "note": "L'accessibilité compte les dentistes à moins de 20 minutes, pas seulement ceux de la commune. La relation décrit une géographie commune aux villes, pas un lien de cause."
+  },
+  "apl_dentistes__cadres": {
+    "question": "Accéder à un dentiste, plus facile là où vivent les cadres ?",
+    "note": "L'accessibilité compte les dentistes à moins de 20 minutes, pas seulement ceux de la commune. La relation décrit une géographie commune aux villes, pas un lien de cause."
   }
 }

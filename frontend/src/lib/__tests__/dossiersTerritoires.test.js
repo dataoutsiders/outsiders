@@ -172,22 +172,30 @@ describe('registre « Dans nos dossiers » : territoires de contrôle', () => {
 
   it('Gers (32) : sport « signature » rugby, et les autres dossiers départementaux', async () => {
     const rs = await dansNosDossiers('dept', '32', { nom: 'Gers' }, fetcher)
-    expect(ids(rs)).toEqual(['auto-ecoles', 'ecole', 'elus', 'segregation', 'sport'].filter((id) =>
+    expect(ids(rs)).toEqual(['auto-ecoles', 'ecole', 'elus', 'pratiques', 'segregation', 'sport'].filter((id) =>
       id !== 'segregation' || lireJson('segregation/departements.json').departements.some((d) => d.dep === '32')))
     const sp = rs.find((r) => r.dossier.id === 'sport')
     expect(sp.texte).toMatch(/sport « signature » : rugby/)
     expect(rs.find((r) => r.dossier.id === 'auto-ecoles').lien).toBe('/terrains/auto-ecoles?dep=32')
   })
 
-  it('Île-de-France (11) : ville et sélectivité', async () => {
+  it('Modes de vie : prises en charge au département, avec la précaution ; Baromètre à la région', async () => {
+    const dep = (await dansNosDossiers('dept', '23', { nom: 'Creuse' }, fetcher)).find((r) => r.dossier.id === 'pratiques')
+    expect(dep.texte).toMatch(/À âge et sexe égaux, 1,8 % des habitants/)
+    expect(dep.precaution).toContain('pas des personnes malades')
+    const reg = (await dansNosDossiers('region', '53', contexteRegion(REGION_INSEE_BY_CODE['53']), fetcher)).find((r) => r.dossier.id === 'pratiques')
+    expect(reg.texte).toMatch(/28,2 % dépassent les repères/)
+  })
+
+  it('Île-de-France (11) : ville, sélectivité et modes de vie', async () => {
     const rs = await dansNosDossiers('region', '11', contexteRegion(REGION_INSEE_BY_CODE['11']), fetcher)
-    expect(ids(rs)).toEqual(['segregation', 'selectivite'])
+    expect(ids(rs)).toEqual(['pratiques', 'segregation', 'selectivite'])
     expect(rs.find((r) => r.dossier.id === 'selectivite').texte).toMatch(/^Parcoursup 2025 : 20 % des 721 formations de licence/)
   })
 
-  it("La Réunion (04) : sélectivité seulement (le dossier Villes regroupe l'outre-mer)", async () => {
+  it("La Réunion (04) : sélectivité et modes de vie (le dossier Villes regroupe l'outre-mer)", async () => {
     const rs = await dansNosDossiers('region', '04', contexteRegion(REGION_INSEE_BY_CODE['04']), fetcher)
-    expect(ids(rs)).toEqual(['selectivite'])
+    expect(ids(rs)).toEqual(['pratiques', 'selectivite'])
   })
 
   it('Mayotte (06) : aucun dossier régional', async () => {

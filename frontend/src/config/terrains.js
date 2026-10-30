@@ -6,7 +6,7 @@
  * `metrics` = chiffre-phare du terrain pour chaque dimension (sert à la
  * comparaison inter-terrains sur les pages thèmes).
  */
-import { Landmark, Trophy, Building2, GraduationCap, DoorOpen, Car, TrendingUp } from 'lucide-react'
+import { Landmark, Trophy, Building2, GraduationCap, DoorOpen, Car, TrendingUp, HeartPulse } from 'lucide-react'
 
 export const TERRAINS = [
   {
@@ -97,6 +97,19 @@ export const TERRAINS = [
     color: '#F59E0B',
     statut: 'disponible',
     to: '/terrains/sport',
+    angles: [],
+    metrics: {},
+  },
+  {
+    id: 'pratiques',
+    titre: 'Les modes de vie',
+    sousTitre: 'Pratiques, corps, tabac · INCA 3 et Baromètre 2024',
+    description:
+      "La carte de nos pratiques, de la table au sport : ce qu'elles doivent à l'âge, au diplôme et à l'argent, et ce qu'elles disent de l'obésité, du tabac et du regard sur son corps.",
+    icon: HeartPulse,
+    color: '#DB2777',
+    statut: 'disponible',
+    to: '/terrains/pratiques',
     angles: [],
     metrics: {},
   },

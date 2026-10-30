@@ -298,6 +298,7 @@ Toutes ouvertes, toujours citées avec un lien vers l'origine (jamais créditée
 - **Éducation nationale** : indice de position sociale (IPS) des écoles, collèges et lycées ; indicateurs de valeur ajoutée des lycées (IVAL).
 - **INSEE** : recensement 2023 (diplômes, logement, emploi et catégories socioprofessionnelles, structure de population) ; revenus Filosofi ; état civil (naissances) ; ERFS et enquête Emploi ; mortalité par catégorie sociale.
 - **DVF / Etalab** : demandes de valeurs foncières (prix de l'immobilier).
+- **Anses** : étude INCA 3 (2014-2015) ; **Santé publique France (Odissé)** : Baromètre 2024 ; **Insee** : prix moyens de vente au détail 2014-2015 ; **Drees** : accessibilité potentielle localisée (APL) 2024 ; **Assurance maladie (data.ameli.fr)** : honoraires et secteurs conventionnels 2025, licence ODbL.
 - **Ministère de l'Intérieur (data.gouv.fr)** : candidatures et résultats des municipales 2020 et 2026, répertoire national des élus.
 - **INJEP** : recensement des licences et clubs sportifs (données géocodées par l'Insee, 2013-2023) ; **ministère des Sports** : équipements (Data ES) ; **ANCT** : quartiers prioritaires.
 - **Assemblée nationale** : députés et collaborateurs ; **Parcoursup** (ministère de l'Enseignement supérieur) ; **Sécurité routière** : taux de réussite des auto-écoles.
@@ -335,7 +336,8 @@ Scripts dans `python/tools/`, à lancer dans cet ordre (détails dans `docs/DEPL
    - `build_atlas_logement.py` (5 indicateurs de logement),
    - `build_atlas_demo.py` (jeunes, 65 ans et plus),
    - `build_atlas_pcs.py` (cadres, professions intermédiaires, employés, ouvriers),
-   - `build_atlas_natalite.py` (taux de natalité).
+   - `build_atlas_natalite.py` (taux de natalité),
+   - `build_atlas_sante.py` (accès aux soins, Drees et Assurance maladie ; les dépassements n'existent qu'au département, `communeKey: null` dans le registre ; hors du jumeau statistique).
 6. `build_atlas_population.py` : champ technique de population par territoire (sert au moteur de résidus et au jumeau, pas un indicateur affiché).
 7. `build_territoires_index.py` : index de recherche, repères nationaux et tranches de population (à relancer après tout ajout d'indicateur de l'Atlas).
 8. `build_atlas_vecteurs.py` : vecteurs communaux du jumeau statistique (communes de 1 000 habitants et plus, avec centroïdes).
@@ -344,9 +346,9 @@ Scripts dans `python/tools/`, à lancer dans cet ordre (détails dans `docs/DEPL
 11. `build_evolution_revenus.py` : dossier « Qui s'enrichit, qui décroche ? » (position des communes dans la distribution des niveaux de vie, Filosofi 2014 et 2021, contrôle Filosofi 2 de 2023 ; communes au périmètre modifié depuis 2014 écartées ; à lancer après `build_atlas_population.py`).
 12. Dossier « Sport » : `explore_sport_injep.py` puis `explore_sport_offre.py` et `explore_sport_elite.py` (licences et clubs INJEP, équipements Data ES, contours QPV, internationaux ; tables dans `python/data/sport/sorties/`, méthode dans `docs/sport/`), puis `build_showcase_sport.py` (→ `showcases/sport.json`, page `/terrains/sport` ; exclut les fédérations multisports des classements par sport).
 13. `build_croisements.py` (cartes-croisements de l'Atlas, après tous les `build_atlas_*`), `build_auto_ecoles.py` (dossier Auto-écoles), puis `build_territoires_echelles.py` et `build_territoires_index.py` (fiches intercommunalité et région, extrait Auto-écoles par département ; à relancer après `build_auto_ecoles.py`).
-14. Dossiers autonomes : `build_international.py` (Eurostat), `build_pisa.py` (OCDE), `build_assemblee.py`, `build_parcoursup.py`, `build_rythmes.py`.
+14. Dossiers autonomes : `build_international.py` (Eurostat), `build_pisa.py` (OCDE), `build_assemblee.py`, `build_parcoursup.py`, `build_rythmes.py`, `build_pratiques.py` (dossier Modes de vie : INCA 3, Baromètre 2024, Assurance maladie ; ACM pondérée, intervalles par plan de sondage, standardisation indirecte ; → `showcases/pratiques.json` et `geo/regions.geojson`), `build_omnivore.py` (section « L'omnivore à l'épreuve » : critères objectifs majoritaire et pas cher, prix Insee IPC-PM-2015 ; → `showcases/omnivore.json`).
 
-**Piège** : `build_atlas_epci.py` réécrit `atlas/epci.json` en entier. Après lui, relancer dans l'ordre `build_atlas_insee`, `build_atlas_logement`, `build_atlas_demo`, `build_atlas_pcs`, `build_atlas_natalite`, `build_atlas_population`, puis `build_territoires_echelles`, `build_territoires_index`, `build_atlas_vecteurs`, `build_croisements`.
+**Piège** : `build_atlas_epci.py` réécrit `atlas/epci.json` en entier. Après lui, relancer dans l'ordre `build_atlas_insee`, `build_atlas_logement`, `build_atlas_demo`, `build_atlas_pcs`, `build_atlas_natalite`, `build_atlas_sante`, `build_atlas_population`, puis `build_territoires_echelles`, `build_territoires_index`, `build_atlas_vecteurs`, `build_croisements`.
 
 Puis redéployer : `cd frontend ; npm run deploy`.
 

@@ -510,6 +510,146 @@
    ]
   },
   {
+   "id": "apl_dentistes__maisons",
+   "y": "apl_dentistes",
+   "x": "maisons",
+   "dimensions": [
+    "sante",
+    "logement"
+   ],
+   "r_communes": -0.652,
+   "r_dept": -0.775,
+   "n_communes": 34684,
+   "force": "forte",
+   "question": "Moins de dentistes accessibles dans la France des maisons ?",
+   "lecture": "Entre communes, Accès aux dentistes et Maisons individuelles évoluent en sens inverse (corrélation -0.65, relation forte).",
+   "dessus": [
+    {
+     "code": "59346",
+     "nom": "Lezennes",
+     "x": 86.8,
+     "y": 147.2,
+     "pop": 2978,
+     "z": 5.0
+    },
+    {
+     "code": "13085",
+     "nom": "Roquefort-la-Bédoule",
+     "x": 67.8,
+     "y": 152.9,
+     "pop": 5798,
+     "z": 4.8
+    },
+    {
+     "code": "2A247",
+     "nom": "Porto-Vecchio",
+     "x": 66.5,
+     "y": 151.7,
+     "pop": 11198,
+     "z": 4.7
+    },
+    {
+     "code": "97414",
+     "nom": "Saint-Louis",
+     "x": 80.9,
+     "y": 132.6,
+     "pop": 54941,
+     "z": 4.2
+    },
+    {
+     "code": "31044",
+     "nom": "Balma",
+     "x": 45.0,
+     "y": 151.9,
+     "pop": 17772,
+     "z": 4.2
+    },
+    {
+     "code": "59034",
+     "nom": "Avelin",
+     "x": 92.0,
+     "y": 124.9,
+     "pop": 2561,
+     "z": 4.1
+    },
+    {
+     "code": "63272",
+     "nom": "Pérignat-lès-Sarliève",
+     "x": 79.8,
+     "y": 131.4,
+     "pop": 2872,
+     "z": 4.1
+    },
+    {
+     "code": "13118",
+     "nom": "Coudoux",
+     "x": 83.0,
+     "y": 128.3,
+     "pop": 3825,
+     "z": 4.0
+    }
+   ],
+   "dessous": [
+    {
+     "code": "73290",
+     "nom": "Val-Cenis",
+     "x": 24.8,
+     "y": 0.0,
+     "pop": 2112,
+     "z": -3.2
+    },
+    {
+     "code": "73157",
+     "nom": "Modane",
+     "x": 14.0,
+     "y": 14.4,
+     "pop": 2849,
+     "z": -2.8
+    },
+    {
+     "code": "38269",
+     "nom": "La Mure",
+     "x": 46.9,
+     "y": 1.6,
+     "pop": 4963,
+     "z": -2.6
+    }
+   ],
+   "variantes": [
+    {
+     "a": "proprietaires",
+     "b": "apl_dentistes",
+     "r": -0.572
+    },
+    {
+     "a": "proprietaires",
+     "b": "apl_mg",
+     "r": -0.365
+    },
+    {
+     "a": "maisons",
+     "b": "apl_mg",
+     "r": -0.352
+    },
+    {
+     "a": "maisons",
+     "b": "apl_kines",
+     "r": -0.347
+    },
+    {
+     "a": "proprietaires",
+     "b": "apl_kines",
+     "r": -0.329
+    },
+    {
+     "a": "hlm",
+     "b": "apl_dentistes",
+     "r": 0.317
+    }
+   ],
+   "note": "L'accessibilité compte les dentistes à moins de 20 minutes, pas seulement ceux de la commune : elle mesure l'éloignement des centres urbains autant que l'offre locale."
+  },
+  {
    "id": "idp__natalite",
    "y": "idp",
    "x": "natalite",
@@ -749,6 +889,150 @@
    "note": "Diversité des candidats, pas des habitants : la relation dit où la diversité accède à la candidature, pas un lien de cause."
   },
   {
+   "id": "apl_dentistes__prix_m2",
+   "y": "apl_dentistes",
+   "x": "prix_m2",
+   "dimensions": [
+    "sante",
+    "richesse"
+   ],
+   "r_communes": 0.59,
+   "r_dept": 0.778,
+   "n_communes": 33137,
+   "force": "forte",
+   "question": "Les dentistes sont-ils plus accessibles là où l'immobilier est cher ?",
+   "lecture": "Entre communes, Accès aux dentistes et Prix immobilier évoluent ensemble (corrélation +0.59, relation forte).",
+   "dessus": [
+    {
+     "code": "69142",
+     "nom": "La Mulatière",
+     "x": 3037,
+     "y": 151.2,
+     "pop": 6534,
+     "z": 4.9
+    },
+    {
+     "code": "13211",
+     "nom": "Marseille 11e arr.",
+     "x": 3167,
+     "y": 148.9,
+     "pop": 59883,
+     "z": 4.7
+    },
+    {
+     "code": "59346",
+     "nom": "Lezennes",
+     "x": 3000,
+     "y": 147.2,
+     "pop": 2978,
+     "z": 4.7
+    },
+    {
+     "code": "31044",
+     "nom": "Balma",
+     "x": 3558,
+     "y": 151.9,
+     "pop": 17772,
+     "z": 4.7
+    },
+    {
+     "code": "13215",
+     "nom": "Marseille 15e arr.",
+     "x": 1597,
+     "y": 132.2,
+     "pop": 79161,
+     "z": 4.6
+    },
+    {
+     "code": "13206",
+     "nom": "Marseille 6e arr.",
+     "x": 3822,
+     "y": 151.7,
+     "pop": 38476,
+     "z": 4.5
+    },
+    {
+     "code": "13201",
+     "nom": "Marseille 1er arr.",
+     "x": 3090,
+     "y": 141.8,
+     "pop": 37599,
+     "z": 4.4
+    },
+    {
+     "code": "69199",
+     "nom": "Saint-Fons",
+     "x": 2580,
+     "y": 135.9,
+     "pop": 19285,
+     "z": 4.3
+    }
+   ],
+   "dessous": [
+    {
+     "code": "83119",
+     "nom": "Saint-Tropez",
+     "x": 12500,
+     "y": 66.9,
+     "pop": 3582,
+     "z": -3.1
+    },
+    {
+     "code": "2A041",
+     "nom": "Bonifacio",
+     "x": 5215,
+     "y": 0.0,
+     "pop": 3344,
+     "z": -3.1
+    },
+    {
+     "code": "74173",
+     "nom": "Megève",
+     "x": 9894,
+     "y": 49.0,
+     "pop": 2893,
+     "z": -2.8
+    },
+    {
+     "code": "13104",
+     "nom": "Sausset-les-Pins",
+     "x": 6445,
+     "y": 19.5,
+     "pop": 7574,
+     "z": -2.7
+    },
+    {
+     "code": "73227",
+     "nom": "Courchevel",
+     "x": 10849,
+     "y": 62.2,
+     "pop": 2290,
+     "z": -2.6
+    },
+    {
+     "code": "56005",
+     "nom": "Arzon",
+     "x": 5167,
+     "y": 10.4,
+     "pop": 2271,
+     "z": -2.6
+    }
+   ],
+   "variantes": [
+    {
+     "a": "prix_m2",
+     "b": "apl_mg",
+     "r": 0.37
+    },
+    {
+     "a": "revenu",
+     "b": "apl_infirmieres",
+     "r": -0.334
+    }
+   ],
+   "note": "L'accessibilité compte les dentistes à moins de 20 minutes, pas seulement ceux de la commune. La relation décrit une géographie commune aux villes, pas un lien de cause."
+  },
+  {
    "id": "prix_m2__maisons",
    "y": "prix_m2",
    "x": "maisons",
@@ -906,6 +1190,126 @@
      "r": -0.373
     }
    ]
+  },
+  {
+   "id": "apl_dentistes__cadres",
+   "y": "apl_dentistes",
+   "x": "cadres",
+   "dimensions": [
+    "sante",
+    "pcs"
+   ],
+   "r_communes": 0.573,
+   "r_dept": 0.667,
+   "n_communes": 34607,
+   "force": "forte",
+   "question": "Accéder à un dentiste, plus facile là où vivent les cadres ?",
+   "lecture": "Entre communes, Accès aux dentistes et Cadres évoluent ensemble (corrélation +0.57, relation forte).",
+   "dessus": [
+    {
+     "code": "2A247",
+     "nom": "Porto-Vecchio",
+     "x": 10.6,
+     "y": 151.7,
+     "pop": 11198,
+     "z": 5.1
+    },
+    {
+     "code": "69142",
+     "nom": "La Mulatière",
+     "x": 15.6,
+     "y": 151.2,
+     "pop": 6534,
+     "z": 5.0
+    },
+    {
+     "code": "13211",
+     "nom": "Marseille 11e arr.",
+     "x": 17.3,
+     "y": 148.9,
+     "pop": 59883,
+     "z": 4.8
+    },
+    {
+     "code": "13085",
+     "nom": "Roquefort-la-Bédoule",
+     "x": 30.1,
+     "y": 152.9,
+     "pop": 5798,
+     "z": 4.7
+    },
+    {
+     "code": "59346",
+     "nom": "Lezennes",
+     "x": 28.4,
+     "y": 147.2,
+     "pop": 2978,
+     "z": 4.5
+    },
+    {
+     "code": "31044",
+     "nom": "Balma",
+     "x": 37.9,
+     "y": 151.9,
+     "pop": 17772,
+     "z": 4.5
+    },
+    {
+     "code": "69199",
+     "nom": "Saint-Fons",
+     "x": 9.1,
+     "y": 135.9,
+     "pop": 19285,
+     "z": 4.5
+    },
+    {
+     "code": "69382",
+     "nom": "Lyon 2e arr.",
+     "x": 43.3,
+     "y": 154.0,
+     "pop": 29981,
+     "z": 4.4
+    }
+   ],
+   "dessous": [],
+   "variantes": [
+    {
+     "a": "diplome_sup",
+     "b": "apl_dentistes",
+     "r": 0.516
+    },
+    {
+     "a": "ouvriers",
+     "b": "apl_dentistes",
+     "r": -0.504
+    },
+    {
+     "a": "ouvriers",
+     "b": "apl_kines",
+     "r": -0.36
+    },
+    {
+     "a": "cadres",
+     "b": "apl_mg",
+     "r": 0.337
+    },
+    {
+     "a": "ouvriers",
+     "b": "apl_mg",
+     "r": -0.325
+    },
+    {
+     "a": "employes",
+     "b": "apl_infirmieres",
+     "r": 0.303
+    },
+    {
+     "a": "diplome_sup",
+     "b": "apl_mg",
+     "r": 0.301
+    }
+   ],
+   "note": "L'accessibilité compte les dentistes à moins de 20 minutes, pas seulement ceux de la commune. La relation décrit une géographie commune aux villes, pas un lien de cause."
   },
   {
    "id": "cadres__maisons",

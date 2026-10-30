@@ -47,6 +47,14 @@ INDICATEURS = [
     ("intermediaires", "intermediaires", "intermediaires"),
     ("employes", "employes", "employes"),
     ("ouvriers", "ouvriers", "ouvriers"),
+    ("apl_mg", "apl_mg", "apl_mg"),
+    ("apl_mg_60", "apl_mg_60", "apl_mg_60"),
+    ("apl_dentistes", "apl_dentistes", "apl_dentistes"),
+    ("apl_kines", "apl_kines", "apl_kines"),
+    ("apl_infirmieres", "apl_infirmieres", "apl_infirmieres"),
+    ("apl_sages_femmes", "apl_sages_femmes", "apl_sages_femmes"),
+    ("depassement_spe", "depassement_spe", None),
+    ("secteur2_spe", "secteur2_spe", None),
 ]
 
 

@@ -52,6 +52,7 @@ CACHE = Path(__file__).resolve().parent / "_cache_territoires"
 FILOSOFI = Path(__file__).resolve().parent / "_cache_filosofi" / "DS_FILOSOFI_CC_2023_data.csv"
 DVF_URL = "https://data-pipeline-open.s3.sbg.io.cloud.ovh.net/dvf/stats_whole_period.csv"
 ZIP_NAIS = DATA / "base_naissances_2008-2025_geo2026_xlsx.zip"
+SANTE = Path(__file__).resolve().parent / "_cache_sante" / "numerateurs-departements.json"
 
 # Régions au 1er janvier 2026 (code officiel géographique de l'Insee).
 REGIONS = [
@@ -77,6 +78,8 @@ REGIONS = [
 REG_OF_DEP = {d: code for code, _, deps in REGIONS for d in deps}
 
 # Origine de chaque valeur régionale (reprise telle quelle dans regions.json et dans la documentation).
+APL_REGION = ("calculée : APL des communes de la région, moyenne pondérée par la population standardisée, "
+              "comme au département (pas de valeur régionale publiée par la Drees)")
 METHODES = {
     "revenu": "officielle : Insee, Filosofi 2023, niveau de vie médian de la région (GEO_OBJECT = REG)",
     # Prix immobilier : les statistiques DVF ne publient pas d'échelle région (échelles : nation,
@@ -105,6 +108,17 @@ METHODES = {
     "ips_lycee_public": "calculée : moyenne des IPS des lycées publics de la région, comme au département",
     "va_lycee": "calculée : moyenne des valeurs ajoutées des lycées de la région, comme au département",
     "pop": "officielle : Insee, recensement 2023, population municipale de la région",
+    "apl_mg": APL_REGION,
+    "apl_mg_60": "calculée : part de l'accès aux généralistes assurée par des médecins de plus de 60 ans, "
+                 "pondérée par la population standardisée, comme au département",
+    "apl_dentistes": APL_REGION,
+    "apl_kines": APL_REGION,
+    "apl_infirmieres": APL_REGION,
+    "apl_sages_femmes": APL_REGION,
+    "depassement_spe": "calculée : dépassements / honoraires sans dépassement des spécialistes de la région, "
+                       "sommes des départements, comme au département",
+    "secteur2_spe": "calculée : spécialistes de secteur 2 / spécialistes de la région, sommes des départements, "
+                    "comme au département",
 }
 
 
@@ -324,6 +338,25 @@ lyc = et[(et.niveau == "l") & et.va.notna()]
 for r, v in lyc.groupby("rg")["va"].mean().items():
     reg[r]["va_lycee"] = round(float(v), 1)
 controles.append(("va_lycee", *ecart_max(lyc.groupby("dep")["va"].mean().round(1).to_dict(), deps_atlas, "va_lycee")))
+
+# 2g. Accès aux soins : sommes des numérateurs et dénominateurs départementaux (build_atlas_sante.py)
+print("Accès aux soins (numérateurs et dénominateurs départementaux)...")
+DEC_SANTE = {"apl_mg": 2}
+for cle, par_dep in json.loads(SANTE.read_text(encoding="utf-8")).items():
+    pct = cle in ("apl_mg_60", "depassement_spe", "secteur2_spe")
+    mult = 100 if pct else 1
+    dec = DEC_SANTE.get(cle, 1)
+    sn, sd = {}, {}
+    for d, (n, m) in par_dep.items():
+        r = REG_OF_DEP.get(d)
+        if r:
+            sn[r] = sn.get(r, 0) + n
+            sd[r] = sd.get(r, 0) + m
+    for r in sn:
+        if sd[r] > 0:
+            reg[r][cle] = round(sn[r] / sd[r] * mult, dec)
+    controles.append((cle, *ecart_max(
+        {d: round(n / m * mult, dec) for d, (n, m) in par_dep.items() if m > 0}, deps_atlas, cle)))
 
 regions = [reg[code] for code, _, _ in REGIONS]
 (ATLAS / "regions.json").write_text(json.dumps({"sources": METHODES, "regions": regions},

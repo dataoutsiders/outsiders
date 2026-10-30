@@ -289,6 +289,55 @@ export const DOSSIERS_TERRITOIRES = [
     },
   },
 
+  // ───────────────────────── Modes de vie ─────────────────────────
+  {
+    id: 'pratiques',
+    titre: 'Manger, bouger, fumer : le poids du milieu social',
+    route: '/terrains/pratiques',
+    source: 'Assurance maladie 2024 ; Santé publique France, Baromètre 2024',
+    sourceUrl: 'https://www.data.gouv.fr/datasets/62b31f7b128643f46ea1f848',
+    fichiers: ['showcases/pratiques.json'],
+    echelles: {
+      dept: {
+        fichier: 'showcases/pratiques.json',
+        extraire: (d, code) => {
+          const ligne = (id) => {
+            const p = d.departements.find((x) => x.id === id)
+            const l = p.lignes.find((x) => x.code === code)
+            return l ? { std: l.std, france: p.france } : null
+          }
+          const addictions = ligne('addictions')
+          const diabete = ligne('diabete')
+          return addictions && diabete ? { addictions, diabete } : null
+        },
+        phrase: (x) => ({
+          texte: `À âge et sexe égaux, ${fr(x.addictions.std)} % des habitants sont pris en charge pour des troubles addictifs (France : ${fr(x.addictions.france)} %) et ${fr(x.diabete.std)} % pour un diabète (France : ${fr(x.diabete.france)} %).`,
+          precaution:
+            "Ces chiffres comptent des personnes prises en charge par le système de soins, pas des personnes malades : un taux bas peut aussi signaler un recours aux soins plus faible.",
+        }),
+        lien: () => '/terrains/pratiques',
+      },
+      region: {
+        fichier: 'showcases/pratiques.json',
+        extraire: (d, code) => {
+          const ligne = (id) => {
+            const r = d.regions.find((x) => x.id === id)
+            const l = r.lignes.find((x) => x.code === code)
+            return l ? { v: l.v, france: r.national.v } : null
+          }
+          const tabac = ligne('tabac')
+          const alcool = ligne('alcool')
+          return tabac && alcool ? { tabac, alcool } : null
+        },
+        phrase: (x) => ({
+          texte: `${fr(x.tabac.v)} % des personnes interrogées fument chaque jour (France : ${fr(x.tabac.france)} %) et ${fr(x.alcool.v)} % dépassent les repères de consommation d'alcool (France : ${fr(x.alcool.france)} %).`,
+          precaution: "Enquête déclarative : un écart d'un ou deux points avec la France n'est pas toujours significatif.",
+        }),
+        lien: () => '/terrains/pratiques',
+      },
+    },
+  },
+
   // ───────────────────────── Sélectivité du supérieur ─────────────────────────
   {
     id: 'selectivite',

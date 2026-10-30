@@ -41,6 +41,7 @@ const DOSSIERS_ITEMS = [
   { to: '/segregation', label: 'Villes', sub: 'riches et pauvres vivent-ils séparés ?' },
   { to: '/terrains/revenus', label: 'Revenus', sub: "qui s'enrichit, qui décroche ?" },
   { to: '/terrains/sport', label: 'Sport', sub: 'le foot, sport des quartiers ?' },
+  { to: '/terrains/pratiques', label: 'Modes de vie', sub: 'manger, bouger, fumer : le poids du milieu social' },
   { to: '/terrains/ecole', label: 'École', sub: "l'école trie-t-elle ?" },
   { to: '/terrains/elus', label: 'Élus', sub: 'la diversité, du candidat au maire' },
   { to: '/terrains/assemblee', label: 'Assemblée', sub: 'qui représente qui, groupe par groupe ?' },

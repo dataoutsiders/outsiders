@@ -31,6 +31,9 @@ Statuts : **mis à jour** ; **déjà à jour** ; **à faire** (avec l'effort) ; 
 | Filosofi 2014, 2021, 2023 (dossier Revenus) | 2014-2021, contrôle 2023 | idem | déjà à jour |
 | Recensement 2023 (Atlas : diplômes, logement, âges, PCS) | RP 2023 | RP 2023 (RP 2024 attendu en 2027) | déjà à jour |
 | Naissances (natalité) | 2021-2025, géographie 2026 | idem, [Insee 1893255](https://www.insee.fr/fr/statistiques/1893255) | déjà à jour |
+| Accès aux soins, APL (Atlas, fiche territoire) | ajouté le 30/10/2026 | 2024, onglets 2022 à 2024, [Drees](https://data.drees.solidarites-sante.gouv.fr/explore/dataset/530_l-accessibilite-potentielle-localisee-apl/) | déjà à jour |
+| Dossier Modes de vie | ajouté le 30/10/2026 | INCA 3 (2014-2015), Baromètre Santé publique France 2024, Assurance maladie 2024, prix moyens Insee 2014-2015 (période d'INCA 3, volontairement) | déjà à jour |
+| Dépassements et secteur 2 des spécialistes (Atlas, fiche territoire) | ajouté le 30/10/2026 | 2025, [Assurance maladie](https://data.ameli.fr/explore/dataset/honoraires/) | déjà à jour |
 | IPS des écoles | rentrée 2024-2025 | 2024-2025 (jeu modifié le 07/08/2026, pas de 2025-2026), [data.education.gouv.fr](https://data.education.gouv.fr/explore/dataset/fr-en-ips-ecoles-ap2022/) | déjà à jour |
 | IPS des collèges et des lycées | rentrée 2025-2026 | 2025-2026 | déjà à jour |
 | Valeur ajoutée des lycées (IVAL) | session 2025 | session 2025 (jeux du 10/06/2026) | déjà à jour |
